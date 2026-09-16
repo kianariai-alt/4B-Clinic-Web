@@ -38,4 +38,9 @@
   ctaLabel="درخواست ارزیابی محرمانه"
   backHref="/"
   backLabel="بازگشت به صفحه اصلی"
+  visualKind="sexual"
+  visualLabel="PRIVATE • CLINICAL"
+  scienceHref="https://zetamed.org/%D9%85%D8%B9%D8%B1%D9%81%DB%8C-%D8%B3%D8%A7%DB%8C%D8%AA/"
+  scienceTitle="مطالعه علمی بیشتر درباره درمان‌های بازساختی"
+  scienceText="Zetamed محتوای علمی مرتبط با پزشکی سلولی مولکولی و درمان‌های بازساختی را در کتابخانه خود منتشر می‌کند. برای مطالب تخصصی‌تر می‌توانید از آنجا ادامه دهید."
 />
