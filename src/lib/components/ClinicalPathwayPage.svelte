@@ -4,7 +4,6 @@
     title,
     titleAccent = '',
     intro,
-    canonical,
     conditions = [],
     pathwayTitle = 'مسیر ارزیابی و درمان',
     pathwayIntro = '',
