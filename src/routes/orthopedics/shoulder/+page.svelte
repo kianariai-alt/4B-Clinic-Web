@@ -1,5 +1,8 @@
 <script>
   import { site } from '$lib/data/site.js';
+  import ClinicalVisual from '$lib/components/ClinicalVisual.svelte';
+  import ZetaScience from '$lib/components/ZetaScience.svelte';
+
   const conditions = [
     {
       title: 'شانه یخ‌زده',
@@ -31,10 +34,13 @@
 </svelte:head>
 
 <section class="shoulder-hero section">
-  <div class="eyebrow">SHOULDER • ROTATOR CUFF • CAPSULE</div>
-  <h1>درمان مشکلات شانه<br/><span>از تشخیص درست شروع می‌شود</span></h1>
-  <p>درد، ضعف یا محدودیت حرکت شانه می‌تواند علل متفاوتی داشته باشد. هدف این صفحه معرفی مسیر ارزیابی شانه یخ‌زده، پارگی‌های ناکامل تاندون‌ها و روتاتورکاف و آسیب‌های منتخب کپسول و بافت نرم است.</p>
-  <div class="actions"><a class="button" href="/contact">رزرو ارزیابی</a><a class="ghost" href="/orthopedics">بازگشت به ارتوپدی</a></div>
+  <div class="hero-copy">
+    <div class="eyebrow">SHOULDER • ROTATOR CUFF • CAPSULE</div>
+    <h1>درمان مشکلات شانه<br/><span>از تشخیص درست شروع می‌شود</span></h1>
+    <p>درد، ضعف یا محدودیت حرکت شانه می‌تواند علل متفاوتی داشته باشد. هدف این صفحه معرفی مسیر ارزیابی شانه یخ‌زده، پارگی‌های ناکامل تاندون‌ها و روتاتورکاف و آسیب‌های منتخب کپسول و بافت نرم است.</p>
+    <div class="actions"><a class="button" href="/contact">رزرو ارزیابی</a><a class="ghost" href="/orthopedics">بازگشت به ارتوپدی</a></div>
+  </div>
+  <ClinicalVisual kind="shoulder" label="SHOULDER • ROTATOR CUFF" />
 </section>
 
 <section class="section shoulder-grid">
@@ -65,6 +71,14 @@
   <p>درمان‌های بیولوژیک و اتولوگ برای تمام انواع آسیب روتاتورکاف توصیه روتین ندارند. تصمیم درمانی باید بر اساس تشخیص، درجه پارگی، علائم و گزینه‌های استاندارد غیرجراحی یا جراحی انجام شود.</p>
 </section>
 
+<section class="section science-wrap">
+  <ZetaScience
+    href="https://zetamed.org/services/orthobiological/"
+    title="ارتوبیولوژیک در بافت‌های تاندون، رباط و مفصل"
+    text="برای مطالعه عمیق‌تر درباره مبانی ارتوبیولوژیک و کاربردهای آن در بافت‌های سیستم اسکلتی‌عضلانی، صفحه علمی Zetamed را ببینید."
+  />
+</section>
+
 <style>
-  .shoulder-hero{background:radial-gradient(circle at 10% 20%,#1b3658 0,#07172b 45%,#050d18 100%);color:#fff}.shoulder-hero h1{font-size:clamp(40px,6vw,80px);line-height:1.2;margin:16px 0}.shoulder-hero h1 span{color:#c9aa6b}.shoulder-hero p{max-width:820px;font-size:19px;color:#d5dce5}.shoulder-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.condition-card{background:#fff;border:1px solid #e3e7e9;border-radius:22px;padding:30px}.condition-card small{color:#9b7735;letter-spacing:.08em}.condition-card h2{margin:10px 0 8px;font-size:28px}.condition-card p{color:#596673}.pathway{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;background:#eef2f3}.pathway h2{font-size:clamp(30px,4vw,48px);line-height:1.45}.pathway ol{margin:0;padding:0;list-style:none;counter-reset:step}.pathway li{counter-increment:step;background:#fff;border:1px solid #e2e7e9;border-radius:16px;padding:20px 24px;margin-bottom:12px}.pathway li::before{content:counter(step,decimal-leading-zero);color:#b99651;font-weight:900;margin-left:12px}.evidence-note{padding-top:48px;padding-bottom:48px}.evidence-note strong{font-size:20px;color:#8f6c2f}.evidence-note p{max-width:900px;color:#53606d}@media(max-width:800px){.shoulder-grid,.pathway{grid-template-columns:1fr}}
+  .shoulder-hero{display:grid;grid-template-columns:minmax(0,1.05fr) minmax(320px,.72fr);gap:54px;align-items:center;background:radial-gradient(circle at 10% 20%,#1b3658 0,#07172b 45%,#050d18 100%);color:#fff}.shoulder-hero h1{font-size:clamp(40px,6vw,80px);line-height:1.2;margin:16px 0}.shoulder-hero h1 span{color:#c9aa6b}.shoulder-hero p{max-width:820px;font-size:19px;color:#d5dce5}.shoulder-hero :global(.visual){max-width:580px;justify-self:end}.shoulder-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.condition-card{background:#fff;border:1px solid #e3e7e9;border-radius:22px;padding:30px}.condition-card small{color:#9b7735;letter-spacing:.08em}.condition-card h2{margin:10px 0 8px;font-size:28px}.condition-card p{color:#596673}.pathway{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px;background:#eef2f3}.pathway h2{font-size:clamp(30px,4vw,48px);line-height:1.45}.pathway ol{margin:0;padding:0;list-style:none;counter-reset:step}.pathway li{counter-increment:step;background:#fff;border:1px solid #e2e7e9;border-radius:16px;padding:20px 24px;margin-bottom:12px}.pathway li::before{content:counter(step,decimal-leading-zero);color:#b99651;font-weight:900;margin-left:12px}.evidence-note{padding-top:48px;padding-bottom:48px}.evidence-note strong{font-size:20px;color:#8f6c2f}.evidence-note p{max-width:900px;color:#53606d}.science-wrap{padding-top:20px}@media(max-width:900px){.shoulder-hero{grid-template-columns:1fr}.shoulder-hero :global(.visual){justify-self:start;width:min(100%,620px)}}@media(max-width:800px){.shoulder-grid,.pathway{grid-template-columns:1fr}}
 </style>

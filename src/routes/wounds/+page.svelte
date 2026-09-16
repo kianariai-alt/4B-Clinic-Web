@@ -38,4 +38,9 @@
   ctaLabel="درخواست ارزیابی زخم"
   backHref="/"
   backLabel="بازگشت به صفحه اصلی"
+  visualKind="wound"
+  visualLabel="WOUND • HEALING"
+  scienceHref="https://zetamed.org/services/wound-clinic/"
+  scienceTitle="چرا زخم مزمن نیاز به نگاه چندعاملی دارد؟"
+  scienceText="در Zetamed می‌توانید درباره زخم مزمن، نقش خون‌رسانی، فشار، عفونت و اصول مراقبت بستر زخم با جزئیات بیشتری مطالعه کنید."
 />
