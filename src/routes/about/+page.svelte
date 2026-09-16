@@ -1,0 +1,1 @@
+<svelte:head><title>درباره 4B Clinic</title></svelte:head><section class="section"><div class="eyebrow">ABOUT 4B</div><h1>4B Clinic</h1><p>کلینیک با تمرکز بر درمان‌های اتولوگ، ارتوبیولوژی و پزشکی بازساختی و با رویکرد مبتنی بر ارزیابی پزشکی و شواهد علمی.</p></section>

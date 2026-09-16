@@ -1,0 +1,2 @@
+<svelte:head><title>مقالات | 4B Clinic</title><meta name="description" content="مقالات آموزشی 4B Clinic درباره درد زانو، درمان‌های اتولوگ، پوست، مو و سلامت بازساختی." /></svelte:head>
+<section class="section"><div class="eyebrow">KNOWLEDGE</div><h1>مقالات و راهنمای بیماران</h1><p>این بخش در مرحله بعد به CMS متصل می‌شود تا تیم کلینیک بدون دستکاری کد، مقاله را به صورت پیش‌نویس ایجاد و منتشر کند.</p></section>
