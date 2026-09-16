@@ -1,0 +1,1 @@
+<svelte:head><title>فناوری‌ها | 4B Clinic</title></svelte:head><section class="section"><div class="eyebrow">TECHNOLOGIES</div><h1>فناوری‌ها و درمان‌ها</h1><p>ACS • PL • PRGF • EXO • SVF • MSC</p><p>این صفحه در نسخه نهایی برای هر فناوری توضیح بیمارپسند، شواهد، محدودیت‌ها و کاربردهای منتخب خواهد داشت.</p></section>
