@@ -1,12 +1,12 @@
 <script>
   import { onMount } from 'svelte';
 
-  const logoSrc = '/brand/4b-symbol-transparent.webp?v=7';
+  const logoSrc = '/brand/4b-symbol-transparent.webp?v=8';
   let visible = false;
   let timer = 0;
 
   onMount(() => {
-    const key = '4b-splash-seen-v7';
+    const key = '4b-splash-seen-v8';
     if (sessionStorage.getItem(key) === '1') return;
 
     const previousOverflow = document.body.style.overflow;
