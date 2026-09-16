@@ -1,5 +1,19 @@
 <script>
-  import ServicePage from '$lib/components/ServicePage.svelte';
+  import ClinicalPathwayPage from '$lib/components/ClinicalPathwayPage.svelte';
+
+  const conditions = [
+    { title: 'ریزش موی الگوی مردانه و زنانه', en: 'Androgenetic Hair Loss', text: 'الگوی ریزش، سن شروع، سابقه خانوادگی، تراکم و ضخامت تار مو در انتخاب برنامه درمانی اهمیت دارند.' },
+    { title: 'ریزش منتشر مو', en: 'Diffuse Hair Loss', text: 'ریزش منتشر می‌تواند با استرس، بیماری، کمبودها، داروها یا عوامل هورمونی همراه باشد و قبل از درمان باید علت‌های قابل اصلاح بررسی شوند.' },
+    { title: 'کاهش کیفیت و ضخامت مو', en: 'Hair Quality & Miniaturization', text: 'کاهش قطر تار مو و مینیاتوریزاسیون فولیکول‌ها می‌تواند پیش از کم‌پشتی واضح دیده شود و در پیگیری درمان قابل ارزیابی است.' },
+    { title: 'مشکلات پوست سر', en: 'Scalp Conditions', text: 'التهاب، خارش، پوسته‌ریزی یا ریزش اسکاری نیازمند افتراق تشخیصی‌اند و در صورت لزوم ارجاع تخصصی انجام می‌شود.' }
+  ];
+
+  const steps = [
+    { title: 'ارزیابی علت', text: 'شرح حال، الگوی ریزش، داروها، بیماری‌های زمینه‌ای و وضعیت پوست سر بررسی می‌شوند.' },
+    { title: 'ثبت پایه', text: 'عکس‌های استاندارد و در صورت امکان ارزیابی تراکم و ضخامت برای مقایسه بعدی ثبت می‌شوند.' },
+    { title: 'انتخاب درمان', text: 'اصلاح عوامل زمینه‌ای، درمان استاندارد و در موارد منتخب PL، PRGF یا فناوری‌های مکمل بررسی می‌شوند.' },
+    { title: 'پیگیری', text: 'پاسخ درمان در بازه زمانی منطقی و با معیارهای قابل مقایسه ارزیابی می‌شود، نه صرفاً بر اساس برداشت لحظه‌ای.' }
+  ];
 </script>
 
 <svelte:head>
@@ -8,31 +22,20 @@
   <link rel="canonical" href="https://4b-clinic.com/hair" />
 </svelte:head>
 
-<ServicePage
-  title="درمان‌های مو"
-  subtitle="ریزش مو یک تشخیص واحد نیست؛ برنامه درمان از علت شروع می‌شود."
-  description="الگوی ریزش، سابقه خانوادگی، وضعیت پوست سر، داروها، بیماری‌های زمینه‌ای و در صورت نیاز آزمایش‌های مرتبط بررسی می‌شوند. درمان‌های اتولوگ تنها زمانی وارد برنامه می‌شوند که برای الگوی ریزش و شرایط بیمار منطقی باشند."
-  bullets={[
-    'ارزیابی ریزش موی الگوی مردانه و زنانه',
-    'بررسی علل قابل اصلاح مانند کمبودها یا اختلالات زمینه‌ای در صورت نیاز',
-    'PL و PRGF در موارد منتخب',
-    'گزینه‌های مبتنی بر EXO فقط پس از تعیین اندیکاسیون',
-    'برنامه پیگیری با عکس‌های استاندارد و ارزیابی روند',
-    'ارجاع موارد مشکوک به ریزش اسکاری یا بیماری فعال پوست سر'
-  ]}
+<ClinicalPathwayPage
+  eyebrow="HAIR • SCALP • FOLLICLE"
+  title="درمان ریزش مو"
+  titleAccent="از تشخیص علت شروع می‌شود"
+  intro="ریزش مو یک تشخیص واحد نیست. الگوی ریزش، وضعیت پوست سر، سابقه خانوادگی، داروها و عوامل زمینه‌ای باید کنار هم دیده شوند تا درمان واقع‌بینانه و قابل پیگیری انتخاب شود."
+  {conditions}
+  pathwayTitle="یک نسخه برای همه انواع ریزش مو وجود ندارد"
+  pathwayIntro="هدف این مسیر مشخص کردن علت غالب ریزش و انتخاب درمانی است که با شرایط واقعی فولیکول و بیمار هم‌خوان باشد."
+  {steps}
+  noteTitle="انتظارات واقع‌بینانه"
+  note="سن، مدت ریزش، تراکم اولیه، علت ریزش و پاسخ فولیکول‌ها روی نتیجه اثر دارند. در بعضی بیماران هدف اصلی کاهش سرعت ریزش و حفظ موهای موجود است."
+  ctaTitle="برای ارزیابی مو، سابقه ریزش و درمان‌های قبلی را همراه داشته باشید."
+  ctaText="اگر آزمایش، نسخه قبلی یا عکس‌های قدیمی از وضعیت مو دارید، همراه مراجعه بیاورید تا روند بهتر قابل مقایسه باشد."
+  ctaLabel="درخواست ارزیابی مو"
+  backHref="/"
+  backLabel="بازگشت به صفحه اصلی"
 />
-
-<section class="section hair-grid">
-  <div class="hair-card"><span>01</span><h2>تشخیص الگوی ریزش</h2><p>ریزش موی ارثی، تلوژن افلوویوم، التهاب پوست سر و بعضی بیماری‌های مو ظاهر مشابهی ندارند و درمان یکسانی هم نمی‌خواهند.</p></div>
-  <div class="hair-card"><span>02</span><h2>انتخاب درمان</h2><p>درمان می‌تواند شامل اصلاح عوامل زمینه‌ای، درمان دارویی استاندارد، روش‌های اتولوگ یا ترکیبی از آنها باشد. تصمیم بر اساس شرایط واقعی بیمار گرفته می‌شود.</p></div>
-  <div class="hair-card"><span>03</span><h2>پیگیری قابل مقایسه</h2><p>نتیجه درمان مو باید در بازه زمانی منطقی و با عکس‌های هم‌زاویه و هم‌نور ارزیابی شود؛ نه با حافظه و حس کلی بیمار.</p></div>
-</section>
-
-<section class="section hair-callout">
-  <div><div class="eyebrow">REALISTIC EXPECTATIONS</div><h2>هدف درمان، بهبود قابل اندازه‌گیری است؛ نه وعده نتیجه یکسان برای همه.</h2><p>سن، مدت ریزش، تراکم اولیه، پاسخ فولیکول و علت ریزش روی نتیجه اثر دارند. در بعضی شرایط هدف اصلی می‌تواند کاهش سرعت ریزش و حفظ موهای موجود باشد.</p></div>
-  <a class="button" href="/contact">درخواست ارزیابی مو</a>
-</section>
-
-<style>
-  .hair-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;background:#eef2f1}.hair-card{background:#fff;border:1px solid #e1e5e5;border-radius:20px;padding:28px}.hair-card span{color:#b99651;font-size:11px;font-weight:900}.hair-card h2{font-size:24px;line-height:1.5;margin:24px 0 10px}.hair-card p{color:#5d6976;font-size:14px}.hair-callout{display:flex;justify-content:space-between;align-items:end;gap:40px;background:#07172b;color:#fff}.hair-callout h2{font-size:clamp(28px,4vw,48px);line-height:1.45;margin:10px 0}.hair-callout p{max-width:800px;color:#c6d0da}@media(max-width:900px){.hair-grid{grid-template-columns:1fr}.hair-callout{align-items:flex-start;flex-direction:column}}
-</style>
