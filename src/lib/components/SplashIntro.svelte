@@ -1,12 +1,12 @@
 <script>
   import { onMount } from 'svelte';
 
-  const logoSrc = '/brand/4b-symbol-transparent.webp?v=5';
+  const logoSrc = 'https://raw.githubusercontent.com/kianariai-alt/4B-Clinic-Web/main/static/brand/4b-symbol-transparent.webp?v=6';
   let visible = false;
   let timer = 0;
 
   onMount(() => {
-    const key = '4b-splash-seen-v5';
+    const key = '4b-splash-seen-v6';
     if (sessionStorage.getItem(key) === '1') return;
 
     const previousOverflow = document.body.style.overflow;
