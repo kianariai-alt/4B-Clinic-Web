@@ -2,7 +2,7 @@
   import { onMount } from 'svelte';
 
   let visible = false;
-  let timer;
+  let timer = 0;
 
   onMount(() => {
     const key = '4b-splash-seen';

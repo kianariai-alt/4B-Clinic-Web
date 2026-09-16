@@ -1,5 +1,19 @@
 <script>
-  import ServicePage from '$lib/components/ServicePage.svelte';
+  import ClinicalPathwayPage from '$lib/components/ClinicalPathwayPage.svelte';
+
+  const conditions = [
+    { title: 'مسیر اختصاصی بانوان', en: 'Women’s Sexual Health', text: 'خشکی، درد، تغییرات بافتی یا مشکلات عملکردی باید با توجه به سن، سابقه پزشکی، داروها و وضعیت هورمونی بررسی شوند.' },
+    { title: 'مسیر اختصاصی آقایان', en: 'Men’s Sexual Health', text: 'مشکلات عملکرد جنسی ممکن است با عوامل عروقی، متابولیک، دارویی، هورمونی، عصبی یا روانی مرتبط باشند.' },
+    { title: 'درمان‌های اتولوگ منتخب', en: 'Selected Autologous Options', text: 'روش‌های اتولوگ فقط در صورت اندیکاسیون مناسب و پس از توضیح شواهد، محدودیت‌ها و گزینه‌های جایگزین وارد برنامه می‌شوند.' },
+    { title: 'حریم خصوصی و پیگیری', en: 'Privacy & Follow-up', text: 'اطلاعات این حوزه باید از مسیرهای رسمی و امن کلینیک منتقل شوند و پاسخ درمان یا عوارض احتمالی در پیگیری بررسی شوند.' }
+  ];
+
+  const steps = [
+    { title: 'شرح حال محرمانه', text: 'علائم، زمان شروع، داروها، بیماری‌های زمینه‌ای و عوامل مرتبط در فضای محرمانه مرور می‌شوند.' },
+    { title: 'بررسی علل قابل درمان', text: 'در صورت نیاز عوامل عروقی، متابولیک، هورمونی، دارویی یا سایر علل قابل اصلاح بررسی می‌شوند.' },
+    { title: 'انتخاب مسیر', text: 'درمان استاندارد، ارجاع تخصصی یا درمان‌های اتولوگ منتخب بر اساس تشخیص و هدف بیمار انتخاب می‌شوند.' },
+    { title: 'پیگیری', text: 'پاسخ درمان، عوارض احتمالی و نیاز به ادامه یا تغییر مسیر در زمان مناسب بررسی می‌شوند.' }
+  ];
 </script>
 
 <svelte:head>
@@ -8,42 +22,20 @@
   <link rel="canonical" href="https://4b-clinic.com/sexual-health" />
 </svelte:head>
 
-<ServicePage
+<ClinicalPathwayPage
+  eyebrow="SEXUAL HEALTH • WOMEN • MEN"
   title="سلامت جنسی"
-  subtitle="ارزیابی محرمانه، محترمانه و پزشکی؛ بدون نسخه یکسان برای همه."
-  description="مشکلات این حوزه می‌توانند علل عروقی، هورمونی، دارویی، روانی، عصبی یا بافتی داشته باشند. پیش از هر مداخله، شرح حال و عوامل قابل درمان بررسی می‌شوند و روش‌های اتولوگ تنها در شرایط منتخب وارد برنامه می‌شوند."
-  bullets={[
-    'ارزیابی اختصاصی بانوان و آقایان',
-    'بررسی عوامل پزشکی و دارویی مرتبط',
-    'درمان‌های اتولوگ در موارد منتخب و با توضیح محدودیت‌ها',
-    'ارجاع برای بررسی‌های تخصصی در صورت نیاز',
-    'حفظ محرمانگی اطلاعات و ارتباط',
-    'پیگیری پاسخ درمان و عوارض احتمالی'
-  ]}
+  titleAccent="با ارزیابی پزشکی و حفظ محرمانگی"
+  intro="مشکلات این حوزه می‌توانند علل متفاوتی داشته باشند. در 4B ابتدا عوامل پزشکی و قابل درمان بررسی می‌شوند و سپس در صورت اندیکاسیون، گزینه‌های مناسب مطرح می‌شوند."
+  {conditions}
+  pathwayTitle="برای بانوان و آقایان مسیر یکسانی وجود ندارد"
+  pathwayIntro="هدف این است که پیش از هر مداخله مشخص شود مشکل از کجا می‌آید و کدام گزینه درمانی واقعاً با شرایط بیمار هم‌خوان است."
+  {steps}
+  noteTitle="محرمانگی بخشی از درمان است"
+  note="برای شروع ارتباط لازم نیست اطلاعات حساس را در پیام عمومی شبکه‌های اجتماعی ارسال کنید. جزئیات پزشکی، تصاویر و مدارک باید فقط از مسیرهای رسمی و امن کلینیک منتقل شوند."
+  ctaTitle="ارزیابی اولیه می‌تواند بدون افشای جزئیات حساس در فضای عمومی شروع شود."
+  ctaText="در مرحله هماهنگی فقط اطلاعات ضروری دریافت می‌شود و شرح حال کامل در مسیر مناسب و محرمانه انجام خواهد شد."
+  ctaLabel="درخواست ارزیابی محرمانه"
+  backHref="/"
+  backLabel="بازگشت به صفحه اصلی"
 />
-
-<section class="section pathways">
-  <article>
-    <div class="eyebrow">WOMEN</div>
-    <h2>مسیر اختصاصی بانوان</h2>
-    <p>خشکی، درد، تغییرات بافتی یا مسائل عملکردی می‌توانند علت‌های متفاوتی داشته باشند. ارزیابی باید پیش از انتخاب هر روش تزریقی یا بازساختی انجام شود.</p>
-  </article>
-  <article>
-    <div class="eyebrow">MEN</div>
-    <h2>مسیر اختصاصی آقایان</h2>
-    <p>مشکلات عملکرد جنسی ممکن است با عوامل عروقی، متابولیک، دارویی یا هورمونی مرتبط باشند. روش‌های اتولوگ جایگزین بررسی پزشکی پایه نیستند.</p>
-  </article>
-</section>
-
-<section class="section privacy-section">
-  <div><div class="eyebrow">PRIVACY FIRST</div><h2>محرمانگی بخشی از درمان است، نه یک گزینه اضافه.</h2><p>جزئیات مراجعه، تصاویر، مدارک و اطلاعات پزشکی باید فقط از مسیرهای رسمی و امن کلینیک منتقل شوند. برای شروع ارتباط لازم نیست اطلاعات حساس را در پیام عمومی شبکه‌های اجتماعی بنویسید.</p></div>
-  <a class="button" href="/contact">مسیرهای رسمی ارتباط</a>
-</section>
-
-<section class="section expectation-section">
-  <div><div class="eyebrow">REALISTIC EXPECTATIONS</div><h2>هیچ مداخله‌ای برای همه مناسب نیست.</h2><p>درمان‌های اتولوگ در این حوزه باید با توضیح روشن درباره شواهد، محدودیت‌ها، احتمال پاسخ و گزینه‌های جایگزین مطرح شوند. اگر علت اصلی نیازمند درمان دیگری باشد، اولویت با همان درمان است.</p></div>
-</section>
-
-<style>
-  .pathways{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:#eef2f1}.pathways article{background:#fff;border:1px solid #e1e5e5;border-radius:20px;padding:30px}.pathways h2{font-size:clamp(27px,3vw,38px);margin:10px 0}.pathways p{color:#5d6976}.privacy-section{display:flex;justify-content:space-between;align-items:end;gap:40px;background:#07172b;color:#fff}.privacy-section h2,.expectation-section h2{font-size:clamp(28px,4vw,48px);line-height:1.45;margin:10px 0}.privacy-section p{max-width:820px;color:#c6d0da}.expectation-section{background:#fff}.expectation-section p{max-width:900px;color:#5d6976;font-size:17px}@media(max-width:850px){.pathways{grid-template-columns:1fr}.privacy-section{align-items:flex-start;flex-direction:column}}
-</style>
