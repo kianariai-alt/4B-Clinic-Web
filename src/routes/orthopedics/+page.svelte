@@ -22,15 +22,24 @@
   ]}
 />
 
-<section class="section shoulder-callout">
-  <div>
+<section class="section pathway-grid">
+  <a class="pathway-card" href="/orthopedics/knee">
+    <span>01</span>
+    <div class="eyebrow">KNEE CARE</div>
+    <h2>زانو، آرتروز و مینیسک</h2>
+    <p>از درد هنگام راه رفتن و پله تا آرتروز و آسیب‌های منتخب مینیسک؛ صفحه زانو برای تفکیک علت درد و انتخاب مسیر غیرجراحی مناسب طراحی شده است.</p>
+    <b>مشاهده صفحه تخصصی زانو ←</b>
+  </a>
+
+  <a class="pathway-card" href="/orthopedics/shoulder">
+    <span>02</span>
     <div class="eyebrow">SHOULDER CARE</div>
-    <h2>درد و محدودیت حرکت شانه فقط یک تشخیص نیست</h2>
-    <p>شانه یخ‌زده، تاندینوپاتی و پارگی ناکامل روتاتورکاف می‌توانند علائم مشابهی ایجاد کنند اما مسیر درمان یکسانی ندارند. در 4B ابتدا تشخیص و شدت آسیب مشخص می‌شود و سپس گزینه‌های مناسب، از بازتوانی و درمان محافظه‌کارانه تا مداخلات منتخب، بررسی می‌شوند.</p>
-  </div>
-  <a class="button" href="/orthopedics/shoulder">مشاهده صفحه تخصصی شانه</a>
+    <h2>شانه، کپسول و روتاتورکاف</h2>
+    <p>شانه یخ‌زده، تاندینوپاتی و پارگی ناکامل روتاتورکاف می‌توانند علائم مشابهی ایجاد کنند اما مسیر درمان یکسانی ندارند.</p>
+    <b>مشاهده صفحه تخصصی شانه ←</b>
+  </a>
 </section>
 
 <style>
-  .shoulder-callout{display:flex;align-items:end;justify-content:space-between;gap:40px;background:#eef2f3;border-top:1px solid #e1e6e8}.shoulder-callout h2{font-size:clamp(28px,4vw,48px);line-height:1.45;margin:12px 0}.shoulder-callout p{max-width:800px;color:#53606d;font-size:17px}@media(max-width:800px){.shoulder-callout{align-items:start;flex-direction:column}}
+  .pathway-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;background:#eef2f3;border-top:1px solid #e1e6e8}.pathway-card{background:#fff;border:1px solid #e1e5e5;border-radius:22px;padding:30px;transition:.2s}.pathway-card:hover{transform:translateY(-4px);box-shadow:0 18px 45px #07172b10}.pathway-card>span{color:#b99651;font-size:11px;font-weight:900}.pathway-card .eyebrow{margin-top:30px}.pathway-card h2{font-size:clamp(28px,4vw,44px);line-height:1.45;margin:10px 0}.pathway-card p{color:#53606d;font-size:16px}.pathway-card b{display:block;margin-top:28px;color:#8c692f;font-size:12px}@media(max-width:800px){.pathway-grid{grid-template-columns:1fr}}
 </style>
