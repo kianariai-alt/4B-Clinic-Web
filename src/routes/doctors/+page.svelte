@@ -8,44 +8,18 @@
   <link rel="canonical" href="https://4b-clinic.com/doctors" />
 </svelte:head>
 
-<section class="doctors-hero section">
-  <div class="eyebrow">MEDICAL TEAM • 4B CLINIC</div>
-  <h1>پزشکان همکار 4B Clinic</h1>
-  <p>تیم پزشکی 4B با رویکرد تشخیص‌محور و همکاری بین تخصصی شکل می‌گیرد. اطلاعات پزشکان همکار به‌تدریج و پس از تأیید مشخصات و تصاویر رسمی در این صفحه تکمیل می‌شود.</p>
-</section>
+<section class="doctors-v2-hero"><div><div class="eyebrow light">MEDICAL TEAM • 4B CLINIC</div><h1>پزشکان همکار<br/><span>4B Clinic</span></h1><p>تیم پزشکی 4B با رویکرد تشخیص‌محور و همکاری بین تخصصی شکل می‌گیرد. اطلاعات پزشکان همکار بعد از تأیید مشخصات و تصاویر رسمی تکمیل می‌شود.</p></div><div class="team-orbit" aria-hidden="true"><span></span><span></span><div>4B</div></div></section>
 
-<section class="section manager-section">
-  <div class="manager-portrait" aria-hidden="true">
-    <div class="avatar-ring"><span>م ز</span></div>
-    <small>Clinic Director</small>
-  </div>
-  <div class="manager-copy">
-    <div class="eyebrow">CLINIC DIRECTOR</div>
-    <h2>{site.manager.name}</h2>
-    <strong>{site.manager.title}</strong>
-    <p>{site.manager.role}</p>
-    <div class="manager-note">تصویر رسمی و اطلاعات تکمیلی حرفه‌ای پس از دریافت فایل نهایی به این پروفایل اضافه می‌شود.</div>
-  </div>
-</section>
+<section class="manager-v2"><div class="portrait-v2"><div class="portrait-core">م ز</div><small>CLINIC DIRECTOR</small></div><div class="manager-copy-v2"><div class="eyebrow">CLINIC DIRECTOR</div><h2>{site.manager.name}</h2><strong>{site.manager.title}</strong><p>{site.manager.role} 4B Clinic</p><div class="manager-note-v2">تصویر رسمی و اطلاعات تکمیلی حرفه‌ای پس از دریافت فایل نهایی در همین ساختار قرار می‌گیرد. لازم نیست دوباره صفحه را از صفر بسازیم، چون خوشبختانه یک بار کافی است.</div></div></section>
 
-<section class="section collaborators">
-  <div class="collaborators-head">
-    <div class="eyebrow">COLLABORATING PHYSICIANS</div>
-    <h2>تیم همکار در حال تکمیل است</h2>
-    <p>برای هر پزشک، نام، تخصص، حوزه همکاری، تصویر رسمی و در صورت نیاز معرفی کوتاه قرار خواهد گرفت. این ساختار از الان آماده است تا بعداً فقط اطلاعات تأییدشده اضافه شوند.</p>
-  </div>
-  <div class="future-grid">
-    <article><span>01</span><h3>نام و تخصص</h3><p>مشخصات حرفه‌ای هر پزشک به‌صورت واضح و مختصر نمایش داده می‌شود.</p></article>
-    <article><span>02</span><h3>حوزه همکاری</h3><p>نقش پزشک در مسیرهای ارتوپدی، پوست و مو، زخم یا سایر خدمات مشخص می‌شود.</p></article>
-    <article><span>03</span><h3>تصویر رسمی</h3><p>فقط تصاویر تأییدشده و هماهنگ با هویت بصری 4B استفاده خواهند شد.</p></article>
-  </div>
-</section>
+<section class="collab-v2"><div class="collab-head"><div><div class="eyebrow">COLLABORATING PHYSICIANS</div><h2>ساختار تیم همکار از الان آماده است.</h2></div><p>برای هر پزشک، نام، تخصص، حوزه همکاری، تصویر رسمی و معرفی کوتاه قرار خواهد گرفت. فقط اطلاعات تأییدشده منتشر می‌شود.</p></div><div class="future-grid-v2"><article><span>01</span><h3>نام و تخصص</h3><p>مشخصات حرفه‌ای هر پزشک به‌صورت واضح و مختصر نمایش داده می‌شود.</p></article><article><span>02</span><h3>حوزه همکاری</h3><p>نقش پزشک در مسیرهای ارتوپدی، پوست و مو، زخم یا سایر خدمات مشخص می‌شود.</p></article><article><span>03</span><h3>تصویر رسمی</h3><p>فقط تصاویر تأییدشده و هماهنگ با هویت بصری 4B استفاده خواهند شد.</p></article></div></section>
 
-<section class="section doctors-cta">
-  <div><div class="eyebrow">APPOINTMENT</div><h2>برای هماهنگی ارزیابی، با کلینیک تماس بگیرید.</h2><p>تیم پذیرش بر اساس موضوع مراجعه، مسیر مناسب ارزیابی را هماهنگ می‌کند.</p></div>
-  <a class="button" href="/contact">راه‌های تماس</a>
-</section>
+<section class="doctors-final"><div><div class="eyebrow light">APPOINTMENT</div><h2>برای هماهنگی ارزیابی، با کلینیک تماس بگیرید.</h2><p>تیم پذیرش بر اساس موضوع مراجعه، مسیر مناسب ارزیابی را هماهنگ می‌کند.</p></div><a href="/contact">راه‌های تماس</a></section>
 
 <style>
-  .doctors-hero{min-height:58vh;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 15% 28%,#1b3b61 0,#07172b 56%,#040d18 100%);color:#fff}.doctors-hero h1{font-size:clamp(42px,6vw,80px);line-height:1.18;margin:14px 0}.doctors-hero p{max-width:850px;color:#d0d9e2;font-size:18px}.manager-section{display:grid;grid-template-columns:.75fr 1.25fr;gap:70px;align-items:center;background:#fff}.manager-portrait{min-height:360px;border-radius:28px;background:linear-gradient(145deg,#07172b,#12385f);display:grid;place-items:center;align-content:center;gap:18px;box-shadow:0 30px 80px #07172b1a}.avatar-ring{width:190px;height:190px;border-radius:50%;border:1px solid #d0b374;display:grid;place-items:center;box-shadow:0 0 0 18px #ffffff08,0 0 60px #d0b37420}.avatar-ring span{font-size:48px;color:#d0b374;font-weight:900}.manager-portrait small{color:#aebccc;letter-spacing:.15em}.manager-copy h2,.collaborators-head h2,.doctors-cta h2{font-size:clamp(32px,4vw,52px);line-height:1.4;margin:10px 0}.manager-copy>strong{display:block;font-size:20px;color:#8c692f}.manager-copy>p{font-size:16px;color:#5d6976;margin-top:4px}.manager-note{margin-top:24px;padding:16px 18px;background:#eef2f1;border-radius:14px;color:#5d6976;font-size:13px}.collaborators{background:#eef2f1}.collaborators-head{max-width:880px}.collaborators-head p{color:#5d6976}.future-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}.future-grid article{background:#fff;border:1px solid #e1e5e5;border-radius:20px;padding:26px}.future-grid span{color:#b99651;font-size:11px;font-weight:900}.future-grid h3{font-size:21px;margin:24px 0 8px}.future-grid p{color:#5d6976;font-size:13px}.doctors-cta{display:flex;justify-content:space-between;align-items:end;gap:40px;background:#07172b;color:#fff}.doctors-cta p{max-width:760px;color:#c6d0da}@media(max-width:850px){.manager-section{grid-template-columns:1fr}.manager-portrait{min-height:300px}.future-grid{grid-template-columns:1fr}.doctors-cta{align-items:flex-start;flex-direction:column}.doctors-cta .button{width:100%}}
+  .eyebrow{font-size:10px;letter-spacing:.16em;color:#9a7331;font-weight:900}.eyebrow.light{color:#ddc287}.doctors-v2-hero{min-height:650px;padding:clamp(90px,11vw,150px) clamp(20px,7vw,110px);display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center;background:linear-gradient(135deg,#07172b,#12385f);color:#fff}.doctors-v2-hero h1{font-size:clamp(48px,7vw,96px);line-height:1.08;margin:12px 0 20px}.doctors-v2-hero h1 span{color:#ddc287}.doctors-v2-hero p{font-size:18px;color:#ced7df;max-width:760px}.team-orbit{position:relative;width:min(36vw,430px);aspect-ratio:1;justify-self:center;display:grid;place-items:center}.team-orbit>span{position:absolute;border-radius:50%;border:1px solid rgba(221,194,135,.3)}.team-orbit>span:nth-child(1){inset:0}.team-orbit>span:nth-child(2){inset:56px;border-style:dashed}.team-orbit>div{width:140px;height:140px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.07);border:1px solid rgba(221,194,135,.5);font-size:38px;font-weight:900;color:#ddc287;backdrop-filter:blur(8px)}
+  .manager-v2{padding:clamp(68px,8vw,112px) clamp(20px,7vw,110px);display:grid;grid-template-columns:.72fr 1.28fr;gap:70px;align-items:center;background:#fff}.portrait-v2{min-height:360px;border-radius:28px;background:linear-gradient(145deg,#07172b,#12385f);display:grid;place-items:center;align-content:center;gap:18px;box-shadow:0 30px 80px rgba(7,23,43,.14)}.portrait-core{width:190px;height:190px;border-radius:50%;display:grid;place-items:center;border:1px solid #d0b374;color:#d0b374;font-size:50px;font-weight:900;box-shadow:0 0 0 18px rgba(255,255,255,.05)}.portrait-v2 small{color:#9caab7;letter-spacing:.14em}.manager-copy-v2 h2,.collab-head h2,.doctors-final h2{font-size:clamp(30px,4.4vw,58px);line-height:1.42;margin:10px 0}.manager-copy-v2>strong{display:block;color:#8d692c;font-size:20px}.manager-copy-v2>p{color:#67727b}.manager-note-v2{margin-top:22px;padding:17px 18px;border-radius:14px;background:#f1f2ee;color:#5e6972;font-size:13px}
+  .collab-v2{padding:clamp(68px,8vw,112px) clamp(20px,7vw,110px);background:#f7f7f4}.collab-head{display:grid;grid-template-columns:1fr minmax(280px,.72fr);gap:60px;align-items:end}.collab-head p{color:#65717b}.future-grid-v2{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:34px}.future-grid-v2 article{padding:28px;border:1px solid #e0e4e1;border-radius:20px;background:#fff}.future-grid-v2 span{color:#a77f39;font-size:11px;font-weight:900}.future-grid-v2 h3{font-size:21px;margin:24px 0 8px}.future-grid-v2 p{color:#626e77;font-size:13px}.doctors-final{padding:clamp(62px,8vw,112px) clamp(20px,7vw,110px);background:#07172b;color:#fff;display:flex;justify-content:space-between;align-items:end;gap:40px}.doctors-final p{max-width:760px;color:#c5ced7}.doctors-final>a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 20px;border-radius:999px;background:#b58d48;color:#fff;text-decoration:none;font-weight:900;flex:none}
+  @media(max-width:900px){.doctors-v2-hero,.manager-v2,.collab-head{grid-template-columns:1fr;gap:30px}.team-orbit{width:min(70vw,420px)}.future-grid-v2{grid-template-columns:1fr}.doctors-final{align-items:flex-start;flex-direction:column}}
+  @media(max-width:620px){.doctors-v2-hero h1{font-size:46px}.team-orbit{width:78vw}.portrait-v2{min-height:300px}.portrait-core{width:150px;height:150px}.doctors-final>a{width:100%}}
 </style>
