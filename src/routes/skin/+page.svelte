@@ -15,8 +15,6 @@
     { title: 'تناوب و پیگیری پاسخ پوست', text: 'بر اساس پاسخ واقعی پوست، جلسات می‌توانند غیرتهاجمی، تزریقی یا به‌صورت تناوبی از هر دو روش ادامه پیدا کنند و نتیجه با عکس‌های استاندارد و ارزیابی بالینی پیگیری شود.' }
   ];
 
-  let activeFocus = 'scar';
-
   const focusTabs = {
     scar: {
       label: 'اسکار',
@@ -34,6 +32,8 @@
       text: 'در اگزمای مزمن، ابتدا تشخیص، عامل محرک و کنترل التهاب اهمیت دارد. در برخی بیماران منتخب می‌توان مداخلات بازساختی را به‌عنوان درمان مکمل برای حمایت از کیفیت بافت و سد پوستی بررسی کرد، نه جایگزین درمان استاندارد.'
     }
   };
+
+  let activeFocus = focusTabs.scar;
 
   const cases = [
     {
@@ -101,21 +101,21 @@
   </div>
 
   <div class="focus-tabs" role="tablist" aria-label="موارد پوستی منتخب">
-    {#each Object.entries(focusTabs) as [key, tab]}
+    {#each Object.values(focusTabs) as tab}
       <button
         type="button"
-        class:active={activeFocus === key}
-        onclick={() => (activeFocus = key)}
+        class:active={activeFocus === tab}
+        onclick={() => (activeFocus = tab)}
         role="tab"
-        aria-selected={activeFocus === key}
+        aria-selected={activeFocus === tab}
       >{tab.label}</button>
     {/each}
   </div>
 
   <article class="focus-panel">
     <div class="eyebrow">CLINICAL FOCUS</div>
-    <h3>{focusTabs[activeFocus].title}</h3>
-    <p>{focusTabs[activeFocus].text}</p>
+    <h3>{activeFocus.title}</h3>
+    <p>{activeFocus.text}</p>
   </article>
 </section>
 
