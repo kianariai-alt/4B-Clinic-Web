@@ -30,7 +30,9 @@
   intro="شانه ورزشکار، شانه یخ‌زده و پارگی تاندون یک مسئله واحد نیستند. دامنه حرکت، قدرت، محل درد و تصویربرداری باید کنار هم قرار بگیرند تا مسیر درمان مشخص شود."
   image="/images/services/shoulder.webp"
   imageAlt="ورزشکار بزرگسال با درد شانه و نمایش ناحیه دردناک"
-  imagePosition="center 38%"
+  imagePosition="center center"
+  mobileImagePosition="right center"
+  heroCopySide="left"
   {conditions}
   pathwayTitle="یک مسیر درمان برای همه شانه‌ها وجود ندارد"
   pathwayIntro="هدف، تشخیص ساختار درگیر و انتخاب درمانی است که با شدت آسیب و سطح فعالیت بیمار هم‌خوان باشد."
