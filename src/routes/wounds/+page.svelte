@@ -29,7 +29,7 @@
 
 <section class="wound-types" id="wound-types"><div class="section-head"><div><div class="eyebrow">CLINICAL VIEW</div><h2>چه نوع زخم‌هایی نیاز به ارزیابی چندعاملی دارند؟</h2></div><p>درمان بازساختی زمانی معنا پیدا می‌کند که مراقبت استاندارد زخم و عوامل زمینه‌ای نیز همزمان مدیریت شوند.</p></div><div class="condition-grid">{#each conditions as item, i}<article><span>0{i+1}</span><h3>{item[0]}</h3><p>{item[1]}</p></article>{/each}</div></section>
 
-<section class="wound-path"><div><div class="eyebrow light">WOUND PATHWAY</div><h2>ترمیم زخم، یک برنامه چندمرحله‌ای است</h2><p>پیشرفت درمان باید با عکس، اندازه‌گیری و ثبت وضعیت بستر زخم پیگیری شود. حافظه انسانی ابزار اندازه‌گیری نیست، هرچند آدم‌ها هنوز گاهی با اعتمادبه‌نفس از آن استفاده می‌کنند.</p></div><ol>{#each steps as item, i}<li><span>0{i+1}</span><div><strong>{item[0]}</strong><p>{item[1]}</p></div></li>{/each}</ol></section>
+<section class="wound-path"><div><div class="eyebrow light">WOUND PATHWAY</div><h2>ترمیم زخم، یک برنامه چندمرحله‌ای است</h2><p>پیشرفت درمان باید با عکس‌های استاندارد، اندازه‌گیری و ثبت منظم وضعیت بستر زخم پیگیری شود تا تغییرات در طول زمان قابل مقایسه باشند.</p></div><ol>{#each steps as item, i}<li><span>0{i+1}</span><div><strong>{item[0]}</strong><p>{item[1]}</p></div></li>{/each}</ol></section>
 
 <section class="warning"><div class="warning-mark">!</div><div><div class="eyebrow">RED FLAGS</div><h2>علائم هشدار را جدی بگیرید</h2><p>تب، درد رو به افزایش، قرمزی منتشرشونده، ترشح بدبو، سیاه‌شدن بافت یا علائم کاهش خون‌رسانی نیازمند ارزیابی سریع پزشکی هستند. در این شرایط اولویت با درمان ایمن و فوری است.</p></div></section>
 
