@@ -25,7 +25,7 @@
 
 <PhotoClinicalPage
   eyebrow="HAIR • SCALP • FOLLICLE"
-  title="ریزش مو"
+  title="درمان ریزش مو"
   titleAccent="از تشخیص علت شروع می‌شود"
   intro="درمان زمانی منطقی است که بدانیم فولیکول چرا ضعیف شده است. الگوی ریزش، پوست سر، سابقه خانوادگی، داروها و عوامل زمینه‌ای قبل از هر پروتکل بررسی می‌شوند."
   image="/images/services/hair.webp"
