@@ -1,5 +1,6 @@
 <script>
   import PhotoClinicalPage from '$lib/components/PhotoClinicalPage.svelte';
+  import PatientVideoSection from '$lib/components/PatientVideoSection.svelte';
 
   const conditions = [
     { title: 'شانه یخ‌زده', en: 'Adhesive Capsulitis', text: 'درد و کاهش تدریجی دامنه حرکت شانه نیاز به افتراق از مشکلات تاندونی، آرتروز، آسیب‌های پس از ضربه و سایر علل درد شانه دارد.' },
@@ -48,4 +49,17 @@
   scienceHref="https://zetamed.org/services/orthobiological/"
   scienceTitle="ارتوبیولوژیک در بافت‌های تاندون، رباط و مفصل"
   scienceText="برای مطالعه عمیق‌تر درباره مبانی ارتوبیولوژیک و کاربردهای آن در بافت‌های سیستم اسکلتی‌عضلانی، صفحه علمی Zetamed را ببینید."
+/>
+
+<PatientVideoSection
+  title="تجربه بیماران درمان شانه"
+  intro="پس از انتشار ویدئوی رضایت بیمار در کانال یوتیوب 4B Clinic، لینک آن در همین بخش قرار می‌گیرد و ویدئو به‌صورت خودکار نمایش داده می‌شود."
+  videos={[
+    {
+      label: 'SHOULDER PATIENT STORY',
+      title: 'رضایت بیمار پس از درمان شانه',
+      text: 'جایگاه آماده برای ویدئوی واقعی بیمار پس از درمان شانه.',
+      youtubeUrl: ''
+    }
+  ]}
 />

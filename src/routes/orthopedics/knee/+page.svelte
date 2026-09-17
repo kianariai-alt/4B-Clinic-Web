@@ -1,5 +1,6 @@
 <script>
   import ZetaScience from '$lib/components/ZetaScience.svelte';
+  import PatientVideoSection from '$lib/components/PatientVideoSection.svelte';
 
   const symptoms = ['درد هنگام راه رفتن یا پله', 'خشکی و محدودیت حرکت', 'تورم یا التهاب تکرارشونده', 'سابقه آسیب یا پارگی مینیسک', 'کاهش فعالیت به‌دلیل درد', 'پاسخ ناکافی به درمان‌های قبلی'];
   const pathway = [
@@ -66,6 +67,19 @@
     <details><summary>پارگی مینیسک همیشه نیاز به جراحی دارد؟</summary><p>نه. نوع پارگی، علائم مکانیکی، سن، وضعیت غضروف و سطح فعالیت مهم‌اند. برخی پارگی‌ها با درمان غیرجراحی مدیریت می‌شوند.</p></details>
   </div>
 </section>
+
+<PatientVideoSection
+  title="تجربه بیماران درمان زانو"
+  intro="بعد از انتشار ویدئوی رضایت بیمار در یوتیوب، فقط لینک آن را به این بخش اضافه می‌کنیم و ویدئو همان‌جا نمایش داده می‌شود."
+  videos={[
+    {
+      label: 'KNEE PATIENT STORY',
+      title: 'رضایت بیمار پس از درمان زانو',
+      text: 'جایگاه آماده برای ویدئوی واقعی بیمار پس از درمان زانو.',
+      youtubeUrl: ''
+    }
+  ]}
+/>
 
 <section class="knee-final"><div><div class="eyebrow-light">NEXT STEP</div><h2>تصاویر و سابقه درمان زانویتان را برای ارزیابی آماده کنید.</h2><p>اگر رادیوگرافی، MRI یا گزارش درمان‌های قبلی دارید، همراه مراجعه داشته باشید تا تصمیم درمانی بر اساس اطلاعات کامل‌تری گرفته شود.</p></div><a href="/contact">ارتباط با کلینیک</a></section>
 
