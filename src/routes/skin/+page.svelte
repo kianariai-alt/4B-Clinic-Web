@@ -1,5 +1,5 @@
 <script>
-  import ClinicalPathwayPage from '$lib/components/ClinicalPathwayPage.svelte';
+  import PhotoClinicalPage from '$lib/components/PhotoClinicalPage.svelte';
 
   const conditions = [
     { title: 'کاهش شفافیت و کیفیت پوست', en: 'Skin Quality', text: 'خشکی، کدری، بافت ناهمگون و کاهش شادابی باید در کنار سن، سبک زندگی، مراقبت پوستی و سابقه درمان‌های قبلی بررسی شوند.' },
@@ -17,29 +17,32 @@
 </script>
 
 <svelte:head>
-  <title>جوانسازی پوست با روش‌های اتولوگ | 4B Clinic تهران</title>
+  <title>جوانسازی پوست با تزریق و سونوفورزیس | 4B Clinic تهران</title>
   <meta name="description" content="برنامه‌های جوانسازی پوست در 4B Clinic تهران با روش‌های اتولوگ منتخب، تزریق و سونوفورزیس؛ انتخاب روش بر اساس کیفیت پوست و هدف درمانی." />
   <link rel="canonical" href="https://4b-clinic.com/skin" />
+  <meta property="og:image" content="https://4b-clinic.com/images/services/skin.webp" />
 </svelte:head>
 
-<ClinicalPathwayPage
+<PhotoClinicalPage
   eyebrow="SKIN • REJUVENATION • SONOPHORESIS"
   title="جوانسازی پوست"
-  titleAccent="بر اساس کیفیت پوست و هدف شما"
+  titleAccent="تزریقی یا غیرتهاجمی، بر اساس نیاز واقعی پوست"
   intro="در 4B یک پروسیجر ثابت برای همه پیشنهاد نمی‌شود. کیفیت پوست، سابقه درمان‌ها، حساسیت، هدف بیمار و میزان تهاجمی بودن روش کنار هم بررسی می‌شوند."
+  image="/images/services/skin.webp"
+  imageAlt="خانمی در کلینیک زیبایی هنگام جوانسازی پوست با تزریق و سونوفورزیس"
+  imagePosition="center 42%"
   {conditions}
   pathwayTitle="روش تزریقی و غیرتهاجمی یک کاربرد واحد ندارند"
   pathwayIntro="انتخاب درمان باید توضیح دهد چرا یک روش برای هدف مشخص بیمار مناسب‌تر است و چه محدودیت‌هایی دارد."
   {steps}
-  noteTitle="نکته مهم"
+  noteTitle="روش غیرتهاجمی همیشه جایگزین تزریق نیست"
   note="غیرتهاجمی بودن یک روش به معنی اثربخشی یکسان با تزریق در همه کاربردها نیست. انتخاب مسیر باید بر اساس هدف درمان، شرایط پوست و شواهد موجود انجام شود."
   ctaTitle="قبل از انتخاب روش، سابقه پوست و درمان‌های قبلی را مرور کنیم."
   ctaText="اطلاعات مربوط به حساسیت‌ها، داروها، درمان‌های زیبایی قبلی و هدف شما کمک می‌کند برنامه منطقی‌تر و شخصی‌تری طراحی شود."
   ctaLabel="درخواست ارزیابی پوست"
   backHref="/"
   backLabel="بازگشت به صفحه اصلی"
-  visualKind="skin"
-  visualLabel="SKIN • TISSUE"
+  badges={['سونوفورزیس', 'تزریق', 'PL / PRGF', 'EXO منتخب']}
   scienceHref="https://zetamed.org/%D9%BE%D8%B2%D8%B4%DA%A9%DB%8C-%D8%A8%D8%A7%D8%B2%D8%B3%D8%A7%D8%AE%D8%AA%DB%8C-%D9%85%D9%82%D8%AF%D9%85%D9%87/"
   scienceTitle="پزشکی بازساختی و کیفیت بافت"
   scienceText="برای آشنایی عمیق‌تر با مفهوم بازسازی بافت، ارتباط سلولی و محدودیت‌های واقعی پزشکی بازساختی، مقدمه علمی Zetamed را بخوانید."

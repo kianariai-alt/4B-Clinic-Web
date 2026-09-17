@@ -1,5 +1,5 @@
 <script>
-  import ClinicalPathwayPage from '$lib/components/ClinicalPathwayPage.svelte';
+  import PhotoClinicalPage from '$lib/components/PhotoClinicalPage.svelte';
 
   const conditions = [
     { title: 'مسیر اختصاصی بانوان', en: 'Women’s Sexual Health', text: 'خشکی، درد، تغییرات بافتی یا مشکلات عملکردی باید با توجه به سن، سابقه پزشکی، داروها و وضعیت هورمونی بررسی شوند.' },
@@ -20,13 +20,17 @@
   <title>سلامت جنسی بانوان و آقایان | 4B Clinic تهران</title>
   <meta name="description" content="خدمات سلامت جنسی بانوان و آقایان در 4B Clinic تهران با ارزیابی محرمانه پزشکی و بررسی درمان‌های اتولوگ منتخب فقط در صورت اندیکاسیون مناسب." />
   <link rel="canonical" href="https://4b-clinic.com/sexual-health" />
+  <meta property="og:image" content="https://4b-clinic.com/images/services/sexual-health.webp" />
 </svelte:head>
 
-<ClinicalPathwayPage
+<PhotoClinicalPage
   eyebrow="SEXUAL HEALTH • WOMEN • MEN"
   title="سلامت جنسی"
   titleAccent="با ارزیابی پزشکی و حفظ محرمانگی"
-  intro="مشکلات این حوزه می‌توانند علل متفاوتی داشته باشند. در 4B ابتدا عوامل پزشکی و قابل درمان بررسی می‌شوند و سپس در صورت اندیکاسیون، گزینه‌های مناسب مطرح می‌شوند."
+  intro="مشکلات این حوزه می‌توانند علل متفاوتی داشته باشند و روی رابطه، اعتمادبه‌نفس و کیفیت زندگی اثر بگذارند. در 4B ابتدا عوامل پزشکی و قابل درمان بررسی می‌شوند و سپس گزینه مناسب مطرح می‌شود."
+  image="/images/services/sexual-health.webp"
+  imageAlt="زوج میانسال با فاصله عاطفی و ناراحتی در فضای خصوصی خانه"
+  imagePosition="center 48%"
   {conditions}
   pathwayTitle="برای بانوان و آقایان مسیر یکسانی وجود ندارد"
   pathwayIntro="هدف این است که پیش از هر مداخله مشخص شود مشکل از کجا می‌آید و کدام گزینه درمانی واقعاً با شرایط بیمار هم‌خوان است."
@@ -38,8 +42,7 @@
   ctaLabel="درخواست ارزیابی محرمانه"
   backHref="/"
   backLabel="بازگشت به صفحه اصلی"
-  visualKind="sexual"
-  visualLabel="PRIVATE • CLINICAL"
+  badges={['بانوان', 'آقایان', 'ارزیابی پزشکی', 'محرمانه']}
   scienceHref="https://zetamed.org/%D9%85%D8%B9%D8%B1%D9%81%DB%8C-%D8%B3%D8%A7%DB%8C%D8%AA/"
   scienceTitle="مطالعه علمی بیشتر درباره درمان‌های بازساختی"
   scienceText="Zetamed محتوای علمی مرتبط با پزشکی سلولی مولکولی و درمان‌های بازساختی را در کتابخانه خود منتشر می‌کند. برای مطالب تخصصی‌تر می‌توانید از آنجا ادامه دهید."
