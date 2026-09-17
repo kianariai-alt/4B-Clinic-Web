@@ -8,80 +8,21 @@
   <link rel="canonical" href="https://4b-clinic.com/contact" />
 </svelte:head>
 
-<section class="contact-hero section">
-  <div class="eyebrow">CONTACT • BOOKING • SOCIAL</div>
-  <h1>ارتباط با 4B Clinic</h1>
-  <p>برای درخواست ارزیابی اولیه، هماهنگی مراجعه و دسترسی به محتوای آموزشی از مسیرهای رسمی کلینیک استفاده کنید.</p>
-</section>
+<section class="contact-v2-hero"><div><div class="eyebrow light">CONTACT • BOOKING • TEHRAN</div><h1>ارتباط با<br/><span>4B Clinic</span></h1><p>برای درخواست ارزیابی اولیه، هماهنگی مراجعه و ارسال مدارک از مسیرهای رسمی کلینیک استفاده کنید.</p></div><div class="contact-hero-card"><small>تهران • قیطریه</small><p>{site.contact.address}</p>{#each site.contact.phones as phone}<a href={phone.href} dir="ltr">{phone.display}</a>{/each}</div></section>
 
-<section class="section direct-contact">
-  <div class="section-head">
-    <div class="eyebrow">DIRECT CONTACT</div>
-    <h2>تماس و مراجعه حضوری</h2>
-    <p>برای هماهنگی نوبت یا پرسش‌های مربوط به مراجعه، از شماره‌های رسمی زیر استفاده کنید.</p>
-  </div>
-  <div class="contact-cards">
-    {#each site.contact.phones as phone}
-      <a class="contact-card" href={phone.href}>
-        <small>{phone.label}</small>
-        <strong dir="ltr">{phone.display}</strong>
-        <span>تماس مستقیم ←</span>
-      </a>
-    {/each}
-    <div class="contact-card address-card">
-      <small>آدرس کلینیک</small>
-      <strong>{site.contact.address}</strong>
-      <span>تهران • قیطریه</span>
-    </div>
-  </div>
-</section>
+<section class="direct-v2"><div class="section-head-v2"><div><div class="eyebrow">DIRECT CONTACT</div><h2>تماس مستقیم و مراجعه حضوری</h2></div><p>برای هماهنگی نوبت یا پرسش‌های مربوط به مراجعه، از شماره‌های رسمی زیر استفاده کنید.</p></div><div class="contact-cards-v2">{#each site.contact.phones as phone}<a href={phone.href}><small>{phone.label}</small><strong dir="ltr">{phone.display}</strong><span>تماس مستقیم ←</span></a>{/each}<div class="address-v2"><small>آدرس کلینیک</small><strong>{site.contact.address}</strong><span>تهران • قیطریه</span></div></div></section>
 
-<section class="section contact-layout">
-  <div class="contact-copy">
-    <div class="eyebrow">BEFORE YOU CONTACT</div>
-    <h2>برای ارزیابی اولیه چه اطلاعاتی آماده باشد؟</h2>
-    <div class="prep-list">
-      <span><b>01</b> مشکل اصلی و مدت شروع علائم</span>
-      <span><b>02</b> درمان‌های قبلی و نتیجه آنها</span>
-      <span><b>03</b> MRI، رادیوگرافی یا گزارش‌های موجود در صورت ارتباط</span>
-      <span><b>04</b> داروهای مهم و بیماری‌های زمینه‌ای مرتبط</span>
-    </div>
-    <div class="privacy-note"><strong>حریم خصوصی:</strong> برای ارسال مدارک پزشکی کامل یا اطلاعات حساس، از مسیر امنی که کلینیک هنگام هماهنگی اعلام می‌کند استفاده کنید. شبکه‌های اجتماعی جای مناسبی برای انتشار عمومی اطلاعات پزشکی نیستند.</div>
-  </div>
+<section class="prepare-v2"><div><div class="eyebrow light">BEFORE YOU CONTACT</div><h2>برای ارزیابی اولیه چه اطلاعاتی آماده باشد؟</h2><p>شرح حال کوتاه و مدارک مرتبط کمک می‌کنند سریع‌تر بفهمیم چه نوع ارزیابی برای شما مناسب است.</p></div><div class="prep-grid"><span><b>01</b> مشکل اصلی و مدت شروع علائم</span><span><b>02</b> درمان‌های قبلی و نتیجه آنها</span><span><b>03</b> MRI، رادیوگرافی یا گزارش‌های مرتبط</span><span><b>04</b> داروهای مهم و بیماری‌های زمینه‌ای</span></div></section>
 
-  <div>
-    <div class="eyebrow">OFFICIAL CHANNELS</div>
-    <h2 class="social-heading">شبکه‌های رسمی 4B</h2>
-    <p class="social-lead">اینستاگرام، تلگرام، بله، روبیکا، ایتا و یوتیوب در این بخش قرار دارند. لینک هر شبکه فقط بعد از تأیید حساب رسمی فعال می‌شود تا بیمار به صفحه اشتباه هدایت نشود.</p>
-    <div class="social-grid" aria-label="شبکه‌های اجتماعی 4B Clinic">
-      {#each site.socials as social}
-        {#if social.href}
-          <a class="social-card" href={social.href} target="_blank" rel="noreferrer" aria-label={`${social.label} 4B Clinic`}>
-            <span class="social-mark">{social.label.slice(0,1)}</span>
-            <div><strong>{social.label}</strong>{#if social.handle}<small>{social.handle}</small>{/if}</div>
-            <b>ورود ↗</b>
-          </a>
-        {:else}
-          <div class="social-card pending" aria-label={`${social.label} - لینک در انتظار تأیید`}>
-            <span class="social-mark">{social.label.slice(0,1)}</span>
-            <div><strong>{social.label}</strong><small>در انتظار تأیید لینک رسمی</small></div>
-            <b>به‌زودی</b>
-          </div>
-        {/if}
-      {/each}
-    </div>
-  </div>
-</section>
+<section class="social-v2"><div><div class="eyebrow">OFFICIAL CHANNELS</div><h2>شبکه‌های رسمی 4B</h2><p>لینک هر شبکه فقط بعد از تأیید حساب رسمی فعال می‌شود تا بیمار به صفحه اشتباه هدایت نشود. حداقل یکی از مشکلات اینترنت را این‌جا خودمان تولید نکنیم.</p></div><div class="social-grid-v2">{#each site.socials as social}{#if social.href}<a href={social.href} target="_blank" rel="noreferrer"><span>{social.label.slice(0,1)}</span><div><strong>{social.label}</strong>{#if social.handle}<small>{social.handle}</small>{/if}</div><b>ورود ↗</b></a>{:else}<div class="pending"><span>{social.label.slice(0,1)}</span><div><strong>{social.label}</strong><small>در انتظار تأیید لینک رسمی</small></div><b>به‌زودی</b></div>{/if}{/each}</div></section>
 
-<section class="section contact-next">
-  <div><div class="eyebrow">BOOKING FLOW</div><h2>مسیر هماهنگی مراجعه</h2></div>
-  <div class="booking-steps">
-    <span><b>1</b> تماس یا ارسال درخواست اولیه</span>
-    <span><b>2</b> بررسی موضوع مراجعه و مدارک لازم</span>
-    <span><b>3</b> تعیین زمان مناسب برای ارزیابی حضوری</span>
-  </div>
-</section>
+<section class="booking-v2"><div><div class="eyebrow light">BOOKING FLOW</div><h2>مسیر هماهنگی مراجعه</h2></div><div class="booking-grid"><span><b>1</b> تماس یا ارسال درخواست اولیه</span><span><b>2</b> بررسی موضوع مراجعه و مدارک لازم</span><span><b>3</b> تعیین زمان مناسب برای ارزیابی حضوری</span></div></section>
 
 <style>
-  .contact-hero{background:radial-gradient(circle at 15% 30%,#17385c 0,#07172b 58%,#040c16 100%);color:#fff}.contact-hero h1{font-size:clamp(40px,6vw,76px);margin:12px 0}.contact-hero p{max-width:760px;color:#cbd5df;font-size:19px}.direct-contact{background:#fff}.section-head{max-width:820px}.section-head h2,.contact-layout h2,.contact-next h2{font-size:clamp(30px,4vw,44px);line-height:1.45;margin:10px 0}.section-head p{color:#596673}.contact-cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:30px}.contact-card{display:grid;gap:5px;padding:25px;border:1px solid #e2e7e9;border-radius:20px;background:#f9fbfa;transition:.2s}.contact-card:hover{transform:translateY(-3px);border-color:#d7c59e;box-shadow:0 16px 42px #07172b0d}.contact-card small{color:#9b7735;font-weight:800}.contact-card strong{font-size:clamp(22px,3vw,30px);line-height:1.65}.contact-card span{color:#687581;font-size:12px}.address-card{grid-column:1/-1}.address-card strong{font-size:18px}.contact-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:70px;align-items:start}.prep-list{display:grid;gap:9px;margin-top:24px}.prep-list span{display:flex;gap:13px;align-items:center;padding:14px 16px;background:#fff;border:1px solid #e2e7e9;border-radius:14px;font-size:14px}.prep-list b{color:#b99651;font-size:11px}.privacy-note{margin-top:22px;padding:16px 18px;border-radius:14px;background:#eef2f1;color:#5e6a75;font-size:13px}.privacy-note strong{color:#122033}.social-heading{margin-bottom:5px!important}.social-lead{color:#596673;margin-top:0}.social-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px;margin-top:24px}.social-card{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:16px;padding:20px;background:#fff;border:1px solid #e2e7e9;border-radius:18px;transition:.2s}.social-card:hover{transform:translateY(-3px);box-shadow:0 14px 36px #07172b10}.social-mark{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:#07172b;color:#c9aa6b;font-weight:900}.social-card div{display:grid}.social-card small{color:#7a8792;margin-top:2px}.social-card b{font-size:12px;color:#9b7735}.pending{opacity:.72}.pending:hover{transform:none;box-shadow:none}.contact-next{background:#07172b;color:#fff}.booking-steps{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:28px}.booking-steps span{padding:18px;border:1px solid #ffffff1c;border-radius:14px;color:#d3dbe3}.booking-steps b{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#b99651;color:#fff;margin-left:8px}@media(max-width:900px){.contact-layout{grid-template-columns:1fr}.booking-steps{grid-template-columns:1fr}}@media(max-width:600px){.contact-cards,.social-grid{grid-template-columns:1fr}.address-card{grid-column:auto}}
+  .eyebrow{font-size:10px;letter-spacing:.16em;color:#9a7331;font-weight:900}.eyebrow.light{color:#ddc287}.contact-v2-hero{padding:clamp(90px,11vw,150px) clamp(20px,7vw,110px);display:grid;grid-template-columns:1fr .8fr;gap:70px;align-items:center;background:linear-gradient(135deg,#07172b,#12385f);color:#fff}.contact-v2-hero h1{font-size:clamp(48px,7vw,96px);line-height:1.08;margin:12px 0 20px}.contact-v2-hero h1 span{color:#ddc287}.contact-v2-hero>div:first-child>p{font-size:18px;color:#d0d9e1;max-width:700px}.contact-hero-card{padding:28px;border:1px solid rgba(255,255,255,.16);border-radius:22px;background:rgba(255,255,255,.06);backdrop-filter:blur(10px);display:grid;gap:8px}.contact-hero-card small{color:#d9c08a}.contact-hero-card p{color:#c5ced7}.contact-hero-card a{padding:10px 12px;border:1px solid rgba(255,255,255,.18);border-radius:12px;color:#fff;text-decoration:none;text-align:center;background:rgba(255,255,255,.04)}
+  .direct-v2,.social-v2{padding:clamp(66px,8vw,112px) clamp(20px,7vw,110px);background:#fff}.section-head-v2{display:grid;grid-template-columns:1fr minmax(280px,.72fr);gap:60px;align-items:end;margin-bottom:34px}.section-head-v2 h2,.prepare-v2 h2,.social-v2 h2,.booking-v2 h2{font-size:clamp(30px,4.4vw,56px);line-height:1.42;margin:10px 0}.section-head-v2>p,.social-v2>div:first-child>p{color:#65717b;margin:0}.contact-cards-v2{display:grid;grid-template-columns:1fr 1fr;gap:12px}.contact-cards-v2>a,.address-v2{padding:24px;border:1px solid #e0e4e1;border-radius:18px;background:#fafaf8;display:grid;gap:5px;text-decoration:none;color:#1d2c39}.contact-cards-v2 small,.address-v2 small{color:#9a7331}.contact-cards-v2 strong,.address-v2 strong{font-size:clamp(21px,3vw,30px);line-height:1.6}.contact-cards-v2 span,.address-v2 span{color:#6b7680;font-size:12px}.address-v2{grid-column:1/-1}.address-v2 strong{font-size:18px}
+  .prepare-v2{padding:clamp(68px,9vw,122px) clamp(20px,7vw,110px);background:#07172b;color:#fff;display:grid;grid-template-columns:.78fr 1.22fr;gap:70px}.prepare-v2>div:first-child>p{color:#bbc6cf}.prep-grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.prep-grid span{padding:18px;border:1px solid rgba(255,255,255,.12);background:rgba(255,255,255,.045);border-radius:16px;color:#d5dde4}.prep-grid b{display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:#b58d48;margin-left:8px;color:#fff;font-size:10px}
+  .social-v2{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.social-grid-v2{display:grid;grid-template-columns:1fr 1fr;gap:10px}.social-grid-v2>a,.social-grid-v2>.pending{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:14px;padding:18px;border:1px solid #e0e4e1;border-radius:16px;background:#fafaf8;text-decoration:none;color:#24313d}.social-grid-v2>a>span,.social-grid-v2>.pending>span{width:40px;height:40px;border-radius:50%;display:grid;place-items:center;background:#07172b;color:#d9bd82;font-weight:900}.social-grid-v2 div>div{display:grid}.social-grid-v2 small{color:#7b8790}.social-grid-v2 b{font-size:11px;color:#9a7331}.pending{opacity:.7}.booking-v2{padding:clamp(66px,8vw,112px) clamp(20px,7vw,110px);background:#0a1d32;color:#fff}.booking-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:30px}.booking-grid span{padding:18px;border:1px solid #263d55;border-radius:15px;color:#d3dce4}.booking-grid b{display:inline-grid;place-items:center;width:27px;height:27px;border-radius:50%;background:#b58d48;margin-left:8px}
+  @media(max-width:900px){.contact-v2-hero,.section-head-v2,.prepare-v2,.social-v2{grid-template-columns:1fr;gap:28px}.booking-grid{grid-template-columns:1fr}}
+  @media(max-width:620px){.contact-v2-hero h1{font-size:46px}.contact-cards-v2,.prep-grid,.social-grid-v2{grid-template-columns:1fr}.address-v2{grid-column:auto}}
 </style>
