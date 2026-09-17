@@ -31,6 +31,8 @@
   image="/images/services/hair.webp"
   imageAlt="نمای واقعی کم‌پشتی و ریزش مو در یک فرد بزرگسال"
   imagePosition="center 38%"
+  mobileImagePosition="72% center"
+  heroCopySide="left"
   {conditions}
   pathwayTitle="یک نسخه برای همه انواع ریزش مو وجود ندارد"
   pathwayIntro="هدف این مسیر مشخص کردن علت غالب ریزش و انتخاب درمانی است که با شرایط واقعی فولیکول و بیمار هم‌خوان باشد."
