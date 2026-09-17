@@ -49,3 +49,14 @@
     </div>
   </details>
 </header>
+
+<style>
+  .header-logo{display:block;width:34px;height:38px;overflow:visible}
+  @media(max-width:1080px){
+    .mobile-menu{margin-right:auto}
+    .desktop-cta{margin-right:0}
+  }
+  @media(max-width:680px){
+    .header-logo{width:32px;height:36px}
+  }
+</style>
