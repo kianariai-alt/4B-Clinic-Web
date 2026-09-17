@@ -39,19 +39,19 @@
     {
       title: 'نمونه واقعی بهبود ضایعه پوستی با ACS + PL',
       image: '/images/cases/skin-psoriasis-case-1.webp',
-      alt: 'نمونه واقعی قبل و بعد از درمان ضایعه پوستی با ACS و PL',
+      alt: 'نمونه واقعی روند بهبود ضایعه پوستی پس از درمان با ACS و PL',
       caption: 'در این نمونه بالینی، کاهش واضح پوسته‌ریزی و بهبود سطح و ظاهر ضایعه پس از درمان با ترکیب ACS + PL مشاهده شده است.'
     },
     {
       title: 'نمونه واقعی بهبود ضایعه مزمن پوستی',
       image: '/images/cases/skin-psoriasis-case-2.webp',
-      alt: 'تصویر قبل و بعد از بهبود ضایعه مزمن پوستی',
+      alt: 'نمونه واقعی روند بهبود یک ضایعه مزمن پوستی',
       caption: 'نمونه‌ای از بهبود بالینی در ظاهر ضایعه و کیفیت سطح پوست پس از درمان بازساختی در بیمار منتخب.'
     },
     {
       title: 'نمونه واقعی بهبود اسکار',
       image: '/images/cases/skin-scar-case-1.webp',
-      alt: 'تصویر قبل و بعد از بهبود اسکار با رویکرد بازساختی',
+      alt: 'تصویر روند قبل و بعد از بهبود اسکار با رویکرد بازساختی',
       caption: 'در این نمونه، کاهش برجستگی اسکار و بهبود کیفیت و یکنواختی بافت پوست پس از درمان مشاهده شده است.'
     }
   ];
@@ -158,14 +158,14 @@
   .focus-panel h3{font-size:clamp(24px,3vw,38px);margin:8px 0 12px;color:#0a1d33}
   .focus-panel p{margin:0;color:#5f6b75;line-height:2}
   .case-section{background:#fff}
-  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+  .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;align-items:start}
   .case-card{overflow:hidden;border:1px solid #e0e3e3;border-radius:22px;background:#fafaf8;box-shadow:0 16px 40px rgba(7,23,43,.06)}
-  .case-card img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:#eee}
+  .case-card img{display:block;width:100%;height:auto;object-fit:contain;background:#f1f0eb}
   .case-card__copy{padding:22px}
   .case-card__copy span{font-size:10px;letter-spacing:.14em;font-weight:900;color:#a17d3c}
   .case-card__copy h3{font-size:20px;line-height:1.6;margin:7px 0 8px;color:#0b2138}
   .case-card__copy p{font-size:14px;line-height:1.9;color:#65717a;margin:0}
   .case-disclaimer{margin:24px 0 0;color:#77818a;font-size:12px;line-height:1.9}
   @media(max-width:900px){.focus-head,.case-head{grid-template-columns:1fr;gap:20px}.case-grid{grid-template-columns:1fr 1fr}}
-  @media(max-width:640px){.case-grid{grid-template-columns:1fr}.case-card img{aspect-ratio:auto}.focus-panel{padding:22px}}
+  @media(max-width:640px){.case-grid{grid-template-columns:1fr}.focus-panel{padding:22px}}
 </style>
