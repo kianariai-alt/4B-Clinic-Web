@@ -105,7 +105,7 @@
       <button
         type="button"
         class:active={activeFocus === key}
-        on:click={() => (activeFocus = key)}
+        onclick={() => (activeFocus = key)}
         role="tab"
         aria-selected={activeFocus === key}
       >{tab.label}</button>
