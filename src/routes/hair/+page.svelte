@@ -1,5 +1,5 @@
 <script>
-  import ClinicalPathwayPage from '$lib/components/ClinicalPathwayPage.svelte';
+  import PhotoClinicalPage from '$lib/components/PhotoClinicalPage.svelte';
 
   const conditions = [
     { title: 'ریزش موی الگوی مردانه و زنانه', en: 'Androgenetic Hair Loss', text: 'الگوی ریزش، سن شروع، سابقه خانوادگی، تراکم و ضخامت تار مو در انتخاب برنامه درمانی اهمیت دارند.' },
@@ -20,13 +20,17 @@
   <title>درمان ریزش مو و تقویت مو | 4B Clinic تهران</title>
   <meta name="description" content="ارزیابی الگوی ریزش مو و انتخاب برنامه شخصی‌سازی‌شده در 4B Clinic تهران؛ از بررسی علت تا درمان‌های اتولوگ منتخب مانند PL و PRGF." />
   <link rel="canonical" href="https://4b-clinic.com/hair" />
+  <meta property="og:image" content="https://4b-clinic.com/images/services/hair.webp" />
 </svelte:head>
 
-<ClinicalPathwayPage
+<PhotoClinicalPage
   eyebrow="HAIR • SCALP • FOLLICLE"
-  title="درمان ریزش مو"
+  title="ریزش مو"
   titleAccent="از تشخیص علت شروع می‌شود"
-  intro="ریزش مو یک تشخیص واحد نیست. الگوی ریزش، وضعیت پوست سر، سابقه خانوادگی، داروها و عوامل زمینه‌ای باید کنار هم دیده شوند تا درمان واقع‌بینانه و قابل پیگیری انتخاب شود."
+  intro="درمان زمانی منطقی است که بدانیم فولیکول چرا ضعیف شده است. الگوی ریزش، پوست سر، سابقه خانوادگی، داروها و عوامل زمینه‌ای قبل از هر پروتکل بررسی می‌شوند."
+  image="/images/services/hair.webp"
+  imageAlt="نمای واقعی کم‌پشتی و ریزش مو در یک فرد بزرگسال"
+  imagePosition="center 38%"
   {conditions}
   pathwayTitle="یک نسخه برای همه انواع ریزش مو وجود ندارد"
   pathwayIntro="هدف این مسیر مشخص کردن علت غالب ریزش و انتخاب درمانی است که با شرایط واقعی فولیکول و بیمار هم‌خوان باشد."
@@ -38,9 +42,8 @@
   ctaLabel="درخواست ارزیابی مو"
   backHref="/"
   backLabel="بازگشت به صفحه اصلی"
-  visualKind="hair"
-  visualLabel="HAIR • FOLLICLE"
+  badges={['PL', 'PRGF', 'ارزیابی پوست سر', 'پروتکل شخصی']}
   scienceHref="https://zetamed.org/%D9%81%D8%A7%DA%A9%D8%AA%D9%88%D8%B1%D9%87%D8%A7%DB%8C-%D8%B1%D8%B4%D8%AF%DB%8C-%DA%A9%D9%87-%D8%A7%D8%B2-%D9%BE%D9%84%D8%A7%DA%A9%D8%AA%D9%87%D8%A7-%D8%A8%D9%87-%D8%AF%D8%B3%D8%AA-%D9%85/"
   scienceTitle="فاکتورهای رشد پلاکتی و بافت مو"
-  scienceText="اگر می‌خواهید درباره فاکتورهای رشد پلاکتی و نقش آن‌ها در پیام‌رسانی و ترمیم بافت بیشتر بدانید، مطلب علمی Zetamed را مطالعه کنید."
+  scienceText="برای مطالعه عمیق‌تر درباره فاکتورهای رشد پلاکتی و نقش آن‌ها در پیام‌رسانی و ترمیم بافت، مطلب علمی Zetamed را ببینید."
 />
