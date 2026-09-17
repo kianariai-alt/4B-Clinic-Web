@@ -158,12 +158,12 @@
 
 <style>
   .eyebrow{font-size:10px;letter-spacing:.16em;color:#a98039;font-weight:900}.eyebrow.light{color:#e0c68e}
-  .sex-hero{position:relative;min-height:clamp(620px,80vh,880px);display:flex;align-items:flex-end;overflow:hidden;background:#07172b;color:#fff}
-  .sex-hero>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 48%;transform:scale(1.01)}
-  .sex-hero__shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(4,13,24,.97) 0%,rgba(4,13,24,.9) 30%,rgba(4,13,24,.48) 62%,rgba(4,13,24,.12) 100%),linear-gradient(0deg,rgba(4,13,24,.68),transparent 48%)}
-  .sex-hero__inner{position:relative;z-index:2;width:min(100%,1400px);margin:0 auto;padding:clamp(120px,14vw,180px) clamp(22px,7vw,110px) clamp(56px,8vw,96px);max-width:760px;margin-left:auto;margin-right:0}
-  .sex-hero h1{font-size:clamp(42px,6vw,84px);line-height:1.2;margin:12px 0 20px}.sex-hero h1 span{color:#d8bd83}
-  .sex-hero p{font-size:clamp(16px,1.5vw,20px);line-height:2.05;color:#edf1f4;margin:0}
+  .sex-hero{position:relative;overflow:hidden;background:#07172b;color:#fff;padding-top:min(62vh,650px)}
+  .sex-hero>img{position:absolute;top:0;left:0;width:100%;height:min(62vh,650px);object-fit:cover;object-position:center 48%}
+  .sex-hero__shade{position:absolute;top:0;left:0;right:0;height:min(62vh,650px);background:linear-gradient(0deg,rgba(4,13,24,.5) 0%,rgba(4,13,24,.05) 36%,rgba(4,13,24,.03) 100%)}
+  .sex-hero__inner{position:relative;z-index:2;width:min(100%,1400px);margin:0 auto;padding:48px clamp(22px,7vw,110px) 70px}
+  .sex-hero h1{font-size:clamp(42px,6vw,82px);line-height:1.2;margin:12px 0 20px;max-width:1050px}.sex-hero h1 span{color:#d8bd83}
+  .sex-hero p{font-size:clamp(16px,1.5vw,20px);line-height:2.05;color:#edf1f4;margin:0;max-width:940px}
   .hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:28px}.primary-action,.secondary-action{display:inline-flex;align-items:center;justify-content:center;min-height:49px;padding:10px 21px;border-radius:999px;font-weight:900;font-size:13px}.primary-action{background:#bd9650;color:#fff;border:1px solid #bd9650}.secondary-action{border:1px solid rgba(255,255,255,.38);color:#fff;background:rgba(255,255,255,.07)}
   .hero-badges{display:flex;gap:7px;flex-wrap:wrap;margin-top:30px}.hero-badges span{font-size:10px;border:1px solid rgba(255,255,255,.2);padding:5px 10px;border-radius:999px;color:#e5e9ee}
   .providers,.shots-section,.problems-section,.pathway-section,.evidence-note,.privacy-note,.final-cta{padding:clamp(64px,8vw,112px) clamp(20px,7vw,110px)}
@@ -177,6 +177,6 @@
   .privacy-note{display:grid;grid-template-columns:1fr 1fr;gap:70px;background:#fff;align-items:start}.privacy-note p{margin:0;color:#626f79;line-height:2;font-size:17px}
   .final-cta{background:linear-gradient(135deg,#0b2645,#061321);color:#fff;display:flex;justify-content:space-between;align-items:end;gap:40px}.final-cta p{color:#c5ced7;max-width:820px;line-height:2}.final-cta .primary-action{flex:none}
   @media(max-width:1100px){.problem-grid{grid-template-columns:repeat(2,1fr)}}
-  @media(max-width:900px){.providers,.shot-grid,.section-head,.pathway-section,.privacy-note{grid-template-columns:1fr;gap:24px}.final-cta{flex-direction:column;align-items:flex-start}.sex-hero__shade{background:linear-gradient(0deg,rgba(4,13,24,.96) 0%,rgba(4,13,24,.73) 48%,rgba(4,13,24,.14) 100%)}.sex-hero__inner{max-width:none;margin:0;padding:130px 24px 52px}}
-  @media(max-width:640px){.sex-hero{min-height:760px}.sex-hero>img{object-position:62% center}.sex-hero h1{font-size:42px}.sex-hero p{font-size:15px}.hero-actions{flex-direction:column}.primary-action,.secondary-action{width:100%}.problem-grid{grid-template-columns:1fr}.problem-grid article{min-height:auto}.shot-card{padding:24px}.providers article{padding:24px}.evidence-note{grid-template-columns:1fr}.note-mark{width:72px;height:72px}.final-cta .primary-action{width:100%}}
+  @media(max-width:900px){.providers,.shot-grid,.section-head,.pathway-section,.privacy-note{grid-template-columns:1fr;gap:24px}.final-cta{flex-direction:column;align-items:flex-start}}
+  @media(max-width:640px){.sex-hero{padding-top:75vw}.sex-hero>img,.sex-hero__shade{height:75vw}.sex-hero>img{object-position:center center}.sex-hero__inner{padding:34px 20px 44px}.sex-hero h1{font-size:42px}.sex-hero p{font-size:15px}.hero-actions{flex-direction:column}.primary-action,.secondary-action{width:100%}.problem-grid{grid-template-columns:1fr}.problem-grid article{min-height:auto}.shot-card{padding:24px}.providers article{padding:24px}.evidence-note{grid-template-columns:1fr}.note-mark{width:72px;height:72px}.final-cta .primary-action{width:100%}}
 </style>
