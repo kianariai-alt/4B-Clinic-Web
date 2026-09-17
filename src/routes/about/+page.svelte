@@ -1,3 +1,7 @@
+<script>
+  import { site } from '$lib/data/site.js';
+</script>
+
 <svelte:head>
   <title>درباره 4B Clinic | رویکرد درمانی و فلسفه کلینیک</title>
   <meta name="description" content="آشنایی با 4B Clinic؛ کلینیک با تمرکز بر درمان‌های اتولوگ، ارتوبیولوژی و پزشکی بازساختی با رویکرد تشخیص‌محور، شفاف و قابل پیگیری." />
@@ -22,6 +26,15 @@
   <article><span>04</span><h2>ارجاع وقتی لازم است</h2><p>اگر بیمار به درمان دیگری، جراحی یا تخصص متفاوت نیاز دارد، هدف باید رسیدن به همان مسیر مناسب باشد.</p></article>
 </section>
 
+<section class="section manager-band">
+  <div>
+    <div class="eyebrow">CLINIC DIRECTOR</div>
+    <h2>{site.manager.name}</h2>
+    <p><strong>{site.manager.title}</strong> • {site.manager.role}</p>
+  </div>
+  <a class="button" href="/doctors">پزشکان همکار</a>
+</section>
+
 <section class="section scope-section">
   <div><div class="eyebrow">CLINICAL SCOPE</div><h2>حوزه‌های اصلی 4B</h2></div>
   <div class="scope-grid">
@@ -40,5 +53,5 @@
 </section>
 
 <style>
-  .about-hero{min-height:62vh;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 18% 30%,#19395f 0,#07172b 58%,#040c16 100%);color:#fff}.about-hero h1{font-size:clamp(50px,8vw,104px);line-height:1.02;margin:16px 0;color:#d0b374}.about-hero p{max-width:850px;color:#d0d9e2;font-size:18px}.about-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.about-intro h2,.scope-section h2,.about-cta h2{font-size:clamp(30px,4vw,50px);line-height:1.45;margin:10px 0}.about-intro p{color:#5d6976;font-size:17px}.values{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;background:#eef2f1}.values article{background:#fff;border:1px solid #e1e5e5;border-radius:18px;padding:25px}.values span{color:#b99651;font-size:11px;font-weight:900}.values h2{font-size:21px;margin:22px 0 8px}.values p{color:#5d6976;font-size:13px}.scope-section{background:#fff}.scope-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:25px}.scope-grid a{padding:18px;border:1px solid #e1e5e5;border-radius:14px;transition:.2s}.scope-grid a:hover{border-color:#b99651;transform:translateY(-2px)}.about-cta{display:flex;justify-content:space-between;align-items:end;gap:40px;background:#07172b;color:#fff}.about-cta p{max-width:820px;color:#c6d0da}@media(max-width:900px){.about-intro{grid-template-columns:1fr}.values{grid-template-columns:1fr 1fr}.scope-grid{grid-template-columns:1fr 1fr}.about-cta{align-items:flex-start;flex-direction:column}}@media(max-width:620px){.values,.scope-grid{grid-template-columns:1fr}}
+  .about-hero{min-height:62vh;display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 18% 30%,#19395f 0,#07172b 58%,#040c16 100%);color:#fff}.about-hero h1{font-size:clamp(50px,8vw,104px);line-height:1.02;margin:16px 0;color:#d0b374}.about-hero p{max-width:850px;color:#d0d9e2;font-size:18px}.about-intro{display:grid;grid-template-columns:.8fr 1.2fr;gap:70px}.about-intro h2,.scope-section h2,.about-cta h2,.manager-band h2{font-size:clamp(30px,4vw,50px);line-height:1.45;margin:10px 0}.about-intro p{color:#5d6976;font-size:17px}.values{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;background:#eef2f1}.values article{background:#fff;border:1px solid #e1e5e5;border-radius:18px;padding:25px}.values span{color:#b99651;font-size:11px;font-weight:900}.values h2{font-size:21px;margin:22px 0 8px}.values p{color:#5d6976;font-size:13px}.manager-band{display:flex;align-items:end;justify-content:space-between;gap:40px;background:#fff}.manager-band p{margin:0;color:#5d6976}.manager-band strong{color:#8c692f}.scope-section{background:#fff}.scope-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:25px}.scope-grid a{padding:18px;border:1px solid #e1e5e5;border-radius:14px;transition:.2s}.scope-grid a:hover{border-color:#b99651;transform:translateY(-2px)}.about-cta{display:flex;justify-content:space-between;align-items:end;gap:40px;background:#07172b;color:#fff}.about-cta p{max-width:820px;color:#c6d0da}@media(max-width:900px){.about-intro{grid-template-columns:1fr}.values{grid-template-columns:1fr 1fr}.scope-grid{grid-template-columns:1fr 1fr}.about-cta,.manager-band{align-items:flex-start;flex-direction:column}}@media(max-width:620px){.values,.scope-grid{grid-template-columns:1fr}}
 </style>
