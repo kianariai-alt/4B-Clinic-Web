@@ -30,7 +30,7 @@
   <article><span>04</span><h3>جراحی وقتی لازم است</h3><p>درمان‌های بیولوژیک نباید باعث تأخیر در جراحی لازم یا درمان استاندارد شوند.</p></article>
 </section>
 
-<section class="ortho-cta"><div><div class="eyebrow light">NEXT STEP</div><h2>تصویربرداری و سابقه درمان قبلی را همراه داشته باشید.</h2><p>برای تصمیم بهتر، اطلاعات قبلی بیمار از یک عکس تبلیغاتی هزار برابر مفیدتر است. بشریت گاهی واقعاً پیشرفت می‌کند.</p></div><a href="/contact">درخواست ارزیابی ارتوپدی</a></section>
+<section class="ortho-cta"><div><div class="eyebrow light">NEXT STEP</div><h2>تصویربرداری و سابقه درمان قبلی را همراه داشته باشید.</h2><p>گزارش‌ها، تصاویر قبلی و نتیجه درمان‌های انجام‌شده به پزشک کمک می‌کنند مسیر ارزیابی و تصمیم درمانی دقیق‌تری برای شما انتخاب شود.</p></div><a href="/contact">درخواست ارزیابی ارتوپدی</a></section>
 
 <style>
   .ortho-hero{background:#07172b;padding:12px}.ortho-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;min-height:calc(100vh - 100px)}.ortho-panel{position:relative;overflow:hidden;border-radius:28px;color:#fff;text-decoration:none;isolation:isolate}.ortho-panel img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.5s}.ortho-panel .shade{position:absolute;inset:0;background:linear-gradient(0deg,rgba(3,10,18,.95) 0%,rgba(3,10,18,.38) 58%,rgba(3,10,18,.06) 100%)}.ortho-panel .copy{position:absolute;z-index:2;inset:auto 0 0;padding:clamp(28px,5vw,64px)}.ortho-panel small{color:#ddc287;letter-spacing:.12em;font-weight:900}.ortho-panel h1{font-size:clamp(38px,5vw,72px);line-height:1.18;margin:10px 0}.ortho-panel p{max-width:560px;color:#e0e6eb;font-size:16px}.ortho-panel b{display:block;margin-top:22px;color:#e0c68e;font-size:12px}.ortho-panel:hover img{transform:scale(1.035)}
