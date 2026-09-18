@@ -1,0 +1,18 @@
+{
+  "name": "4B Clinic",
+  "short_name": "4B Clinic",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#07172b",
+  "theme_color": "#07172b",
+  "lang": "fa-IR",
+  "dir": "rtl",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}
