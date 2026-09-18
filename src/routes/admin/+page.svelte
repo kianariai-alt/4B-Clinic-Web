@@ -45,7 +45,8 @@
       ],
       faq: [
         ['سؤال رایج', 'پاسخ کوتاه و روشن']
-      ]
+      ],
+      updatedAt: new Date().toISOString()
     };
   }
 
