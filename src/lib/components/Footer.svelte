@@ -18,6 +18,7 @@
       <a href="/doctors">پزشکان همکار</a>
       <a href="/articles">مقالات</a>
       <a href="/contact">تماس و نوبت</a>
+      <a href="/editorial-policy">سیاست تحریریه</a>
     </div>
   </div>
 
