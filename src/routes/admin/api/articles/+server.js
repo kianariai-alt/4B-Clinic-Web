@@ -1,6 +1,7 @@
 import { json } from '@sveltejs/kit';
 import { isAdmin, saveArticles } from '$lib/server/admin.js';
 
+/** @param {string} value */
 function validSlug(value) {
   return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value);
 }
