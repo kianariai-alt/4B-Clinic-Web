@@ -20,7 +20,6 @@
     inLanguage: 'fa-IR',
     author: organizationAuthor,
     publisher: organizationAuthor,
-    ...(article.createdAt ? { datePublished: article.createdAt } : {}),
     ...(article.updatedAt ? { dateModified: article.updatedAt } : {})
   });
   let breadcrumbSchema = $derived({
