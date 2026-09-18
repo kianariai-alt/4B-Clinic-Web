@@ -28,7 +28,7 @@
 
 <svelte:head>
   <title>درمان زخم دیابتی، زخم بستر و زخم مزمن | 4B Clinic تهران</title>
-  <meta name="description" content="ارزیابی و درمان زخم پای دیابتی، زخم بستر، زخم عروقی و زخم دیرترمیم در 4B Clinic تهران؛ پانسمان نوین، دبریدمان، کنترل فشار و عفونت و در بیماران منتخب درمان‌های اتولوگ مانند PL، PRGF و ACS." />
+  <meta name="description" content="ارزیابی زخم پای دیابتی، زخم بستر، زخم عروقی و زخم دیرترمیم در 4B Clinic تهران؛ پانسمان، دبریدمان، کنترل فشار و عفونت و درمان‌های منتخب اتولوگ." />
   <link rel="canonical" href="https://4b-clinic.com/wounds" />
 </svelte:head>
 
