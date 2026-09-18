@@ -1,5 +1,5 @@
 import { site } from '$lib/data/site.js';
-import { articles } from '$lib/data/articles.js';
+import { publishedArticles as articles } from '$lib/data/articles.js';
 
 export const prerender = true;
 
