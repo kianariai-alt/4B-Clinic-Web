@@ -5,9 +5,7 @@ const ARTICLES_PATH = 'src/lib/data/articles.js';
 /** @param {any} event @param {string} name */
 export function envValue(event, name) {
   const platformValue = event?.platform?.env?.[name];
-  if (platformValue) return String(platformValue);
-  if (typeof process !== 'undefined' && process?.env?.[name]) return String(process.env[name]);
-  return '';
+  return platformValue ? String(platformValue) : '';
 }
 
 /** @param {string} input */
