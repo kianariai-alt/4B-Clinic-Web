@@ -1,9 +1,16 @@
 import { json } from '@sveltejs/kit';
 import { isAdmin, saveArticles } from '$lib/server/admin.js';
+import { articles as storedArticles } from '$lib/data/articles.js';
 
 /** @param {string} value */
 function validSlug(value) {
   return /^[a-z0-9]+(?:-[a-z0-9]+)*$/.test(value);
+}
+
+/** @param {any} article */
+function comparable(article) {
+  const { updatedAt, createdAt, ...rest } = article || {};
+  return JSON.stringify(rest);
 }
 
 export async function PUT(event) {
@@ -28,7 +35,14 @@ export async function PUT(event) {
     }
     slugs.add(article.slug);
     article.status = article.status === 'draft' ? 'draft' : 'published';
-    article.updatedAt = new Date().toISOString();
+
+    const existing = storedArticles.find((item) => item.slug === article.slug);
+    const now = new Date().toISOString();
+    article.createdAt = existing?.createdAt || article.createdAt || now;
+    article.updatedAt =
+      existing && comparable(existing) === comparable(article)
+        ? existing.updatedAt || article.updatedAt || now
+        : now;
   }
 
   const payloadSize = new TextEncoder().encode(JSON.stringify(articles)).length;
