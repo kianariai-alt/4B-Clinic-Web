@@ -1,5 +1,5 @@
 <script>
-  import { articles } from '$lib/data/articles.js';
+  import { publishedArticles as articles } from '$lib/data/articles.js';
 </script>
 
 <svelte:head>
