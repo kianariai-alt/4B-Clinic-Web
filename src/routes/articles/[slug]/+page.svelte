@@ -1,7 +1,7 @@
 <script>
   let { data } = $props();
-  const { article } = data;
-  const canonical = `https://4b-clinic.com/articles/${article.slug}`;
+  let article = $derived(data.article);
+  let canonical = $derived(`https://4b-clinic.com/articles/${article.slug}`);
 </script>
 
 <svelte:head>
