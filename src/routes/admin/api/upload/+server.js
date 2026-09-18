@@ -1,12 +1,14 @@
 import { json } from '@sveltejs/kit';
 import { isAdmin, saveImage } from '$lib/server/admin.js';
 
+/** @type {Record<string, string>} */
 const typeToExt = {
   'image/webp': 'webp',
   'image/jpeg': 'jpg',
   'image/png': 'png'
 };
 
+/** @param {FormDataEntryValue | null} value */
 function cleanSlug(value) {
   return String(value || 'article')
     .toLowerCase()
