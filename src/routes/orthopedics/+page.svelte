@@ -1,6 +1,7 @@
 <svelte:head>
   <title>ارتوپدی، زانو و شانه | 4B Clinic</title>
   <meta name="description" content="ارزیابی مشکلات منتخب زانو و شانه، از آرتروز و آسیب مینیسک تا شانه یخ‌زده و پارگی‌های ناکامل روتاتورکاف، با انتخاب درمان متناسب با تشخیص." />
+  <link rel="canonical" href="https://4b-clinic.com/orthopedics" />
 </svelte:head>
 
 <section class="ortho-hero">
