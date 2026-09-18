@@ -83,7 +83,7 @@ export const articles = [
         "بیشتر در برخی بیماران مبتلا به آرتروز یا التهاب مفصل بررسی می‌شود و انتخاب آن نیازمند معاینه و ارزیابی علت درد است."
       ]
     ],
-    "updatedAt": "2026-09-18T07:35:05.906Z"
+    "updatedAt": "2026-09-18T07:36:43.813Z"
   },
   {
     "slug": "platelet-lysate",
@@ -169,7 +169,7 @@ export const articles = [
         "در برخی پروتکل‌های بازساختی بررسی می‌شود، اما شواهد بالینی مستقیم آن از PRP محدودتر است."
       ]
     ],
-    "updatedAt": "2026-09-18T07:35:05.906Z"
+    "updatedAt": "2026-09-18T07:36:43.813Z"
   },
   {
     "slug": "prgf-growth-factors",
@@ -255,7 +255,7 @@ export const articles = [
         "در برخی برنامه‌های درمانی استفاده می‌شود، ولی ابتدا باید نوع ریزش مو مشخص شود."
       ]
     ],
-    "updatedAt": "2026-09-18T07:35:05.906Z"
+    "updatedAt": "2026-09-18T07:36:43.813Z"
   },
   {
     "slug": "exosomes-regenerative-medicine",
@@ -341,7 +341,7 @@ export const articles = [
         "خیر. منبع سلولی، روش تولید، خلوص، دوز و نگهداری می‌توانند بسیار متفاوت باشند."
       ]
     ],
-    "updatedAt": "2026-09-18T07:35:05.906Z"
+    "updatedAt": "2026-09-18T07:36:43.813Z"
   },
   {
     "slug": "svf-stromal-vascular-fraction",
@@ -427,7 +427,7 @@ export const articles = [
         "بله، معمولاً ماده اولیه از بافت چربی خود بیمار تهیه می‌شود."
       ]
     ],
-    "updatedAt": "2026-09-18T07:35:05.906Z"
+    "updatedAt": "2026-09-18T07:36:43.813Z"
   },
   {
     "slug": "mesenchymal-stromal-cells-msc",
@@ -513,7 +513,7 @@ export const articles = [
         "استفاده بالینی باید از منبع دارای مجوز و با کنترل کیفی و مشخصات محصول روشن انجام شود."
       ]
     ],
-    "updatedAt": "2026-09-18T07:35:05.906Z"
+    "updatedAt": "2026-09-18T07:36:43.813Z"
   },
   {
     "slug": "hyaluronic-acid-knee-injection",
@@ -606,7 +606,7 @@ export const articles = [
         "الزاماً نه؛ ویژگی محصول و شواهد بالینی آن مهم‌تر از تعداد تزریق است."
       ]
     ],
-    "updatedAt": "2026-09-18T07:35:05.906Z"
+    "updatedAt": "2026-09-18T07:36:43.813Z"
   },
   {
     "slug": "skin-rejuvenation-autologous",
@@ -699,7 +699,7 @@ export const articles = [
         "درمان‌های بازساختی معمولاً تدریجی‌اند و ارزیابی چند هفته تا چند ماه منطقی‌تر است."
       ]
     ],
-    "updatedAt": "2026-09-18T07:35:05.906Z"
+    "updatedAt": "2026-09-18T07:36:43.813Z"
   },
   {
     "slug": "hair-loss-control",
@@ -792,7 +792,7 @@ export const articles = [
         "وقتی فولیکول در ناحیه‌ای از بین رفته و امکان بازیابی با درمان دارویی یا بازساختی محدود است."
       ]
     ],
-    "updatedAt": "2026-09-18T07:35:05.906Z"
+    "updatedAt": "2026-09-18T07:36:43.813Z"
   },
   {
     "slug": "p-shot-prp-erectile-function",
@@ -892,7 +892,7 @@ export const articles = [
         "ارزیابی عوامل عروقی، دیابت، فشار خون، داروها و در صورت لزوم وضعیت هورمونی اهمیت دارد."
       ]
     ],
-    "updatedAt": "2026-09-18T07:35:05.906Z"
+    "updatedAt": "2026-09-18T07:36:43.813Z"
   },
   {
     "slug": "o-shot-female-sexual-health",
@@ -992,7 +992,7 @@ export const articles = [
         "بله. درد، خشکی، اختلال ارگاسم و بی‌اختیاری هرکدام علل متفاوتی دارند."
       ]
     ],
-    "updatedAt": "2026-09-18T07:35:05.906Z"
+    "updatedAt": "2026-09-18T07:36:43.813Z"
   },
   {
     "slug": "wound-inflammation-angiogenesis",
@@ -1086,36 +1086,7 @@ export const articles = [
         "شواهد اختصاصی آن در زخم محدود است و در صورت استفاده باید به‌عنوان درمان مکمل و انتخابی مطرح شود."
       ]
     ],
-    "updatedAt": "2026-09-18T07:35:05.906Z"
-  },
-  {
-    "slug": "cms-test",
-    "status": "draft",
-    "tag": "تست",
-    "title": "Test",
-    "metaTitle": "",
-    "metaDescription": "",
-    "excerpt": "این مقاله صرفا برای تست است",
-    "image": "/images/services/knee.webp",
-    "imageAlt": "",
-    "keywords": [],
-    "zetaHref": "https://zetamed.org/blog/",
-    "zetaLabel": "مطالعه علمی در Zetamed",
-    "sections": [
-      {
-        "heading": "مقدمه",
-        "paragraphs": [
-          "متن این بخش را وارد کنید."
-        ]
-      }
-    ],
-    "faq": [
-      [
-        "سؤال رایج",
-        "پاسخ کوتاه و روشن"
-      ]
-    ],
-    "updatedAt": "2026-09-18T07:35:05.906Z"
+    "updatedAt": "2026-09-18T07:36:43.813Z"
   }
 ];
 
