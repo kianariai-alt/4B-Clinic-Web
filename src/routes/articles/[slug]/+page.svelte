@@ -1,5 +1,5 @@
 <script>
-  import { organizationAuthor } from '$lib/data/seo.js';
+  import { organizationAuthor, serializeJsonLd } from '$lib/data/seo.js';
 
   let { data } = $props();
   let article = $derived(data.article);
@@ -46,7 +46,7 @@
   <meta name="twitter:description" content={article.metaDescription} />
   <meta name="twitter:image" content={imageUrl} />
   {#if article.updatedAt}<meta property="article:modified_time" content={article.updatedAt} />{/if}
-  <script type="application/ld+json">{JSON.stringify([articleSchema, breadcrumbSchema])}</script>
+  {@html serializeJsonLd([articleSchema, breadcrumbSchema])}
 </svelte:head>
 
 <article class="article-page">
