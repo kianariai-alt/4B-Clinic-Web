@@ -836,4 +836,5 @@ export const articles = [
   }
 ];
 
+/** @param {string} slug */
 export const articleBySlug = (slug) => articles.find((article) => article.slug === slug);
