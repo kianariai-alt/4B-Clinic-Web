@@ -3,7 +3,7 @@ import { publishedArticles as articles } from '$lib/data/articles.js';
 
 export const prerender = true;
 
-const staticPaths = ['', '/orthopedics','/orthopedics/knee','/orthopedics/shoulder','/hair','/skin','/wounds','/sexual-health','/bio-harmony','/technologies','/articles','/doctors','/about','/contact'];
+const staticPaths = ['', '/orthopedics','/orthopedics/knee','/orthopedics/shoulder','/hair','/skin','/wounds','/sexual-health','/bio-harmony','/technologies','/articles','/doctors','/about','/contact','/editorial-policy'];
 
 /** @param {string} path @param {string} [lastmod] */
 function urlEntry(path, lastmod = '') {
