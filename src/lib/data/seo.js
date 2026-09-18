@@ -65,3 +65,14 @@ export const organizationAuthor = {
     url: `${site.domain}/brand/4b-logo-mark-navy.webp`
   }
 };
+
+
+/**
+ * Serialize JSON-LD as a complete script tag for Svelte head injection.
+ * Escaping "<" prevents accidental script termination while preserving valid JSON.
+ * @param {unknown} schema
+ */
+export function serializeJsonLd(schema) {
+  const json = JSON.stringify(schema).replace(/</g, '\\u003c');
+  return `<script type="application/ld+json">${json}</script>`;
+}
