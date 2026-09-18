@@ -37,8 +37,9 @@ export async function PUT(event) {
     article.status = article.status === 'draft' ? 'draft' : 'published';
 
     const existing = storedArticles.find((item) => item.slug === article.slug);
+    const existingCreatedAt = existing && 'createdAt' in existing ? String(existing.createdAt) : '';
     const now = new Date().toISOString();
-    article.createdAt = existing?.createdAt || article.createdAt || now;
+    article.createdAt = existingCreatedAt || article.createdAt || now;
     article.updatedAt =
       existing && comparable(existing) === comparable(article)
         ? existing.updatedAt || article.updatedAt || now
