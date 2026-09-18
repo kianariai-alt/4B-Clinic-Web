@@ -1,6 +1,7 @@
 export const articles = [
   {
     slug: 'acs-autologous-conditioned-serum',
+    status: 'published',
     tag: 'ACS • ارتوبیولوژیک',
     title: 'ACS چیست؟ سرم اتولوگ شرطی‌شده در آرتروز و التهاب مفصل',
     metaTitle: 'ACS چیست؟ تزریق سرم اتولوگ برای آرتروز زانو | 4B Clinic',
@@ -70,6 +71,7 @@ export const articles = [
   },
   {
     slug: 'platelet-lysate',
+    status: 'published',
     tag: 'PL • فاکتورهای رشد',
     title: 'Platelet Lysate چیست؟ پلاکت لیزیت و نقش آن در ترمیم بافت',
     metaTitle: 'پلاکت لیزیت چیست؟ کاربرد Platelet Lysate در زانو، پوست و مو | 4B',
@@ -139,6 +141,7 @@ export const articles = [
   },
   {
     slug: 'prgf-growth-factors',
+    status: 'published',
     tag: 'PRGF • فاکتور رشد',
     title: 'PRGF چیست؟ فاکتورهای رشد مشتق از پلاکت در درمان‌های بازساختی',
     metaTitle: 'PRGF چیست؟ کاربرد PRGF در زانو، پوست و مو | 4B Clinic',
@@ -208,6 +211,7 @@ export const articles = [
   },
   {
     slug: 'exosomes-regenerative-medicine',
+    status: 'published',
     tag: 'EXOSOMES • پیام‌رسان سلولی',
     title: 'اگزوزوم چیست؟ از پیام‌رسانی سلولی تا کاربردهای پوست، مو و مفصل',
     metaTitle: 'اگزوزوم چیست؟ کاربرد Exosome برای مو، پوست و آرتروز | 4B Clinic',
@@ -277,6 +281,7 @@ export const articles = [
   },
   {
     slug: 'svf-stromal-vascular-fraction',
+    status: 'published',
     tag: 'SVF • بافت چربی',
     title: 'SVF چیست؟ فراکسیون عروقی استرومال و کاربرد آن در آرتروز',
     metaTitle: 'SVF چیست؟ تزریق SVF و سلول‌های مشتق از چربی برای آرتروز | 4B',
@@ -346,6 +351,7 @@ export const articles = [
   },
   {
     slug: 'mesenchymal-stromal-cells-msc',
+    status: 'published',
     tag: 'MSC • سلول‌درمانی',
     title: 'MSC چیست؟ سلول‌های مزانشیمی و جایگاه آنها در پزشکی بازساختی',
     metaTitle: 'سلول بنیادی مزانشیمی MSC چیست؟ کاربرد در آرتروز زانو | 4B Clinic',
@@ -415,6 +421,7 @@ export const articles = [
   },
   {
     slug: 'hyaluronic-acid-knee-injection',
+    status: 'published',
     tag: 'HA • زانو',
     title: 'تزریق ژل هیالورونیک اسید زانو؛ چه زمانی می‌تواند کمک‌کننده باشد؟',
     metaTitle: 'تزریق ژل زانو و هیالورونیک اسید برای آرتروز | 4B Clinic تهران',
@@ -491,6 +498,7 @@ export const articles = [
   },
   {
     slug: 'skin-rejuvenation-autologous',
+    status: 'published',
     tag: 'پوست • جوانسازی',
     title: 'جوانسازی پوست با روش‌های اتولوگ؛ از PRGF و PL تا سونوفورزیس',
     metaTitle: 'جوانسازی پوست بدون جراحی با PRGF، PL و سونوفورزیس | 4B Clinic',
@@ -567,6 +575,7 @@ export const articles = [
   },
   {
     slug: 'hair-loss-control',
+    status: 'published',
     tag: 'مو • ریزش مو',
     title: 'قطع ریزش مو؛ اول علت را پیدا کنیم، بعد درمان را انتخاب کنیم',
     metaTitle: 'قطع ریزش مو و درمان ریزش مو بدون کاشت | PL، PRGF و اگزوزوم | 4B',
@@ -643,6 +652,7 @@ export const articles = [
   },
   {
     slug: 'p-shot-prp-erectile-function',
+    status: 'published',
     tag: 'P-SHOT • سلامت مردان',
     title: 'P-Shot چیست؟ PRP و درمان‌های پلاکتی در اختلال نعوظ',
     metaTitle: 'P-Shot چیست؟ تزریق PRP برای اختلال نعوظ و شواهد آن | 4B Clinic',
@@ -726,6 +736,7 @@ export const articles = [
   },
   {
     slug: 'o-shot-female-sexual-health',
+    status: 'published',
     tag: 'O-SHOT • سلامت بانوان',
     title: 'O-Shot چیست؟ PRP و درمان‌های بازساختی در سلامت جنسی بانوان',
     metaTitle: 'O-Shot چیست؟ او شات، PRP و سلامت جنسی بانوان | 4B Clinic',
@@ -809,6 +820,7 @@ export const articles = [
   },
   {
     slug: 'wound-inflammation-angiogenesis',
+    status: 'published',
     tag: 'زخم • التهاب • رگ‌زایی',
     title: 'کنترل التهاب و رگ‌زایی در زخم مزمن؛ نقش ACS، PL و اگزوزوم',
     metaTitle: 'کنترل التهاب و رگ‌زایی زخم با ACS، PL و اگزوزوم | 4B Clinic',
@@ -885,5 +897,7 @@ export const articles = [
   }
 ];
 
+export const publishedArticles = articles.filter((article) => article.status !== 'draft');
+
 /** @param {string} slug */
-export const articleBySlug = (slug) => articles.find((article) => article.slug === slug);
+export const articleBySlug = (slug) => publishedArticles.find((article) => article.slug === slug);
