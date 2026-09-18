@@ -5,6 +5,7 @@ export const prerender = true;
 
 const staticPaths = ['', '/orthopedics','/orthopedics/knee','/orthopedics/shoulder','/hair','/skin','/wounds','/sexual-health','/bio-harmony','/technologies','/articles','/doctors','/about','/contact'];
 
+/** @param {string} path @param {string} [lastmod] */
 function urlEntry(path, lastmod = '') {
   const modified = lastmod ? `<lastmod>${lastmod.slice(0, 10)}</lastmod>` : '';
   return `<url><loc>${site.domain}${path}</loc>${modified}</url>`;
@@ -13,7 +14,7 @@ function urlEntry(path, lastmod = '') {
 export function GET() {
   const staticUrls = staticPaths.map((path) => urlEntry(path));
   const articleUrls = articles.map((article) =>
-    urlEntry(`/articles/${article.slug}`, article.updatedAt || article.createdAt || '')
+    urlEntry(`/articles/${article.slug}`, article.updatedAt || '')
   );
   const urls = [...staticUrls, ...articleUrls].join('');
   return new Response(
