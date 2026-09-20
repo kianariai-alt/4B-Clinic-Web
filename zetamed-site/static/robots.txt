@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: /
+
+# STAGING ONLY. Replace before moving zetamed.org to this build.
