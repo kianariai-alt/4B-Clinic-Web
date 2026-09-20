@@ -2,7 +2,7 @@ export const site = {
   name: '4B Clinic',
   domain: 'https://4b-clinic.com',
   sloganEn: 'Build your Body By your Body',
-  sloganFa: 'بدن خودت را با بدن خودت بساز',
+  sloganFa: 'بدن خودت رو با بدن خودت بساز',
   description: 'کلینیک 4B؛ درمان‌های اتولوگ و ارتوبیولوژیک با تمرکز بر مشکلات منتخب مفاصل و تاندون‌ها، پوست و مو، زخم‌های مزمن و سلامت جنسی.',
   contact: {
     phones: [
@@ -17,13 +17,13 @@ export const site = {
     role: 'مدیر کلینیک'
   },
   nav: [
-    { href: '/orthopedics', label: 'ارتوپدی و مفاصل' },
-    { href: '/hair', label: 'مو' },
+    { href: '/orthopedics', label: 'زانو، شانه و مفاصل' },
+    { href: '/hair', label: 'درمان ریزش مو' },
     { href: '/skin', label: 'پوست و جوانسازی' },
-    { href: '/wounds', label: 'زخم‌های مزمن' },
+    { href: '/wounds', label: 'درمان زخم' },
     { href: '/sexual-health', label: 'سلامت جنسی' },
-    { href: '/doctors', label: 'پزشکان همکار' },
-    { href: '/articles', label: 'مقالات' }
+    { href: '/doctors', label: 'تیم درمان' },
+    { href: '/articles', label: 'راهنمای بیمار' }
   ],
   socials: [
     { key: 'instagram', label: 'اینستاگرام', handle: '', href: null },
