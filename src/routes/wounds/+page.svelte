@@ -3,6 +3,12 @@
 
   const woundImage = '/images/services/wounds.webp';
 
+  const woundGuides = [
+    ['درمان زخم مزمن و دیرترمیم', 'چرا بعضی زخم‌ها متوقف می‌شوند و چه عواملی باید قبل از درمان بازساختی اصلاح شوند؟', '/wounds/chronic-wound-treatment'],
+    ['زخم پای دیابتی', 'از فشار و نوروپاتی تا عفونت و خون‌رسانی؛ مسیر ایمن ارزیابی زخم پای دیابتی.', '/wounds/diabetic-foot'],
+    ['زخم دیابتی؛ چه زمانی اورژانسی است؟', 'علائم هشدار عفونت، ایسکمی و تخریب بافت که نباید منتظر جلسه بعد بمانند.', '/wounds/diabetic-wound-red-flags']
+  ];
+
   const woundTypes = [
     { title: 'زخم پای دیابتی', text: 'کنترل قند، ارزیابی نوروپاتی، فشار روی پا، عفونت و خون‌رسانی باید همزمان با مراقبت موضعی انجام شود. بدون کاهش فشار و اصلاح عوامل زمینه‌ای، درمان موضعی به‌تنهایی کافی نیست.' },
     { title: 'زخم بستر (زخم فشاری)', text: 'کاهش فشار، تغییر وضعیت، تغذیه، کنترل رطوبت و عمق آسیب تعیین می‌کنند چه پانسمان یا مداخله‌ای مناسب‌تر است. برداشتن فشار از ناحیه، بخش اصلی درمان است.' },
@@ -97,6 +103,11 @@
   </ol>
 </section>
 
+<section class="wound-hub">
+  <div class="wound-hub__head"><div><div class="eyebrow">WOUND KNOWLEDGE HUB</div><h2>زخم مزمن و دیابتی؛ اول علت توقف ترمیم را پیدا کنیم</h2></div><p>زخم فقط سطح پوست نیست. فشار، خون‌رسانی، عفونت، قند خون، تغذیه و وضعیت عمومی می‌توانند تعیین کنند زخم چرا ترمیم نمی‌شود و کدام درمان ایمن‌تر است.</p></div>
+  <div class="wound-hub__grid">{#each woundGuides as guide}<a href={guide[2]}><strong>{guide[0]}</strong><p>{guide[1]}</p><b>مطالعه راهنما ←</b></a>{/each}</div>
+</section>
+
 <section class="warning">
   <div class="warning-mark">!</div>
   <div><div class="eyebrow">RED FLAGS</div><h2>بعضی زخم‌ها نباید منتظر جلسه بعد بمانند.</h2><p>تب، درد رو به افزایش، قرمزی منتشرشونده، ترشح بدبو، سیاه‌شدن بافت، سردی اندام یا علائم کاهش خون‌رسانی نیازمند ارزیابی سریع پزشکی هستند. در این شرایط، اولویت با درمان فوری و ایمن است.</p></div>
@@ -125,4 +136,4 @@
   .wound-cta{padding:clamp(62px,8vw,112px) clamp(20px,7vw,110px);background:#0b2630;color:#fff;display:flex;justify-content:space-between;align-items:end;gap:40px}.wound-cta>div{max-width:850px}.wound-cta p{max-width:820px;color:#c1d0d3;line-height:1.95}
   @media(max-width:1000px){.wound-hero{grid-template-columns:1fr}.hero-photo{max-width:720px}.difference,.pathway,.section-head{grid-template-columns:1fr;gap:28px}.grid-3{grid-template-columns:1fr 1fr}.wound-cta{align-items:flex-start;flex-direction:column}}
   @media(max-width:640px){.wound-hero{min-height:auto;padding:88px 18px 54px;gap:30px}.wound-copy h1{font-size:38px;line-height:1.28}.wound-copy>p{font-size:15px;line-height:1.95}.hero-photo{border-radius:18px}.hero-photo figcaption{font-size:11px;padding:11px 13px}.wound-types,.modern-care,.science{padding-left:18px;padding-right:18px}.grid-2,.grid-3{grid-template-columns:1fr}.info-card,.care-card{padding:23px}.warning{grid-template-columns:1fr}.hero-actions{flex-direction:column}.hero-actions a,.wound-cta>a{width:100%}}
-</style>
+.wound-hub{padding:clamp(62px,8vw,112px) clamp(20px,7vw,110px);background:#eef0ec;color:#132538}.wound-hub__head{display:grid;grid-template-columns:1fr minmax(280px,.72fr);gap:60px;align-items:end;margin-bottom:34px}.wound-hub__head h2{font-size:clamp(30px,4.2vw,54px);line-height:1.4;margin:10px 0 0}.wound-hub__head>p{color:#65717b;line-height:1.9}.wound-hub__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.wound-hub__grid a{min-height:220px;padding:26px;border-radius:22px;background:#fff;border:1px solid #dfe4e1;text-decoration:none;color:#17313c;display:flex;flex-direction:column}.wound-hub__grid strong{font-size:20px;line-height:1.6}.wound-hub__grid p{color:#65717b;line-height:1.9;font-size:13px}.wound-hub__grid b{margin-top:auto;color:#8f6a2d;font-size:11px}@media(max-width:800px){.wound-hub__head,.wound-hub__grid{grid-template-columns:1fr}.wound-hub__head{gap:18px}}</style>
