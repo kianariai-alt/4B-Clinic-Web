@@ -29,6 +29,12 @@
     }
   ];
 
+  const scarGuides = [
+    ['درمان جای زخم و اسکار بدون جراحی', 'نوع اسکار، سن آن و کیفیت بافت چگونه انتخاب درمان را تغییر می‌دهند؟', '/skin/scar/non-surgical-scar-treatment'],
+    ['اسکار برجسته و کلوئید', 'چرا اسکار برجسته با اسکار فرورفته یکسان نیست و چه زمانی ارزیابی تخصصی مهم است؟', '/skin/scar/hypertrophic-keloid'],
+    ['اسکار آکنه و فرورفتگی پوست', 'انواع جای جوش و دلیل تفاوت مسیر درمان در اسکارهای فرورفته.', '/skin/scar/acne-scars']
+  ];
+
   const skinGuides = [
     ['جوانسازی پوست بدون جراحی', 'از مراقبت پایه و فوتوبیومدولیشن تا روش‌های اتولوگ منتخب؛ کدام مسیر برای چه هدفی مطرح می‌شود؟', '/skin/non-surgical-rejuvenation'],
     ['جوانسازی پوست بدون تزریق', 'سونوفورزیس چیست، چه محدودیت‌هایی دارد و چه زمانی مسیر غیرتهاجمی ارزش بررسی دارد؟', '/skin/needle-free-rejuvenation'],
@@ -106,6 +112,11 @@
   <div class="skin-intent__grid">{#each skinGuides as guide}<a href={guide[2]}><strong>{guide[0]}</strong><p>{guide[1]}</p><b>مطالعه راهنما ←</b></a>{/each}</div>
 </section>
 
+<section class="scar-hub">
+  <div class="scar-hub__head"><div><div class="eyebrow">SCAR CARE HUB</div><h2>اسکار و جای زخم؛ درمان از تشخیص نوع اسکار شروع می‌شود</h2></div><p>اسکار برجسته، کلوئید، اسکار فرورفته و جای جوش رفتار یکسانی ندارند. این راهنماها برای فهم بهتر نوع اسکار، زمان مناسب درمان و محدودیت روش‌های بازساختی طراحی شده‌اند.</p></div>
+  <div class="scar-hub__grid">{#each scarGuides as guide}<a href={guide[2]}><strong>{guide[0]}</strong><p>{guide[1]}</p><b>مطالعه راهنما ←</b></a>{/each}</div>
+</section>
+
 <section class="case-section">
   <div class="case-head">
     <div>
@@ -161,4 +172,4 @@
   .skin-final-cta a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 20px;border-radius:999px;font-weight:900;font-size:13px;background:#bd9650;color:#fff;border:1px solid #bd9650;flex:none}
   @media(max-width:900px){.case-head{grid-template-columns:1fr;gap:20px}.case-grid{grid-template-columns:1fr 1fr}.skin-final-cta{align-items:flex-start;flex-direction:column}}
   @media(max-width:640px){.case-grid{grid-template-columns:1fr}.skin-final-cta a{width:100%}}
-.skin-intent{padding:clamp(62px,8vw,112px) clamp(20px,7vw,110px);background:#f4f5f1;color:#132538}.skin-intent__head{display:grid;grid-template-columns:1fr minmax(280px,.72fr);gap:60px;align-items:end;margin-bottom:34px}.skin-intent__head h2{font-size:clamp(30px,4.2vw,54px);line-height:1.4;margin:10px 0 0}.skin-intent__head>p{color:#65717b;line-height:1.9}.skin-intent__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skin-intent__grid a{min-height:210px;padding:26px;border-radius:22px;background:#fff;border:1px solid #dfe4e1;text-decoration:none;color:#17313c;display:flex;flex-direction:column}.skin-intent__grid strong{font-size:20px;line-height:1.6}.skin-intent__grid p{color:#65717b;line-height:1.9;font-size:13px}.skin-intent__grid b{margin-top:auto;color:#8f6a2d;font-size:11px}@media(max-width:800px){.skin-intent__head,.skin-intent__grid{grid-template-columns:1fr}.skin-intent__head{gap:18px}}</style>
+.skin-intent{padding:clamp(62px,8vw,112px) clamp(20px,7vw,110px);background:#f4f5f1;color:#132538}.skin-intent__head{display:grid;grid-template-columns:1fr minmax(280px,.72fr);gap:60px;align-items:end;margin-bottom:34px}.skin-intent__head h2{font-size:clamp(30px,4.2vw,54px);line-height:1.4;margin:10px 0 0}.skin-intent__head>p{color:#65717b;line-height:1.9}.skin-intent__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skin-intent__grid a{min-height:210px;padding:26px;border-radius:22px;background:#fff;border:1px solid #dfe4e1;text-decoration:none;color:#17313c;display:flex;flex-direction:column}.skin-intent__grid strong{font-size:20px;line-height:1.6}.skin-intent__grid p{color:#65717b;line-height:1.9;font-size:13px}.skin-intent__grid b{margin-top:auto;color:#8f6a2d;font-size:11px}@media(max-width:800px){.skin-intent__head,.skin-intent__grid{grid-template-columns:1fr}.skin-intent__head{gap:18px}}.scar-hub{padding:clamp(62px,8vw,112px) clamp(20px,7vw,110px);background:#0b2637;color:#fff}.scar-hub__head{display:grid;grid-template-columns:1fr minmax(280px,.72fr);gap:60px;align-items:end;margin-bottom:34px}.scar-hub__head h2{font-size:clamp(30px,4.2vw,54px);line-height:1.4;margin:10px 0 0}.scar-hub__head>p{color:#c7d1d6;line-height:1.9}.scar-hub__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.scar-hub__grid a{min-height:210px;padding:26px;border-radius:22px;background:#fff;color:#17313c;text-decoration:none;display:flex;flex-direction:column}.scar-hub__grid strong{font-size:20px;line-height:1.6}.scar-hub__grid p{color:#65717b;line-height:1.9;font-size:13px}.scar-hub__grid b{margin-top:auto;color:#8f6a2d;font-size:11px}@media(max-width:800px){.scar-hub__head,.scar-hub__grid{grid-template-columns:1fr}.scar-hub__head{gap:18px}}</style>
