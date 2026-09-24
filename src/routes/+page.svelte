@@ -91,6 +91,20 @@
   <div class="clinic-contact"><div class="eyebrow light">تهران • قیطریه</div><h2>ارزیابی حضوری در تهران</h2><p>{site.contact.address}</p><div class="phone-row">{#each site.contact.phones as phone}<a href={phone.href} dir="ltr">{phone.display}</a>{/each}</div><a class="contact-button" href="/contact">راه‌های تماس و نوبت</a></div>
 </section>
 
+<section class="discovery-v2">
+  <div><div class="eyebrow">راهنماهای جدید بیمار</div><h2>مسیرهای کاربردی برای مسئله‌ای که همین حالا دارید</h2><p>این راهنماها از صفحات اصلی به موضوعات دقیق‌تر می‌رسند تا هم بیمار سریع‌تر مسیر مناسب را پیدا کند و هم ساختار موضوعی سایت روشن‌تر باشد.</p></div>
+  <div class="discovery-links">
+    <a href="/orthopedics/knee/osteoarthritis-non-surgical">آرتروز زانو بدون جراحی</a>
+    <a href="/orthopedics/knee/meniscus-non-surgical">پارگی مینیسک بدون جراحی</a>
+    <a href="/hair/hair-loss-control">ارزیابی ریزش فعال مو</a>
+    <a href="/skin/non-surgical-rejuvenation">جوانسازی پوست بدون جراحی</a>
+    <a href="/wounds/chronic-wound-treatment">درمان زخم مزمن</a>
+    <a href="/wounds/diabetic-foot">زخم پای دیابتی</a>
+    <a href="/sexual-health/erectile-dysfunction-evaluation">ارزیابی اختلال نعوظ</a>
+    <a href="/sexual-health/female-dryness-pain">خشکی و درد در بانوان</a>
+  </div>
+</section>
+
 <section class="articles-v2"><div><div class="eyebrow">راهنمای بیمار</div><h2>قبل از مراجعه، بهتر بدانید با چه مسئله‌ای روبه‌رو هستید.</h2><p>مقالات 4B برای تصمیم‌گیری بیمار نوشته می‌شوند. جزئیات علمی‌تر و مباحث سلولی مولکولی به Zetamed ارجاع داده می‌شوند.</p></div><div class="article-actions"><a href="/articles">مقالات و راهنمای بیماران</a><a class="outline-dark" href="https://zetamed.org" target="_blank" rel="noreferrer">مطالعه علمی در Zetamed</a></div></section>
 
 <style>
@@ -102,4 +116,5 @@
   .bio-v2{margin:clamp(36px,6vw,80px);padding:clamp(40px,6vw,78px);border-radius:32px;background:linear-gradient(135deg,#07172b,#12385f);color:#fff;display:flex;justify-content:space-between;align-items:end;gap:40px}.bio-v2 p{max-width:760px;color:#c5ced7}.clinic-v2{display:grid;grid-template-columns:.8fr 1.2fr;background:#f2eee4}.clinic-card,.clinic-contact{padding:clamp(58px,7vw,96px) clamp(20px,7vw,90px)}.clinic-card{background:#f8f8f5}.clinic-card strong{color:#8d692c}.clinic-card p{color:#66727c}.clinic-contact{background:#0a1d32;color:#fff}.clinic-contact p{color:#c2ccd5;max-width:760px}.phone-row{display:flex;gap:9px;flex-wrap:wrap;margin:22px 0}.phone-row a{border:1px solid #38516c;color:#ddc287;padding:8px 13px;border-radius:12px;text-decoration:none}.contact-button{margin-top:6px}.articles-v2{display:flex;justify-content:space-between;align-items:end;gap:50px;background:#fff}.articles-v2>div:first-child{max-width:820px}.articles-v2 p{color:#65717b}.article-actions{display:flex;gap:9px;flex-wrap:wrap;justify-content:flex-end}.article-actions .outline-dark{background:#fff;color:#132538;border:1px solid #cbd2cf}
   @media(max-width:1000px){.home-v2-shade{background:linear-gradient(0deg,rgba(3,10,18,.98) 0%,rgba(3,10,18,.78) 50%,rgba(3,10,18,.1) 100%)}.home-v2-content{width:auto;margin:0;padding:130px 24px 52px}.home-intro-v2,.section-heading-v2,.approach-v2,.clinic-v2{grid-template-columns:1fr;gap:28px}.service-photo-grid{grid-template-columns:1fr 1fr}.photo-service-card.large{grid-column:span 1}.tech-list-v2{grid-template-columns:1fr 1fr}.articles-v2{align-items:flex-start;flex-direction:column}.article-actions{justify-content:flex-start}}
   @media(max-width:650px){.home-v2-hero{min-height:760px}.home-v2-hero>img{object-position:right center}.home-v2-content{padding-top:290px}.home-v2-content h1{font-size:46px}.home-actions{flex-direction:column}.home-actions a{width:100%}.service-photo-grid{grid-template-columns:1fr;grid-auto-rows:330px}.tech-list-v2{grid-template-columns:1fr}.approach-steps{grid-template-columns:1fr}.bio-v2{margin:28px 14px;padding:34px 22px;align-items:flex-start;flex-direction:column}.bio-v2>a{width:100%}.phone-row{display:grid;grid-template-columns:1fr 1fr}.article-actions{width:100%;display:grid}.article-actions>a{width:100%}}
+.discovery-v2{padding:clamp(62px,8vw,104px) clamp(20px,7vw,110px);background:#faf7ef;display:grid;grid-template-columns:.8fr 1.2fr;gap:60px;align-items:start}.discovery-v2 h2{font-size:clamp(28px,4vw,48px);line-height:1.45;margin:10px 0}.discovery-v2 p{color:#65717b}.discovery-links{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}.discovery-links a{padding:16px 18px;border:1px solid #ded7c7;border-radius:15px;background:#fff;color:#17313d;text-decoration:none;font-weight:800}.discovery-links a:hover{border-color:#b58d48}@media(max-width:760px){.discovery-v2{grid-template-columns:1fr;gap:24px}.discovery-links{grid-template-columns:1fr}}
 </style>
