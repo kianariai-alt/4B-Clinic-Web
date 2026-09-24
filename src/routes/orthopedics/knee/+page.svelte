@@ -9,6 +9,14 @@
     ['درجه‌بندی و هدف', 'شدت بیماری، وضعیت بافت، سن، سطح فعالیت و هدف واقعی بیمار کنار هم قرار می‌گیرند.'],
     ['انتخاب مسیر', 'بازتوانی، اصلاح عوامل زمینه‌ای، دارو، تزریق یا در موارد لازم ارجاع برای جراحی بررسی می‌شوند.']
   ];
+  const scienceGuides = [
+    ['ACS', 'کنترل محیط التهابی مفصل', '/articles/acs-autologous-conditioned-serum'],
+    ['PRGF', 'فاکتورهای رشد مشتق از پلاکت', '/articles/prgf-growth-factors'],
+    ['PL', 'Platelet Lysate و فرآورده پلاکتی', '/articles/platelet-lysate'],
+    ['HA', 'تزریق هیالورونیک اسید برای زانو', '/articles/hyaluronic-acid-knee-injection'],
+    ['SVF', 'کسر عروقی استرومایی و سطح شواهد', '/articles/svf-stromal-vascular-fraction'],
+    ['MSC', 'سلول‌های استرومایی مزانشیمی و شواهد', '/articles/mesenchymal-stromal-cells-msc']
+  ];
   const therapies = [
     ['PL', 'پلاکت لیزیت'],
     ['PRGF', 'فاکتورهای رشد مشتق از پلاکت'],
@@ -60,6 +68,11 @@
   </div>
 </section>
 
+<section class="v2-section evidence-map">
+  <div class="section-head"><div><div class="eyebrow-dark">EVIDENCE MAP</div><h2>روش‌ها را با اسمشان انتخاب نکنید؛ شواهد و اندیکاسیون را ببینید</h2></div><p>این راهنماها توضیح می‌دهند هر فناوری چیست، چه منطقی دارد و محدودیت شواهد آن کجاست. تصمیم درمانی بعد از ارزیابی بالینی انجام می‌شود.</p></div>
+  <div class="evidence-grid">{#each scienceGuides as guide}<a href={guide[2]}><b>{guide[0]}</b><span>{guide[1]}</span><i>مطالعه راهنما ←</i></a>{/each}</div>
+</section>
+
 <section class="bio-harmony-v2">
   <div><div class="eyebrow-light">BIO HARMONY</div><h2>مسیر چندسطحی 4B برای آرتروز زانو</h2><p>Bio Harmony یک آمپول واحد نیست. ساختاری است برای انتخاب مرحله‌ای درمان بر اساس شدت علائم، شرایط مفصل و ارزیابی پزشک.</p></div>
   <a href="/bio-harmony">آشنایی با Bio Harmony</a>
@@ -100,4 +113,4 @@
   .bio-harmony-v2{margin:clamp(36px,6vw,80px);padding:clamp(38px,6vw,78px);border-radius:30px;background:linear-gradient(135deg,#07172b,#12385f);color:#fff;display:flex;justify-content:space-between;align-items:end;gap:40px}.bio-harmony-v2 p{max-width:760px;color:#c5ced7}.science-v2{padding-top:20px;padding-bottom:20px}.faq-v2{background:#fff}.faq-list{display:grid;gap:9px;max-width:960px}.faq-list details{padding:18px 20px;border:1px solid #e1e4e2;border-radius:15px;background:#fbfbf9}.faq-list summary{cursor:pointer;font-weight:900}.faq-list p{color:#5f6a74}.knee-final{padding:clamp(62px,8vw,112px) clamp(20px,7vw,110px);background:#07172b;color:#fff;display:flex;justify-content:space-between;align-items:end;gap:40px}.knee-final p{color:#c5ced7;max-width:820px}
   @media(max-width:900px){.knee-v2-overlay{background:linear-gradient(0deg,rgba(4,13,24,.98) 0%,rgba(4,13,24,.78) 50%,rgba(4,13,24,.10) 100%)}.knee-v2-copy{width:auto;margin:0;padding:120px 22px 48px}.knee-intro,.section-head,.treatment-section{grid-template-columns:1fr;gap:26px}.path-grid{grid-template-columns:1fr 1fr}.bio-harmony-v2,.knee-final{align-items:flex-start;flex-direction:column}}
   @media(max-width:620px){.knee-v2-hero{min-height:720px}.knee-v2-hero>img{object-position:right center}.knee-v2-copy{padding-top:290px}.knee-v2-copy h1{font-size:42px}.knee-actions{flex-direction:column}.knee-actions a{width:100%}.symptom-grid,.path-grid{grid-template-columns:1fr}.therapy-list div{grid-template-columns:100px 1fr}.bio-harmony-v2{margin:26px 14px;padding:34px 22px}.knee-final>a{width:100%}}
-.intent-guides{background:#f7f7f4}.intent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.intent-grid a{display:grid;gap:8px;padding:24px;border-radius:20px;background:#fff;border:1px solid #dfe4e1;text-decoration:none;color:#17313c}.intent-grid strong{font-size:18px}.intent-grid span{font-size:13px;color:#66727b}@media(max-width:800px){.intent-grid{grid-template-columns:1fr}}</style>
+.intent-guides{background:#f7f7f4}.intent-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.intent-grid a{display:grid;gap:8px;padding:24px;border-radius:20px;background:#fff;border:1px solid #dfe4e1;text-decoration:none;color:#17313c}.intent-grid strong{font-size:18px}.intent-grid span{font-size:13px;color:#66727b}@media(max-width:800px){.intent-grid{grid-template-columns:1fr}}.evidence-map{background:#eef0ec}.evidence-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.evidence-grid a{min-height:160px;padding:24px;border-radius:20px;background:#fff;border:1px solid #dce2de;text-decoration:none;color:#17313c;display:flex;flex-direction:column}.evidence-grid b{font-size:24px;color:#8f6a2d}.evidence-grid span{margin-top:9px;color:#5f6a74;font-size:13px}.evidence-grid i{margin-top:auto;padding-top:20px;color:#89672d;font-style:normal;font-size:11px;font-weight:900}@media(max-width:800px){.evidence-grid{grid-template-columns:1fr 1fr}}@media(max-width:520px){.evidence-grid{grid-template-columns:1fr}}</style>
