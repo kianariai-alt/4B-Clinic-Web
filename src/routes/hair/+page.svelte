@@ -8,6 +8,11 @@
     { title: 'مشکلات پوست سر', en: 'Scalp Conditions', text: 'التهاب، خارش، پوسته‌ریزی یا ریزش اسکاری نیازمند افتراق تشخیصی‌اند و در صورت لزوم ارجاع تخصصی انجام می‌شود.' }
   ];
 
+  const hairGuides = [
+    ['قطع ریزش مو؛ اول علت را پیدا کنیم', 'ریزش فعال مو چه علت‌هایی دارد و چه زمانی باید بررسی آزمایشگاهی یا پزشکی انجام شود؟', '/hair/hair-loss-control'],
+    ['درمان ریزش مو بدون جراحی', 'از درمان علت تا روش‌های استاندارد و فرآورده‌های اتولوگ منتخب.', '/hair/non-surgical-hair-loss'],
+    ['PL و PRGF برای مو چه تفاوتی دارند؟', 'تفاوت فرآورده‌ها، منطق زیستی و محدودیت‌های واقعی شواهد.', '/hair/pl-prgf']
+  ];
   const steps = [
     { title: 'ارزیابی علت', text: 'شرح حال، الگوی ریزش، داروها، بیماری‌های زمینه‌ای و وضعیت پوست سر بررسی می‌شوند.' },
     { title: 'ثبت پایه', text: 'عکس‌های استاندارد و در صورت امکان ارزیابی تراکم و ضخامت برای مقایسه بعدی ثبت می‌شوند.' },
@@ -19,6 +24,15 @@
 <svelte:head>
   <title>درمان ریزش مو و تقویت مو | 4B Clinic تهران</title>
   <meta name="description" content="ارزیابی الگوی ریزش مو و انتخاب برنامه شخصی‌سازی‌شده در 4B Clinic تهران؛ از بررسی علت تا درمان‌های اتولوگ منتخب مانند PL و PRGF." />
+
+<section class="hair-intent">
+  <div class="hair-intent__head"><div><span>HAIR KNOWLEDGE HUB</span><h2>قبل از انتخاب روش، مسئله ریزش مو را درست بشناسیم</h2></div><p>سه راهنمای بیمارمحور برای سؤال‌هایی که بیشتر پیش از مراجعه مطرح می‌شوند. هر راهنما به مسیر ارزیابی مو در 4B برمی‌گردد.</p></div>
+  <div class="hair-intent__grid">{#each hairGuides as guide}<a href={guide[2]}><strong>{guide[0]}</strong><p>{guide[1]}</p><b>مطالعه راهنما ←</b></a>{/each}</div>
+</section>
+
+<style>
+.hair-intent{padding:clamp(62px,8vw,112px) clamp(20px,7vw,110px);background:#f4f5f1;color:#132538}.hair-intent__head{display:grid;grid-template-columns:1fr minmax(280px,.72fr);gap:60px;align-items:end;margin-bottom:34px}.hair-intent__head span{font-size:10px;letter-spacing:.16em;color:#9c7532;font-weight:900}.hair-intent__head h2{font-size:clamp(30px,4.2vw,54px);line-height:1.4;margin:10px 0 0}.hair-intent__head>p{color:#65717b;line-height:1.9}.hair-intent__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.hair-intent__grid a{min-height:210px;padding:26px;border-radius:22px;background:#fff;border:1px solid #dfe4e1;text-decoration:none;color:#17313c;display:flex;flex-direction:column}.hair-intent__grid strong{font-size:20px;line-height:1.6}.hair-intent__grid p{color:#65717b;line-height:1.9;font-size:13px}.hair-intent__grid b{margin-top:auto;color:#8f6a2d;font-size:11px}@media(max-width:800px){.hair-intent__head,.hair-intent__grid{grid-template-columns:1fr}.hair-intent__head{gap:18px}}
+</style>
   <link rel="canonical" href="https://4b-clinic.com/hair" />
   <meta property="og:image" content="https://4b-clinic.com/images/services/hair.webp" />
 </svelte:head>
