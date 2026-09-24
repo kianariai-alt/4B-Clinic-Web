@@ -5,6 +5,7 @@
   let article = $derived(data.article);
   let canonical = $derived(`https://4b-clinic.com/articles/${article.slug}`);
   let imageUrl = $derived(`https://4b-clinic.com${article.image}`);
+  /** @type {Record<string, {href: string, label: string, title: string, text: string}>} */
   const clinicalRoutes = {
     'acs-autologous-conditioned-serum': { href: '/orthopedics/knee', label: 'مرکز درمان زانو 4B', title: 'این فناوری در مسیر درمان زانو کجا قرار می‌گیرد؟', text: 'نام یک فناوری به‌تنهایی تعیین‌کننده درمان نیست. برای دیدن مسیر ارزیابی آرتروز، مینیسک و گزینه‌های غیرجراحی به مرکز درمان زانو برگردید.' },
     'platelet-lysate': { href: '/orthopedics/knee', label: 'مرکز درمان زانو 4B', title: 'PL در مسیر درمان زانو کجا قرار می‌گیرد؟', text: 'شواهد و کاربرد بالینی PL باید در کنار تشخیص، شدت بیماری و درمان‌های پایه دیده شود. مسیر بیمارمحور زانو، گزینه‌ها را در زمینه بالینی قرار می‌دهد.' },
