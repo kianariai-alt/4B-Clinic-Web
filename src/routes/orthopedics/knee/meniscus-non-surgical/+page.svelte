@@ -1,0 +1,14 @@
+<script>
+  const sections = [["همه پارگی‌های مینیسک شبیه هم نیستند",["پارگی ممکن است پس از آسیب ورزشی ایجاد شود یا بخشی از تغییرات دژنراتیو زانو باشد. محل، شکل، اندازه و پایداری پارگی در تصمیم درمانی اهمیت دارد.","MRI باید همراه با شرح حال و معاینه تفسیر شود؛ یافته تصویربرداری بدون علامت بالینی الزاماً هدف درمان نیست."]],["چه زمانی درمان غیرجراحی مطرح است؟",["در بسیاری از پارگی‌های دژنراتیو و برخی پارگی‌های پایدار، کنترل فعالیت، بازتوانی و تقویت عضلات می‌تواند بخش اصلی درمان باشد. هدف، کاهش درد و بازگرداندن عملکرد است.","وجود آرتروز همراه نیز مسیر درمان را تغییر می‌دهد و باید مشخص شود سهم اصلی درد از مینیسک است یا کل مفصل."]],["چه زمانی ارزیابی جراحی مهم‌تر می‌شود؟",["قفل‌شدن واقعی زانو، آسیب حاد مشخص، برخی پارگی‌های ناپایدار یا علائم مداوم با وجود درمان مناسب می‌توانند نیاز به نظر جراح ارتوپد را بیشتر کنند.","تصمیم جراحی باید بر اساس مجموعه یافته‌ها باشد، نه صرفاً یک جمله در گزارش MRI."]],["نقش درمان‌های تزریقی چیست؟",["تزریق نمی‌تواند هر نوع پارگی مکانیکی را ترمیم کند. در بیمار منتخب، درمان تزریقی ممکن است برای مدیریت محیط التهابی مفصل یا علائم همراه بررسی شود، اما جای تشخیص ساختاری و بازتوانی را نمی‌گیرد."]]];
+</script>
+<svelte:head>
+  <title>درمان پارگی مینیسک بدون جراحی | 4B Clinic</title>
+  <meta name="description" content="آیا پارگی مینیسک بدون جراحی درمان می‌شود؟ تفاوت پارگی‌های قابل مدیریت غیرجراحی با موارد نیازمند ارزیابی جراحی و مسیر درمان در 4B Clinic." />
+</svelte:head>
+<article class="guide">
+  <header><a href="/orthopedics/knee">مرکز درمان زانو 4B ←</a><h1>پارگی مینیسک بدون جراحی؛ چه زمانی امکان‌پذیر است؟</h1><p>دیدن عبارت «پارگی مینیسک» در MRI به تنهایی تعیین نمی‌کند که بیمار باید جراحی شود. نوع پارگی، علائم، سن، وضعیت غضروف و عملکرد زانو مهم‌اند.</p></header>
+  <main>{#each sections as s}<section><h2>{s[0]}</h2>{#each s[1] as p}<p>{p}</p>{/each}</section>{/each}
+    <aside><strong>مسیر بعدی</strong><p>انتخاب درمان به معاینه، شدت آسیب، تصویربرداری و هدف بیمار وابسته است.</p><a href="/orthopedics/knee">بررسی مسیر درمان زانو</a><a href="/contact">درخواست ارزیابی</a></aside>
+  </main>
+</article>
+<style>.guide{background:#f7f7f4;color:#17313c;min-height:100vh}.guide header{padding:130px max(22px,8vw) 70px;background:linear-gradient(135deg,#07172b,#12385f);color:white}.guide header a{color:#ddc287;text-decoration:none;font-weight:800}.guide h1{font-size:clamp(38px,6vw,72px);line-height:1.35;max-width:1000px}.guide header p{font-size:18px;line-height:2;max-width:850px;color:#d5dee6}.guide main{max-width:920px;margin:auto;padding:70px 22px}.guide section{margin-bottom:50px}.guide h2{font-size:clamp(26px,4vw,42px)}.guide p{line-height:2.15;color:#45545e}.guide aside{padding:28px;border-radius:24px;background:#fff;border:1px solid #dfe4e1}.guide aside a{display:inline-block;margin:10px 0 0 10px;padding:10px 16px;border-radius:999px;background:#0b2b3a;color:white;text-decoration:none}</style>
