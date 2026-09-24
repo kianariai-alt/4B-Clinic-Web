@@ -29,6 +29,12 @@
     }
   ];
 
+  const skinGuides = [
+    ['جوانسازی پوست بدون جراحی', 'از مراقبت پایه و فوتوبیومدولیشن تا روش‌های اتولوگ منتخب؛ کدام مسیر برای چه هدفی مطرح می‌شود؟', '/skin/non-surgical-rejuvenation'],
+    ['جوانسازی پوست بدون تزریق', 'سونوفورزیس چیست، چه محدودیت‌هایی دارد و چه زمانی مسیر غیرتهاجمی ارزش بررسی دارد؟', '/skin/needle-free-rejuvenation'],
+    ['PL و PRGF برای جوانسازی پوست', 'تفاوت دو فرآورده پلاکتی و اینکه چرا نام فناوری به‌تنهایی نتیجه را تعیین نمی‌کند.', '/skin/pl-prgf-rejuvenation']
+  ];
+
   const steps = [
     { title: 'انتخاب فرآورده اتولوگ', text: 'بر اساس هدف درمان و شرایط پوست، فرآورده‌های منتخب مانند PL یا PRGF و نحوه استفاده از آن‌ها مشخص می‌شوند.' },
     { title: 'انتقال بدون تزریق یا تزریق مستقیم', text: 'در مسیر غیرتهاجمی، سونوفورزیس برای افزایش موقت نفوذپذیری سد پوستی به کار می‌رود؛ در مسیر تزریقی، فرآورده مستقیماً به ناحیه هدف رسانده می‌شود.' },
@@ -95,6 +101,11 @@
   scienceText="برای آشنایی عمیق‌تر با مبانی پزشکی بازساختی، پیام‌رسانی سلولی و محدودیت‌های واقعی این درمان‌ها، محتوای علمی Zetamed را مطالعه کنید."
 />
 
+<section class="skin-intent">
+  <div class="skin-intent__head"><div><div class="eyebrow">SKIN KNOWLEDGE HUB</div><h2>جوانسازی پوست؛ اول هدف، بعد روش</h2></div><p>سه راهنمای بیمارمحور برای انتخاب آگاهانه‌تر میان مسیرهای غیرجراحی، بدون تزریق و فرآورده‌های اتولوگ. ارزیابی کیفیت پوست و هدف درمانی قبل از انتخاب تکنیک انجام می‌شود.</p></div>
+  <div class="skin-intent__grid">{#each skinGuides as guide}<a href={guide[2]}><strong>{guide[0]}</strong><p>{guide[1]}</p><b>مطالعه راهنما ←</b></a>{/each}</div>
+</section>
+
 <section class="case-section">
   <div class="case-head">
     <div>
@@ -150,4 +161,4 @@
   .skin-final-cta a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:10px 20px;border-radius:999px;font-weight:900;font-size:13px;background:#bd9650;color:#fff;border:1px solid #bd9650;flex:none}
   @media(max-width:900px){.case-head{grid-template-columns:1fr;gap:20px}.case-grid{grid-template-columns:1fr 1fr}.skin-final-cta{align-items:flex-start;flex-direction:column}}
   @media(max-width:640px){.case-grid{grid-template-columns:1fr}.skin-final-cta a{width:100%}}
-</style>
+.skin-intent{padding:clamp(62px,8vw,112px) clamp(20px,7vw,110px);background:#f4f5f1;color:#132538}.skin-intent__head{display:grid;grid-template-columns:1fr minmax(280px,.72fr);gap:60px;align-items:end;margin-bottom:34px}.skin-intent__head h2{font-size:clamp(30px,4.2vw,54px);line-height:1.4;margin:10px 0 0}.skin-intent__head>p{color:#65717b;line-height:1.9}.skin-intent__grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.skin-intent__grid a{min-height:210px;padding:26px;border-radius:22px;background:#fff;border:1px solid #dfe4e1;text-decoration:none;color:#17313c;display:flex;flex-direction:column}.skin-intent__grid strong{font-size:20px;line-height:1.6}.skin-intent__grid p{color:#65717b;line-height:1.9;font-size:13px}.skin-intent__grid b{margin-top:auto;color:#8f6a2d;font-size:11px}@media(max-width:800px){.skin-intent__head,.skin-intent__grid{grid-template-columns:1fr}.skin-intent__head{gap:18px}}</style>
