@@ -9,7 +9,8 @@ const staticPaths = ['', '/orthopedics','/orthopedics/knee','/orthopedics/knee/o
 /** @param {string} path @param {string} [lastmod] */
 function urlEntry(path, lastmod = '') {
   const modified = lastmod ? `<lastmod>${lastmod.slice(0, 10)}</lastmod>` : '';
-  return `<url><loc>${site.domain}${path}</loc>${modified}</url>`;
+  const priority = path === '' ? '<priority>1.0</priority>' : '';
+  return `<url><loc>${site.domain}${path}</loc>${modified}${priority}</url>`;
 }
 
 export function GET() {
@@ -17,9 +18,9 @@ export function GET() {
   const articleUrls = articles.map((article) =>
     urlEntry(`/articles/${article.slug}`, article.updatedAt || '')
   );
-  const urls = [...new Set([...staticUrls, ...articleUrls])].join('');
+  const urls = [...new Set([...staticUrls, ...articleUrls])].join('\n');
   return new Response(
-    `<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">${urls}</urlset>`,
+    `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls}\n</urlset>`,
     { headers: { 'content-type': 'application/xml; charset=utf-8' } }
   );
 }
