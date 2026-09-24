@@ -4,6 +4,7 @@
 <svelte:head>
   <title>ساییدگی زانو چیست؟ علائم و درمان | 4B Clinic</title>
   <meta name="description" content="ساییدگی زانو یا آرتروز زانو چیست، چه علائمی دارد و درمان آن چگونه بر اساس شدت بیماری انتخاب می‌شود؟ راهنمای بیمار 4B Clinic." />
+  <link rel="canonical" href="https://4b-clinic.com/orthopedics/knee/knee-wear" />
 </svelte:head>
 <article class="guide">
   <header><a href="/orthopedics/knee">مرکز درمان زانو 4B ←</a><h1>ساییدگی زانو چیست و چه درمان‌هایی دارد؟</h1><p>«ساییدگی زانو» اصطلاح رایجی برای تغییرات دژنراتیو مفصل است، اما وضعیت واقعی زانو پیچیده‌تر از کم‌شدن فاصله مفصلی در یک عکس است.</p></header>

@@ -4,6 +4,7 @@
 <svelte:head>
   <title>درمان آرتروز زانو بدون جراحی | راهنمای بیمار 4B Clinic</title>
   <meta name="description" content="درمان آرتروز زانو بدون جراحی چگونه انتخاب می‌شود؟ از ورزش و کاهش وزن تا تزریق‌های منتخب و درمان‌های ارتوبیولوژیک؛ راهنمای بیمار 4B Clinic." />
+  <link rel="canonical" href="https://4b-clinic.com/orthopedics/knee/osteoarthritis-non-surgical" />
 </svelte:head>
 <article class="guide">
   <header><a href="/orthopedics/knee">مرکز درمان زانو 4B ←</a><h1>درمان آرتروز زانو بدون جراحی؛ چه گزینه‌هایی داریم؟</h1><p>آرتروز زانو همیشه به معنی جراحی فوری نیست. درمان مناسب به شدت بیماری، علت درد، عملکرد مفصل و شرایط هر بیمار بستگی دارد.</p></header>

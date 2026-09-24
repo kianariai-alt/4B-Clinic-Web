@@ -4,6 +4,7 @@
 <svelte:head>
   <title>درمان پارگی مینیسک بدون جراحی | 4B Clinic</title>
   <meta name="description" content="آیا پارگی مینیسک بدون جراحی درمان می‌شود؟ تفاوت پارگی‌های قابل مدیریت غیرجراحی با موارد نیازمند ارزیابی جراحی و مسیر درمان در 4B Clinic." />
+  <link rel="canonical" href="https://4b-clinic.com/orthopedics/knee/meniscus-non-surgical" />
 </svelte:head>
 <article class="guide">
   <header><a href="/orthopedics/knee">مرکز درمان زانو 4B ←</a><h1>پارگی مینیسک بدون جراحی؛ چه زمانی امکان‌پذیر است؟</h1><p>دیدن عبارت «پارگی مینیسک» در MRI به تنهایی تعیین نمی‌کند که بیمار باید جراحی شود. نوع پارگی، علائم، سن، وضعیت غضروف و عملکرد زانو مهم‌اند.</p></header>
