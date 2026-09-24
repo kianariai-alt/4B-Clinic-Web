@@ -5,8 +5,21 @@
   let article = $derived(data.article);
   let canonical = $derived(`https://4b-clinic.com/articles/${article.slug}`);
   let imageUrl = $derived(`https://4b-clinic.com${article.image}`);
-  const kneeSlugs = new Set(['acs-autologous-conditioned-serum','platelet-lysate','prgf-growth-factors','exosomes-regenerative-medicine','svf-stromal-vascular-fraction','mesenchymal-stromal-cells-msc','hyaluronic-acid-knee-injection']);
-  let isKneeScience = $derived(kneeSlugs.has(article.slug));
+  const clinicalRoutes = {
+    'acs-autologous-conditioned-serum': { href: '/orthopedics/knee', label: 'مرکز درمان زانو 4B', title: 'این فناوری در مسیر درمان زانو کجا قرار می‌گیرد؟', text: 'نام یک فناوری به‌تنهایی تعیین‌کننده درمان نیست. برای دیدن مسیر ارزیابی آرتروز، مینیسک و گزینه‌های غیرجراحی به مرکز درمان زانو برگردید.' },
+    'platelet-lysate': { href: '/orthopedics/knee', label: 'مرکز درمان زانو 4B', title: 'PL در مسیر درمان زانو کجا قرار می‌گیرد؟', text: 'شواهد و کاربرد بالینی PL باید در کنار تشخیص، شدت بیماری و درمان‌های پایه دیده شود. مسیر بیمارمحور زانو، گزینه‌ها را در زمینه بالینی قرار می‌دهد.' },
+    'prgf-growth-factors': { href: '/orthopedics/knee', label: 'مرکز درمان زانو 4B', title: 'PRGF در مسیر درمان زانو کجا قرار می‌گیرد؟', text: 'برای تصمیم درمانی، نام فرآورده کافی نیست. مسیر زانو توضیح می‌دهد ارزیابی آرتروز و مینیسک چگونه به انتخاب گزینه غیرجراحی مناسب می‌رسد.' },
+    'exosomes-regenerative-medicine': { href: '/orthopedics/knee', label: 'مرکز درمان زانو 4B', title: 'اگزوزوم در مسیر درمان زانو چه جایگاهی دارد؟', text: 'کاربردهای اگزوزوم هنوز به نوع فرآورده، اندیکاسیون و سطح شواهد وابسته‌اند. مسیر زانو کمک می‌کند این فناوری جدا از تبلیغات و در زمینه تشخیص دیده شود.' },
+    'svf-stromal-vascular-fraction': { href: '/orthopedics/knee', label: 'مرکز درمان زانو 4B', title: 'SVF در مسیر درمان زانو چه جایگاهی دارد؟', text: 'SVF برای همه بیماران آرتروز انتخاب یکسانی نیست. ارزیابی ساختاری و بالینی زانو باید پیش از تصمیم درباره درمان‌های سلولی انجام شود.' },
+    'mesenchymal-stromal-cells-msc': { href: '/orthopedics/knee', label: 'مرکز درمان زانو 4B', title: 'MSC در مسیر درمان زانو چه جایگاهی دارد؟', text: 'کاربرد MSC به منبع سلولی، چارچوب قانونی، تشخیص و سطح شواهد وابسته است. مسیر زانو گزینه‌های بالینی را بدون وعده بازسازی قطعی کنار هم قرار می‌دهد.' },
+    'hyaluronic-acid-knee-injection': { href: '/orthopedics/knee', label: 'مرکز درمان زانو 4B', title: 'هیالورونیک اسید در مسیر درمان زانو کجا قرار می‌گیرد؟', text: 'انتخاب تزریق ژل به شدت آرتروز، علائم و درمان‌های قبلی وابسته است. مسیر زانو جایگاه این گزینه را کنار سایر درمان‌های غیرجراحی نشان می‌دهد.' },
+    'hair-loss-control': { href: '/hair/hair-loss-control', label: 'راهنمای ارزیابی ریزش مو', title: 'از شواهد علمی به مسیر ارزیابی ریزش مو', text: 'این مقاله درباره انواع ریزش مو و سطح شواهد است. برای مسیر عملی تشخیص علت، بررسی ریزش فعال و انتخاب قدم بعدی، راهنمای بیمار را ببینید.' },
+    'skin-rejuvenation-autologous': { href: '/skin/non-surgical-rejuvenation', label: 'راهنمای جوانسازی غیرجراحی', title: 'از شواهد جوانسازی به انتخاب مسیر مناسب پوست', text: 'روش مناسب به مشکل غالب پوست، انتظار بیمار و ارزیابی بالینی وابسته است. راهنمای بیمار تفاوت مسیرهای غیرجراحی را در قالب تصمیم بالینی توضیح می‌دهد.' },
+    'wound-inflammation-angiogenesis': { href: '/wounds/chronic-wound-treatment', label: 'راهنمای درمان زخم مزمن', title: 'از زیست‌شناسی زخم به مسیر درمان زخم مزمن', text: 'در زخم مزمن، اصلاح علت، خون‌رسانی، کنترل عفونت و فشار مقدم بر درمان‌های مکمل است. راهنمای بیمار مسیر ارزیابی و درمان پایه را مرحله‌به‌مرحله نشان می‌دهد.' },
+    'p-shot-prp-erectile-function': { href: '/sexual-health/erectile-dysfunction-evaluation', label: 'راهنمای ارزیابی اختلال نعوظ', title: 'از شواهد P-Shot به ارزیابی علت اختلال نعوظ', text: 'پیش از هر تزریق باید علت اختلال نعوظ بررسی شود. راهنمای بیمار مسیر ارزیابی و جایگاه احتمالی درمان‌های پلاکتی را بدون وعده نتیجه قطعی توضیح می‌دهد.' },
+    'o-shot-female-sexual-health': { href: '/sexual-health/female-dryness-pain', label: 'راهنمای خشکی و درد بانوان', title: 'از شواهد O-Shot به ارزیابی علت علائم', text: 'خشکی، درد یا تغییر عملکرد جنسی علت‌های متفاوتی دارند. راهنمای بیمار بر تشخیص علت و انتخاب درمان مناسب پیش از مداخلات تزریقی تمرکز دارد.' }
+  };
+  let clinicalRoute = $derived(clinicalRoutes[article.slug]);
   let updatedLabel = $derived(
     article.updatedAt
       ? new Intl.DateTimeFormat('fa-IR', { year: 'numeric', month: 'long', day: 'numeric' }).format(new Date(article.updatedAt))
@@ -98,10 +111,10 @@
         </section>
       {/each}
 
-      {#if isKneeScience}
+      {#if clinicalRoute}
         <section class="clinical-route">
-          <div><div class="eyebrow">CLINICAL PATHWAY</div><h2>این فناوری در مسیر درمان زانو کجا قرار می‌گیرد؟</h2><p>نام یک فناوری به‌تنهایی تعیین‌کننده درمان نیست. برای دیدن مسیر ارزیابی آرتروز، مینیسک و گزینه‌های غیرجراحی به مرکز درمان زانو برگردید.</p></div>
-          <a href="/orthopedics/knee">مرکز درمان زانو 4B ←</a>
+          <div><div class="eyebrow">CLINICAL PATHWAY</div><h2>{clinicalRoute.title}</h2><p>{clinicalRoute.text}</p></div>
+          <a href={clinicalRoute.href}>{clinicalRoute.label} ←</a>
         </section>
       {/if}
 
