@@ -79,6 +79,7 @@ export function serializeJsonLd(schema) {
 
 
 /** Build reusable BreadcrumbList JSON-LD for public routes. */
+/** @param {Array<{name: string, path: string}>} items */
 export function breadcrumbSchema(items) {
   return {
     '@context': 'https://schema.org',
@@ -93,7 +94,9 @@ export function breadcrumbSchema(items) {
 }
 
 /** Build a conservative WebPage schema for patient-intent guides. */
-export function patientGuideSchema({ name, description, path }) {
+/** @param {{name: string, description: string, path: string}} guide */
+export function patientGuideSchema(guide) {
+  const { name, description, path } = guide;
   return {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
