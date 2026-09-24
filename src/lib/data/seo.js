@@ -76,3 +76,33 @@ export function serializeJsonLd(schema) {
   const json = JSON.stringify(schema).replace(/</g, '\\u003c');
   return `<script type="application/ld+json">${json}</script>`;
 }
+
+
+/** Build reusable BreadcrumbList JSON-LD for public routes. */
+export function breadcrumbSchema(items) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, index) => ({
+      '@type': 'ListItem',
+      position: index + 1,
+      name: item.name,
+      item: item.path ? `${site.domain}${item.path}` : site.domain
+    }))
+  };
+}
+
+/** Build a conservative WebPage schema for patient-intent guides. */
+export function patientGuideSchema({ name, description, path }) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'WebPage',
+    '@id': `${site.domain}${path}#webpage`,
+    url: `${site.domain}${path}`,
+    name,
+    description,
+    inLanguage: 'fa-IR',
+    isPartOf: { '@id': `${site.domain}/#website` },
+    publisher: { '@id': `${site.domain}/#clinic` }
+  };
+}
