@@ -3,6 +3,7 @@
   import SplashIntro from '$lib/components/SplashIntro.svelte';
   import Header from '$lib/components/Header.svelte';
   import Footer from '$lib/components/Footer.svelte';
+  import Analytics from '$lib/components/Analytics.svelte';
   import { clinicSchema, websiteSchema, serializeJsonLd } from '$lib/data/seo.js';
   let { children } = $props();
 </script>
@@ -14,6 +15,7 @@
   {@html serializeJsonLd([clinicSchema, websiteSchema])}
 </svelte:head>
 
+<Analytics />
 <SplashIntro />
 <Header />
 <main>{@render children()}</main>
