@@ -6,18 +6,25 @@
 
   const measurementId = env.PUBLIC_GA4_MEASUREMENT_ID || '';
 
+  function getGaWindow() {
+    return /** @type {any} */ (window);
+  }
+
   function initGtag() {
     if (!browser || !measurementId) return;
-    window.dataLayer = window.dataLayer || [];
-    if (!window.gtag) {
-      window.gtag = function (...args) {
-        window.dataLayer.push(args);
+    const ga = getGaWindow();
+    ga.dataLayer = ga.dataLayer || [];
+
+    if (!ga.gtag) {
+      ga.gtag = (...args) => {
+        ga.dataLayer.push(args);
       };
     }
-    if (!window.__fourBGA4Initialized) {
-      window.__fourBGA4Initialized = true;
-      window.gtag('js', new Date());
-      window.gtag('config', measurementId, {
+
+    if (!ga.__fourBGA4Initialized) {
+      ga.__fourBGA4Initialized = true;
+      ga.gtag('js', new Date());
+      ga.gtag('config', measurementId, {
         send_page_view: false
       });
     }
@@ -26,8 +33,11 @@
   initGtag();
 
   afterNavigate(() => {
-    if (!browser || !measurementId || !window.gtag) return;
-    window.gtag('event', 'page_view', {
+    if (!browser || !measurementId) return;
+    const ga = getGaWindow();
+    if (!ga.gtag) return;
+
+    ga.gtag('event', 'page_view', {
       page_title: document.title,
       page_location: window.location.origin + window.location.pathname,
       page_path: window.location.pathname
@@ -41,20 +51,22 @@
       const script = document.createElement('script');
       script.async = true;
       script.src = `https://www.googletagmanager.com/gtag/js?id=${encodeURIComponent(measurementId)}`;
-      script.dataset['4bGa4'] = 'true';
+      script.setAttribute('data-4b-ga4', 'true');
       document.head.appendChild(script);
     }
 
-    const handleClick = (event) => {
+    /** @param {MouseEvent} event */
+    function handleClick(event) {
       const target = event.target;
-      if (!(target instanceof Element) || !window.gtag) return;
+      const ga = getGaWindow();
+      if (!(target instanceof Element) || !ga.gtag) return;
+
       const link = target.closest('a');
       if (!link) return;
-
       const href = link.getAttribute('href') || '';
 
       if (href.startsWith('tel:')) {
-        window.gtag('event', 'phone_click', {
+        ga.gtag('event', 'phone_click', {
           event_category: 'conversion',
           link_url: href
         });
@@ -62,7 +74,7 @@
       }
 
       if (href === '/contact' || href.startsWith('/contact?')) {
-        window.gtag('event', 'appointment_click', {
+        ga.gtag('event', 'appointment_click', {
           event_category: 'conversion',
           link_url: '/contact'
         });
@@ -70,11 +82,11 @@
       }
 
       if (href.includes('wa.me') || href.includes('whatsapp')) {
-        window.gtag('event', 'whatsapp_click', {
+        ga.gtag('event', 'whatsapp_click', {
           event_category: 'conversion'
         });
       }
-    };
+    }
 
     document.addEventListener('click', handleClick);
     return () => document.removeEventListener('click', handleClick);
