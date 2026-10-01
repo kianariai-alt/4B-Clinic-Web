@@ -16,8 +16,8 @@
     ga.dataLayer = ga.dataLayer || [];
 
     if (!ga.gtag) {
-      ga.gtag = (...args) => {
-        ga.dataLayer.push(args);
+      ga.gtag = function () {
+        ga.dataLayer.push(Array.from(arguments));
       };
     }
 
