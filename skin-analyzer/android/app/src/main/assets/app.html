@@ -1,0 +1,450 @@
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#0b1220">
+<title>4B Skin Analyzer | تحلیل قبل و بعد پوست</title>
+<style>:root{color-scheme:dark;--bg:#0b1220;--panel:#121d2c;--panel2:#172436;--border:#2b3b50;--text:#f3f2ed;--muted:#a3afbd;--gold:#e8bd74;--accent:#eec980;--alert:#ffbaab;--green:#a9d8bd}*{box-sizing:border-box}html{font-family:Tahoma,"Noto Sans Arabic",system-ui,sans-serif;scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--text);font-size:14px}.app-shell{min-height:100vh}.brand-bar{height:78px;padding:0 max(24px,calc((100% - 1450px)/2));display:flex;align-items:center;gap:15px;border-bottom:1px solid var(--border);background:#0d1726}.brand-sign{font-size:27px;letter-spacing:-3px;font-weight:900;color:var(--gold);border:1px solid var(--gold);border-radius:12px;width:56px;height:49px;display:grid;place-items:center;direction:ltr}.brand-text{display:flex;flex-direction:column;gap:4px}.brand-text strong{font:700 17px Arial,sans-serif;letter-spacing:2.3px}.brand-text span{color:var(--muted);font-size:11px}.offline-tag{margin-right:auto;color:#c1d3c7;background:#183127;border:1px solid #2e5743;border-radius:50px;padding:8px 12px;font-size:11px}.layout{max-width:1450px;margin:auto;display:grid;grid-template-columns:244px minmax(0,1fr);min-height:calc(100vh - 78px)}.sidebar{border-left:1px solid var(--border);padding:28px 14px;position:sticky;top:0;height:calc(100vh - 78px);display:flex;flex-direction:column;gap:8px}.nav-title{padding:0 12px 24px;color:var(--muted);font-size:12px}.nav{width:100%;background:transparent;color:#bac7d4;border:1px solid transparent;text-align:right;padding:15px 12px;display:flex;align-items:center;gap:13px;font-family:inherit;font-size:13px;border-radius:10px;cursor:pointer}.nav:hover{background:#172234}.nav.active{color:var(--gold);background:#222735;border-color:#5b4a35}.nav-num{font-size:13px;font-weight:bold;color:inherit}.sidebar-foot{margin-top:auto;border-top:1px solid var(--border);padding:23px 12px;color:var(--muted);font-size:11px;line-height:2}.quiet-line{color:var(--gold);font:700 12px Arial;letter-spacing:3px}.main{padding:35px clamp(18px,4vw,55px) 70px;min-width:0}.screen{display:none}.screen.active{display:block}.page-head{display:flex;justify-content:space-between;gap:20px;align-items:center;margin:0 0 30px}.eyebrow{font-size:12px;color:var(--gold);margin-bottom:12px;letter-spacing:.5px}h1{font-size:clamp(25px,3vw,34px);margin:0 0 12px;font-weight:800}h2{font-size:16px;font-weight:700;margin:0 0 18px;color:#fff}h3{font-size:15px}.lead{line-height:2;color:var(--muted);margin:0;max-width:750px}.head-pictogram{width:88px;height:88px;border:1px solid #564c3b;border-radius:50%;display:grid;place-items:center;font-size:50px;color:var(--gold);opacity:.6;flex-shrink:0}.panel{background:linear-gradient(140deg,rgba(24,36,53,.96),rgba(18,29,44,.99));border:1px solid var(--border);border-radius:16px;padding:24px;margin-bottom:19px;box-shadow:0 15px 34px #070b1322}.form-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:17px}.form-grid label{display:flex;flex-direction:column;gap:8px;color:#bfcbd6;font-size:12px}.form-grid input,.form-grid select{width:100%;border-radius:9px;background:#0b1625;border:1px solid #334459;color:#f3f2ed;padding:12px 13px;font:inherit;outline:none;min-height:43px}.form-grid input:focus,.form-grid select:focus{border-color:var(--gold)}.photos-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:19px}.photo-panel{min-width:0}.photo-head{display:flex;align-items:center;justify-content:space-between;gap:10px}.photo-head h2{margin-bottom:13px}.chip{border:1px solid #3d4d62;color:#adbcc7;padding:4px 9px;border-radius:12px;font-size:10px}.file-btn{background:#283748;border:1px dashed #7b846e;color:var(--gold);border-radius:10px;display:block;text-align:center;padding:10px 14px;margin-bottom:14px;cursor:pointer}.face-canvas{width:100%;aspect-ratio:4/5;display:block;background:#0a131f;border:1px solid #344359;border-radius:12px;object-fit:contain;cursor:crosshair}.mark-hint{color:var(--gold);background:#1b2530;border-radius:8px;font-size:12px;line-height:1.9;padding:10px 12px;min-height:48px;margin-top:11px}.text-button{padding:8px;background:none;color:#afc3dd;border:0;text-decoration:underline;cursor:pointer;font-family:inherit}.check-grid{display:grid;grid-template-columns:1fr 1fr;gap:9px 20px;font-size:12px;color:#c4d0dc;line-height:1.7}.consent{display:flex;align-items:center;gap:8px;color:#dde5eb;font-size:12px;padding:16px 0}.consent input{accent-color:#cba469;width:16px;height:16px}.action-row{display:flex;align-items:center;flex-wrap:wrap;gap:12px;margin-top:13px}.primary-btn,.ghost-btn{font:700 13px Tahoma,system-ui;border-radius:10px;cursor:pointer;padding:13px 18px;min-height:44px}.primary-btn{background:var(--gold);border:1px solid var(--gold);color:#1b2030}.primary-btn:hover{background:#f5d59f}.ghost-btn{color:#eee;background:transparent;border:1px solid #6a7b8c}.error{color:var(--alert);font-size:12px}.empty-state{padding:35px;text-align:center;color:var(--muted);line-height:2}.summary-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:18px}.stat-card{background:#162334;border:1px solid var(--border);padding:22px;border-radius:14px;display:flex;flex-direction:column;gap:7px}.stat-card small,.stat-card span{color:var(--muted);font-size:12px}.stat-card strong{font-family:Tahoma,sans-serif;color:var(--gold);font-size:30px}.aligned-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.aligned-grid>div{text-align:center}.aligned-canvas{width:100%;aspect-ratio:4/5;max-width:390px;border-radius:12px;border:1px solid var(--border);background:#0b1220}.aligned-grid p{color:#cbd6df}.scroll-table{overflow:auto}table{border-collapse:collapse;width:100%;font-size:12px;text-align:right}th{background:#263449;color:#f3d8ad;font-weight:700}td,th{padding:12px 11px;border-bottom:1px solid #334257;white-space:nowrap}tr:nth-child(even) td{background:#142235}.footnote,.small-muted{color:var(--muted);line-height:2;font-size:11px}.contour-info{line-height:2.3;color:#e7e0d5}.quality-box{border-color:#534635}.quality-box p{line-height:1.9}.quality-box ul{line-height:2.2;margin:5px 0;padding-right:20px}.report-tools{margin-bottom:22px}.printable{background:#fff;color:#1d293b;border-radius:9px;padding:32px 40px;direction:rtl;box-shadow:0 8px 28px #0004;max-width:880px;margin:auto;font-size:12px}.report-header{display:flex;align-items:center;gap:15px;border-bottom:2px solid #bd995c;padding-bottom:15px}.report-logo{color:#ae8550;font:900 33px Arial;letter-spacing:-3px;border:2px solid #ae8550;border-radius:10px;padding:10px;direction:ltr}.report-header h2{margin:0;color:#1b2d45;font-size:20px}.report-header p{margin:8px 0 0;color:#657282;font:11px Arial}.report-meta{display:grid;grid-template-columns:repeat(2,1fr);gap:9px 20px;margin:15px 0;color:#33445b}.report-caption{background:#edf1f6;padding:12px 15px;margin-bottom:16px;border-radius:6px}.report-img-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}.report-img-grid>div{text-align:center}.report-img-grid img{width:100%;height:280px;object-fit:contain;background:#e9edf0;display:block;border:1px solid #dee5eb}.report-img-grid strong{margin:8px auto;display:block}.report-table{font-size:11px}.report-table th{background:#dce4ee;color:#28384a}.report-table td{border-color:#d5dce4;color:#293849}.report-table tr:nth-child(even) td{background:#f6f8fa}.report-summary{border:1px solid #b9c5d1;background:#f5f7fa;padding:12px;margin:17px 0;line-height:2}.report-caveat{font-size:10px;line-height:1.9;background:#faf5eb;border-right:3px solid #c5a469;padding:12px 14px}.report-caveat p{margin:8px 0}.report-footer{display:flex;justify-content:space-between;border-top:1px solid #c3cbd3;padding-top:10px;margin-top:14px;color:#667488}.toast{position:fixed;bottom:20px;left:20px;max-width:350px;background:#ebc982;color:#142137;padding:12px 18px;box-shadow:0 10px 24px #0004;border-radius:12px;opacity:0;pointer-events:none;transition:opacity .25s;z-index:999}.toast.show{opacity:1}@media (max-width:1000px){.form-grid{grid-template-columns:repeat(2,1fr)}.layout{grid-template-columns:190px 1fr}}@media(max-width:760px){.brand-bar{padding:10px 16px;height:auto;min-height:70px}.brand-sign{width:50px;height:45px}.brand-text strong{font-size:13px}.offline-tag{font-size:9px;max-width:95px;text-align:center;padding:5px}.layout{display:block}.sidebar{position:sticky;top:0;z-index:100;display:flex;flex-direction:row;height:auto;padding:8px;background:#0d1726;border-bottom:1px solid var(--border);border-left:0;overflow-x:auto}.sidebar .nav-title,.sidebar-foot{display:none}.nav{width:auto;white-space:nowrap;font-size:11px;padding:10px 9px}.nav-num{display:none}.main{padding:24px 12px 55px}.head-pictogram{display:none}.photos-grid{grid-template-columns:1fr}.panel{padding:17px}.form-grid{grid-template-columns:1fr 1fr;gap:10px}.check-grid{grid-template-columns:1fr}.summary-grid{grid-template-columns:1fr 1fr}.summary-grid .stat-card:last-child{grid-column:span 2}.aligned-grid{gap:8px}.stat-card strong{font-size:21px}.printable{padding:15px}.report-header h2{font-size:15px}.report-img-grid img{height:200px}}@media print{@page{size:A4;margin:10mm}html,body{background:#fff!important;color:#111!important}header,.sidebar,.page-head,.no-print,.screen:not(#screen-report),.toast,.report-tools{display:none!important}.layout{display:block!important}.main{padding:0!important}.screen#screen-report{display:block!important}.printable{display:block!important;max-width:none!important;padding:0!important;box-shadow:none!important;border-radius:0!important}.report-img-grid img{height:210px!important}.report-table{font-size:10px!important}.report-table th,.report-table td{padding:6px!important}.report-caveat{break-inside:avoid}.report-header{break-inside:avoid}}
+
+.block-label{display:flex;flex-direction:column;gap:9px;color:#c1cad5;font-size:12px}textarea{border:1px solid #334459;border-radius:10px;background:#0b1625;color:#f3f2ed;resize:vertical;min-height:95px;font:14px Tahoma,system-ui;padding:12px;line-height:1.8}.case-actions{display:flex;align-items:flex-end;flex-wrap:wrap;gap:12px}.case-actions>label:not(.file-btn){display:flex;flex-direction:column;gap:8px;font-size:12px;color:#c1cad5}.case-actions input{min-height:44px;background:#0b1625;border:1px solid #334459;color:white;border-radius:10px;padding:9px 12px}.mini-file{width:auto;display:inline-block;min-height:44px;margin:0}.doctor-notes{border:1px solid #d4dbe3;border-radius:5px;padding:12px;margin:12px 0;line-height:2;white-space:pre-wrap}.doctor-notes div{min-height:22px}@media print{.doctor-notes{break-inside:avoid}}
+
+@media print{.report-results{break-before:page;page-break-before:always}.report-results h3{margin:7px 0 14px}.report-results table{break-inside:avoid;page-break-inside:avoid}.report-results thead{display:table-header-group}.report-summary{break-inside:avoid}}
+
+/* 1.0 clinic enhancement */
+.deep-panel .blend-wrap{margin:16px auto;max-width:440px}.blend-wrap canvas{max-height:520px;object-fit:contain}.slide-label{display:flex;align-items:center;gap:12px;color:var(--text);padding:12px 0}.slide-label input{flex:1;accent-color:#e8bd74}.region-detail{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding:14px 0}.region-detail>div{border:1px solid var(--border);border-radius:12px;padding:14px;background:#172436;display:flex;flex-direction:column;gap:10px}.region-detail>div small{font-size:11px;color:var(--muted)}.region-detail strong{font-size:23px;color:#eec980}.region-detail p{grid-column:1/-1;color:var(--muted);line-height:2}.report-validation{padding:12px 8px;border-top:1px solid #cad3dc;line-height:2;font-size:10px;color:#344052}@media(max-width:640px){.region-detail{grid-template-columns:repeat(3,1fr);gap:5px}.region-detail>div{padding:9px}.region-detail strong{font-size:16px}.slide-label{flex-wrap:wrap}}@media print{.report-validation{break-inside:avoid}}
+
+@media print{.printable{padding:0 10px!important}.report-meta>div{padding:3px 8px;overflow-wrap:anywhere;min-width:0}.report-table td:first-child{padding-right:10px!important}.report-summary,.report-caveat{padding-left:12px!important;padding-right:12px!important}}
+
+.report-contour h3{font-size:13px;color:#23364d;margin:10px 0 6px}.report-contour p{color:#526174;font-size:10px;line-height:1.7;margin:0 0 8px}.report-contour table{width:100%;border-collapse:collapse}.report-contour td,.report-contour th{padding:5px 8px;font-size:10px;border:1px solid #d6dee6;text-align:right;color:#28384a}.report-contour th{background:#eef2f8}@media print{.report-contour{break-inside:avoid;margin-top:8px}.report-contour h3{margin:2px 0 4px}.report-contour td,.report-contour th{padding:4px 6px!important}.report-contour p{margin:0 0 4px}}
+</style>
+</head>
+<body>
+<div class="app-shell">
+<header class="brand-bar"><div class="brand-sign">4B</div><div class="brand-text"><strong>SKIN ANALYZER</strong><span>آنالیز مقایسه‌ای چهره | نسخه ۲٫۰ · تحلیل تصویری غیرتشخیصی</span></div><span class="offline-tag">پردازش محلی · بدون آپلود</span></header>
+<div class="layout"><aside class="sidebar">
+  <div class="nav-title">میز کار کلینیک</div>
+  <button class="nav active" data-screen="capture"><span class="nav-num">۰۱</span> پرونده و تصاویر</button>
+  <button class="nav" data-screen="analysis"><span class="nav-num">۰۲</span> آنالیز ناحیه‌ای</button>
+  <button class="nav" data-screen="report"><span class="nav-num">۰۳</span> گزارش قبل و بعد</button>
+  <div class="sidebar-foot"><div class="quiet-line">4B CLINIC</div><p>شاخص‌های این نسخه صرفاً تصویری و پژوهشی‌اند و جایگزین معاینه، تصویربرداری سه‌بعدی یا سونوگرافی پوست نیستند.</p></div>
+</aside><main class="main">
+  <section class="screen active" id="screen-capture">
+    <div class="page-head"><div><div class="eyebrow">پروتکل پایش درمان زیبایی</div><h1>پرونده و تصاویر</h1><p class="lead">دو عکس استاندارد از یک فرد، پیش و پس از پروسیجر. نقاط مرجع را روی هر دو تصویر مشخص کنید تا مقایسه هندسی انجام شود.</p></div><div class="head-pictogram">◉</div></div>
+    <div class="panel"><h2>مشخصات گزارش</h2><div class="form-grid">
+      <label>کد پرونده <input id="patientId" type="text" placeholder="مثلاً 4B-0024" autocomplete="off"></label>
+      <label>نام بیمار (اختیاری) <input id="patientName" type="text" placeholder="برای گزارش محرمانه" autocomplete="off"></label>
+      <label>پروسیجر <select id="procedure"><option>میکروکاویتیشن و درمان موضعی</option><option>لیزر زیبایی</option><option>تزریق زیبایی</option><option>سایر درمان‌های پوستی</option></select></label>
+      <label>نام پزشک <input id="doctor" type="text" placeholder="پزشک ارزیاب" autocomplete="off"></label>
+      <label>تاریخ عکس قبل <input id="beforeDate" type="date"></label>
+      <label>تاریخ عکس بعد <input id="afterDate" type="date"></label>
+    </div></div>
+    <div class="panel"><h2>یادداشت بالینی پزشک</h2><label class="block-label">تفسیر معاینه، زمان پس از درمان و عوامل مؤثر بر نتیجه<textarea id="clinicalNotes" rows="3" placeholder="مثلاً: جلسه پیگیری ۶ هفته بعد از پروسیجر؛ عکس‌ها در نور یکسان تهیه شده‌اند..."></textarea></label></div>
+    <div class="photos-grid">
+      <div class="panel photo-panel"><div class="photo-head"><h2>عکس قبل از درمان</h2><span class="chip" id="beforeStatus">بدون تصویر</span></div>
+        <label class="file-btn" for="beforeFile">+ انتخاب عکس قبل</label><input id="beforeFile" type="file" accept="image/*" hidden>
+        <canvas class="face-canvas" id="beforeCanvas" width="720" height="900" aria-label="عکس قبل و تعیین نقاط مرجع"></canvas>
+        <div class="mark-hint" id="beforeHint">لطفاً یک عکس تمام‌رخ و بدون فیلتر انتخاب کنید.</div>
+        <button class="text-button" id="beforeRedo" type="button">تصحیح دستی نقاط (فقط در صورت نیاز)</button>
+      </div>
+      <div class="panel photo-panel"><div class="photo-head"><h2>عکس بعد از درمان</h2><span class="chip" id="afterStatus">بدون تصویر</span></div>
+        <label class="file-btn" for="afterFile">+ انتخاب عکس بعد</label><input id="afterFile" type="file" accept="image/*" hidden>
+        <canvas class="face-canvas" id="afterCanvas" width="720" height="900" aria-label="عکس بعد و تعیین نقاط مرجع"></canvas>
+        <div class="mark-hint" id="afterHint">زاویه، فاصله، نور و حالت صورت باید مانند عکس قبل باشد.</div>
+        <button class="text-button" id="afterRedo" type="button">تصحیح دستی نقاط (فقط در صورت نیاز)</button>
+      </div>
+    </div>
+    <div class="panel"><h2>ذخیره و بازیابی پرونده روی دستگاه</h2><p class="footnote">پرونده شامل تصاویر و نقاط نشانه‌گذاری می‌تواند با گذرواژه در فایل رمزگذاری‌شده ذخیره شود. بدون گذرواژه امکان بازیابی اطلاعات وجود ندارد؛ این قابلیت جایگزین سامانه مدیریت پرونده پزشکی و پشتیبان‌گیری امن نیست.</p>
+      <div class="case-actions"><label>گذرواژه پرونده (حداقل ۸ نویسه) <input id="casePass" type="password" placeholder="برای رمزگذاری یا بازیابی" autocomplete="new-password"></label><button class="ghost-btn" id="saveCase" type="button">ذخیره پرونده رمزگذاری‌شده</button><label for="loadCaseFile" class="file-btn mini-file">بازیابی پرونده از فایل</label><input id="loadCaseFile" type="file" accept=".4bcase,application/json" hidden></div>
+    </div>
+    <div class="panel"><h2>تشخیص خودکار صورت</h2><p class="footnote" id="modelStatus" role="status">در حال آماده‌سازی موتور تشخیص نقاط چهره (MediaPipe)... برای اولین استفاده به اینترنت نیاز است. عکس‌های شما برای پردازش به سرور ارسال نمی‌شوند؛ کتابخانه و مدل از منابع رسمی دریافت می‌شوند. ممکن است کتابخانه اطلاعات عملکردی غیرتصویری ارسال کند.</p><p class="footnote">منبع: Google MediaPipe Face Landmarker با مجوز Apache 2.0. این سامانه تشخیص بیماری یا اندازه‌گیری عمق زیرپوست نیست.</p></div>
+    <div class="panel"><h2>استاندارد ثبت عکس</h2><div class="check-grid"><div>✓ نور ثابت و یکنواخت، بدون فیلتر زیبایی</div><div>✓ صورت روبه‌دوربین، حالت خنثی و دهان بسته</div><div>✓ بدون آرایش سنگین و سایه شدید</div><div>✓ فاصله و دوربین یکسان در جلسات</div><div>✓ حداقل ۸۰۰ پیکسل عرض عکس ترجیحی</div><div>✓ ثبت بازه درمان و پرهیز از نتیجه‌گیری از عکس غیرقابل‌مقایسه</div></div>
+      <label class="consent"><input id="consent" type="checkbox"> رضایت فرد برای پردازش تصاویر چهره و تهیه گزارش دریافت شده است.</label>
+      <div class="action-row"><button id="runAnalysis" class="primary-btn" type="button">تحلیل و مقایسه دو تصویر ←</button><button id="clearSession" class="ghost-btn" type="button">پاک‌کردن اطلاعات این مراجعه از صفحه</button><span id="captureError" class="error"></span></div></div>
+  </section>
+  <section class="screen" id="screen-analysis">
+    <div class="page-head"><div><div class="eyebrow">تقسیم‌بندی آناتومیک با کنترل کیفیت عکس</div><h1>آنالیز ۱۴ ناحیه صورت</h1><p class="lead">شاخص‌های تغییر الگوی خطوط و کنتراست بافت، پس از هم‌ترازسازی دو عکس محاسبه می‌شوند.</p></div></div>
+    <div id="noAnalysis" class="panel empty-state">هنوز تحلیلی انجام نشده است. ابتدا دو عکس استاندارد وارد کنید تا نقاط به‌صورت خودکار شناسایی شوند.</div>
+    <div id="analysisResults" hidden>
+      <div class="summary-grid"><div class="stat-card"><small>ناحیه‌های بررسی‌شده</small><strong id="zoneCount">۱۴</strong><span>ناحیه مستقل</span></div><div class="stat-card"><small>میانگین تغییر شاخص خطوط ظاهری</small><strong id="avgChange">ــ</strong><span>درصد تغییر نسبی</span></div><div class="stat-card"><small>ارزیابی کیفیت مقایسه</small><strong id="qualityStatus">ــ</strong><span>پیش‌شرط تفسیر تصویر</span></div></div>
+      <div class="panel"><h2>نقشه ناحیه‌ای قبل و بعد</h2><div class="aligned-grid"><div><canvas class="aligned-canvas" width="720" height="900" id="alignedBefore"></canvas><p>قبل از درمان</p></div><div><canvas class="aligned-canvas" width="720" height="900" id="alignedAfter"></canvas><p>بعد از درمان</p></div></div></div>
+      <div class="panel deep-panel"><h2>بزرگنمایی و مقایسه هم‌تراز</h2>
+        <p class="footnote">اسلایدر را جابه‌جا کنید تا دو عکس روی یکدیگر دیده شوند. این ابزار برای بازبینی بصری پزشک است.</p>
+        <div class="blend-wrap"><canvas id="blendCanvas" width="720" height="900" class="aligned-canvas"></canvas></div>
+        <label class="slide-label">میزان نمایش تصویر بعد <input id="blendSlider" type="range" min="0" max="100" value="50"><span id="blendValue">۵۰٪</span></label>
+      </div>
+      <div class="panel"><h2>بازبینی اختصاصی هر ناحیه</h2><label class="block-label">انتخاب ناحیه
+        <select id="regionSelect"></select></label><div id="regionDetail" class="region-detail"></div>
+      </div>
+      <div class="panel"><h2>جدول شاخص‌های سطح پوست</h2><div class="scroll-table"><table id="metricsTable"><thead><tr><th>ناحیه</th><th>شاخص خطوط قبل</th><th>شاخص خطوط بعد</th><th>تغییر نسبی</th><th>تغییر مطلق</th><th>قابلیت تفسیر</th></tr></thead><tbody></tbody></table></div><p class="footnote">«شاخص خطوط ظاهری» درصد پیکسل‌های دارای الگوی تیره با کنتراست موضعی بالا در ناحیه تعریف‌شده است. این عدد، عمق چروک به میلی‌متر و درصد بازسازی پوست نیست. اعداد بدون کنترل شرایط نور و زاویه قابل تفسیر نیستند.</p></div>
+      <div class="panel"><h2>خط فک و گونه: اندازه‌گیری اکتشافی</h2><div id="contourMetric" class="contour-info"></div><p class="footnote">نقاط گونه و فک توسط مدل تشخیص چهره یا در موارد استثنایی توسط اپراتور علامت‌گذاری می‌شوند؛ تغییراتشان به زاویه، حالت صورت و دقت نقطه‌گذاری حساس است. از این شاخص برای ادعای «درصد رفع افتادگی» استفاده نشود.</p></div>
+      <div id="qualityPanel" class="panel quality-box"></div>
+      <div class="action-row"><button id="goReport" class="primary-btn">ساخت گزارش فارسی ←</button><button id="redoFromAnalysis" class="ghost-btn">بازگشت به تصاویر</button></div>
+    </div>
+  </section>
+  <section class="screen" id="screen-report">
+    <div class="page-head no-print"><div><div class="eyebrow">فایل قابل ارائه و چاپ</div><h1>گزارش قبل و بعد پروسیجر</h1><p class="lead">پس از بررسی، گزارش را با گزینه چاپ در قالب PDF ذخیره کنید.</p></div></div>
+    <div class="panel no-print report-tools"><label class="consent"><input id="anonymize" type="checkbox" checked> در تصاویر گزارش، نوار پوشاننده چشم‌ها قرار گیرد.</label><div class="action-row"><button id="printReport" class="primary-btn">چاپ / ذخیره PDF</button><button id="exportCsv" class="ghost-btn">دریافت جدول CSV</button><button id="exportJson" class="ghost-btn">دریافت نتایج JSON</button></div><div class="small-muted">در اندروید، در پنجره چاپ گزینه «Save as PDF / ذخیره به‌صورت PDF» را انتخاب کنید.</div></div>
+    <div id="reportMissing" class="panel empty-state">برای ایجاد گزارش، ابتدا تحلیل را اجرا کنید.</div>
+    <article id="printable" class="printable" hidden>
+      <div class="report-header"><div class="report-logo">4B</div><div><h2>گزارش مقایسه‌ای تصاویر پوست صورت</h2><p>4B Clinic · Skin Analysis Report · نسخه ۲٫۰ · تحلیل تصویری غیرتشخیصی</p></div></div>
+      <div class="report-meta" id="reportMeta"></div>
+      <div class="report-caption">مقایسه ظاهری قبل و بعد از پروسیجر، با ترازسازی هندسی بر اساس نقاط مرجع شناسایی‌شده چهره</div>
+      <div class="report-img-grid"><div><img id="reportBefore" alt="تصویر قبل"><strong>قبل از درمان</strong></div><div><img id="reportAfter" alt="تصویر بعد"><strong>بعد از درمان</strong></div></div>
+      <div class="report-contour"><h3>شاخص هندسی موقعیت گونه و خط فک</h3>
+      <p>موقعیت نقاط علامت‌گذاری‌شده نسبت به فاصله بین مردمک‌ها؛ بدون واحد میلی‌متر و بدون استنتاج میزان افتادگی بافت.</p>
+      <table class="report-table"><thead><tr><th>نقطه هندسی</th><th>قبل</th><th>بعد</th><th>تغییر</th></tr></thead><tbody id="reportContourRows"></tbody></table></div>
+      <div class="report-results"><h3>نتایج ناحیه‌ای</h3><table class="report-table"><thead><tr><th>ناحیه</th><th>قبل (%)</th><th>بعد (%)</th><th>تغییر نسبی (%)</th></tr></thead><tbody id="reportTable"></tbody></table></div>
+      <div class="report-summary" id="reportSummary"></div>
+      <div class="report-validation"><strong>نوع تحلیل:</strong> شاخص‌های دوبعدی ظاهری، بدون ارزیابی بالینی مستقل. <strong>تأیید پزشک:</strong> .......................... <strong>تاریخ:</strong> ..........................</div>
+      <div class="doctor-notes"><strong>یادداشت و تفسیر پزشک:</strong><div id="reportDoctorNotes"></div></div>
+      <div class="report-caveat"><strong>محدودیت‌ها و تفسیر پزشکی</strong><p>این گزارش فقط شاخص‌های ظاهری قابل استخراج از دو عکس دوبعدی را نشان می‌دهد. نتایج وابسته به نور، کیفیت عکس، آرایش، حالات صورت و دقت نشانه‌گذاری است. اندازه‌گیری ضخامت درم، کلاژن، چربی زیرپوستی، عمق میلی‌متری چروک یا درصد واقعی اصلاح افتادگی از این تصاویر ممکن نیست. نتیجه نهایی باید با معاینه پزشک و در صورت نیاز تصویربرداری کالیبره‌شده تأیید شود.</p></div>
+      <div class="report-footer"><span>گزارش محلی، بدون انتقال تصاویر به سرور</span><span>4b-clinic.com</span></div>
+    </article>
+  </section>
+</main></div>
+<div id="toast" class="toast" role="status"></div>
+</div><script>/* 4B Skin Analyzer 1.0 - all processing remains on the device.
+   Exploratory photographic texture indices only. Not clinically validated. */
+'use strict';
+(() => {
+const $ = (id) => document.getElementById(id);
+const POINTS = [
+  {id:'eyeL',label:'مرکز مردمک چشم سمت چپ تصویر'},
+  {id:'eyeR',label:'مرکز مردمک چشم سمت راست تصویر'},
+  {id:'nose',label:'نوک بینی'},
+  {id:'mouth',label:'مرکز خط دهان'},
+  {id:'chin',label:'پایین‌ترین نقطه چانه'},
+  {id:'cheekL',label:'برجسته‌ترین نقطه گونه سمت چپ تصویر'},
+  {id:'cheekR',label:'برجسته‌ترین نقطه گونه سمت راست تصویر'},
+  {id:'jawL',label:'نقطه شکست خط فک سمت چپ تصویر'},
+  {id:'jawR',label:'نقطه شکست خط فک سمت راست تصویر'}
+];
+const ZONES = [
+ {id:'foreheadL',name:'پیشانی سمت چپ تصویر',x:238,y:225,rx:72,ry:40,kind:'wrinkle'},
+ {id:'foreheadC',name:'پیشانی مرکزی',x:360,y:220,rx:88,ry:42,kind:'wrinkle'},
+ {id:'foreheadR',name:'پیشانی سمت راست تصویر',x:482,y:225,rx:72,ry:40,kind:'wrinkle'},
+ {id:'glabella',name:'بین دو ابرو',x:360,y:300,rx:36,ry:31,kind:'wrinkle'},
+ {id:'eyeL',name:'اطراف چشم چپ تصویر',x:183,y:382,rx:47,ry:35,kind:'wrinkle'},
+ {id:'eyeR',name:'اطراف چشم راست تصویر',x:537,y:382,rx:47,ry:35,kind:'wrinkle'},
+ {id:'cheekL',name:'گونه چپ تصویر',x:248,y:531,rx:63,ry:75,kind:'texture'},
+ {id:'cheekR',name:'گونه راست تصویر',x:472,y:531,rx:63,ry:75,kind:'texture'},
+ {id:'nasolabialL',name:'خط خنده سمت چپ تصویر',x:307,y:573,rx:31,ry:66,kind:'wrinkle'},
+ {id:'nasolabialR',name:'خط خنده سمت راست تصویر',x:413,y:573,rx:31,ry:66,kind:'wrinkle'},
+ {id:'upperLip',name:'خطوط بالای لب',x:360,y:619,rx:49,ry:26,kind:'wrinkle'},
+ {id:'jawL',name:'خط فک چپ تصویر',x:230,y:688,rx:57,ry:37,kind:'texture'},
+ {id:'jawR',name:'خط فک راست تصویر',x:490,y:688,rx:57,ry:37,kind:'texture'},
+ {id:'chin',name:'چانه',x:360,y:734,rx:75,ry:38,kind:'texture'}
+];
+// Face-region centers adapt to both sets of manually annotated landmarks.
+// Coordinates are normalized by inter-pupillary distance after rigid registration.
+// This is not semantic segmentation, a skin-depth measurement or an AI prediction.
+function personalizedZones(pts){
+ const [leftEye,rightEye,nose,mouth,chin,leftCheek,rightCheek,leftJaw,rightJaw]=pts;
+ const mid=(a,b)=>({x:(a.x+b.x)/2,y:(a.y+b.y)/2});
+ const eyes=mid(leftEye,rightEye);const d=Math.max(90,Math.hypot(leftEye.x-rightEye.x,leftEye.y-rightEye.y));
+ const z=(id,x,y,rx,ry)=>({ ...ZONES.find(a=>a.id===id), x, y, rx:Math.max(18,rx),ry:Math.max(15,ry)});
+ return [
+  z('foreheadL',leftEye.x,eyes.y-.44*d,.29*d,.18*d),
+  z('foreheadC',eyes.x,eyes.y-.47*d,.36*d,.19*d),
+  z('foreheadR',rightEye.x,eyes.y-.44*d,.29*d,.18*d),
+  z('glabella',eyes.x,eyes.y-.17*d,.17*d,.15*d),
+  z('eyeL',leftEye.x-.27*d,leftEye.y+.15*d,.21*d,.15*d),
+  z('eyeR',rightEye.x+.27*d,rightEye.y+.15*d,.21*d,.15*d),
+  z('cheekL',leftCheek.x,leftCheek.y,.27*d,.29*d),
+  z('cheekR',rightCheek.x,rightCheek.y,.27*d,.29*d),
+  z('nasolabialL',(nose.x+mouth.x)/2-.25*d,(nose.y+mouth.y)/2,.14*d,.27*d),
+  z('nasolabialR',(nose.x+mouth.x)/2+.25*d,(nose.y+mouth.y)/2,.14*d,.27*d),
+  z('upperLip',mouth.x,mouth.y-.12*d,.23*d,.12*d),
+  z('jawL',leftJaw.x+.12*d,leftJaw.y-.06*d,.25*d,.17*d),
+  z('jawR',rightJaw.x-.12*d,rightJaw.y-.06*d,.25*d,.17*d),
+  z('chin',chin.x,chin.y-.12*d,.32*d,.18*d)
+ ];
+}
+let sessions = {
+ before:{img:null,points:[],active:false,display:null,name:'',source:null,landmarks:null,pose:null},
+ after:{img:null,points:[],active:false,display:null,name:'',source:null,landmarks:null,pose:null}
+};
+let result = null;
+const refDate = new Date().toISOString().substring(0,10);
+$('beforeDate').value=refDate;$('afterDate').value=refDate;
+let notifyTimeout;
+function toast(message){const t=$('toast');t.textContent=message;t.classList.add('show');clearTimeout(notifyTimeout);notifyTimeout=setTimeout(()=>t.classList.remove('show'),3500);}
+function screen(name){document.querySelectorAll('.screen').forEach(el=>el.classList.toggle('active',el.id==='screen-'+name));document.querySelectorAll('.nav').forEach(el=>el.classList.toggle('active',el.dataset.screen===name));window.scrollTo({top:0,behavior:'instant'});if(name==='report')renderReport();}
+document.querySelectorAll('.nav').forEach(b=>b.addEventListener('click',()=>screen(b.dataset.screen)));
+function fitDimensions(img,cv){const scale=Math.min(cv.width/img.width,cv.height/img.height);const w=img.width*scale,h=img.height*scale;return{x:(cv.width-w)/2,y:(cv.height-h)/2,w,h};}
+function preview(which){
+ const s=sessions[which],canvas=$(which+'Canvas'),ctx=canvas.getContext('2d');ctx.clearRect(0,0,720,900);ctx.fillStyle='#0c1724';ctx.fillRect(0,0,720,900);
+ if(!s.img){ctx.fillStyle='#667a8c';ctx.font='28px Tahoma, sans-serif';ctx.textAlign='center';ctx.fillText('4B • IMAGE',360,450);return;}
+ const f=fitDimensions(s.img,canvas);s.display=f;ctx.drawImage(s.img,f.x,f.y,f.w,f.h);
+ s.points.forEach((p,i)=>{const px=f.x+p.x*f.w,py=f.y+p.y*f.h;ctx.beginPath();ctx.arc(px,py,10,0,Math.PI*2);ctx.fillStyle='#e8bd74';ctx.fill();ctx.strokeStyle='#10192b';ctx.lineWidth=2;ctx.stroke();ctx.fillStyle='#071525';ctx.textAlign='center';ctx.font='bold 12px Arial';ctx.fillText(''+(i+1),px,py+4);});
+ if(s.active&&s.points.length<POINTS.length){ctx.fillStyle='rgba(6,18,32,.77)';ctx.fillRect(15,16,690,62);ctx.fillStyle='#f3d49e';ctx.font='22px Tahoma, sans-serif';ctx.textAlign='center';ctx.fillText('نقطه '+(s.points.length+1)+' از '+POINTS.length,360,54);}
+}
+function updateStatus(which){
+ const s=sessions[which],n=s.points.length;
+ $(which+'Status').textContent=!s.img?'بدون تصویر':s.processing?'تشخیص خودکار در حال انجام':n===9?(s.source==='automatic'?'۴۷۸ نقطه به‌صورت خودکار':'۹ نقطه با تصحیح دستی'):'نیاز به تشخیص';
+ $(which+'Hint').textContent=!s.img?'عکس تمام‌رخ انتخاب کنید.':s.processing?'لطفاً منتظر تکمیل تشخیص خودکار باشید.':s.active&&n<9?'فقط در وضعیت اضطراری، نقطه '+(n+1)+' از ۹: '+POINTS[n].label:n===9?(s.source==='automatic'?'نقاط چهره خودکار شناسایی شد.':'نقاط دستی ثبت شد؛ برچسب بازبینی در گزارش درج می‌شود.'):'تشخیص خودکار موفق نشد؛ اتصال اینترنت و کیفیت عکس را بررسی کنید.';
+ preview(which);
+}
+const pointAvg=(landmarks,ids)=>{const ok=ids.map(i=>landmarks[i]).filter(Boolean);return {x:ok.reduce((s,p)=>s+p.x,0)/ok.length,y:ok.reduce((s,p)=>s+p.y,0)/ok.length}};
+function pointsFromLandmarks(lm){
+ if(!Array.isArray(lm)||lm.length<468)throw new Error('مدل تعداد نقاط لازم را گزارش نکرد.');
+ const irises=lm.length>=478?[pointAvg(lm,[468,469,470,471,472]),pointAvg(lm,[473,474,475,476,477])]:[pointAvg(lm,[33,133,159,145]),pointAvg(lm,[263,362,386,374])];
+ irises.sort((a,b)=>a.x-b.x);
+ const pair=(i,j)=>[lm[i],lm[j]].sort((a,b)=>a.x-b.x);
+ const [cl,cr]=pair(205,425),[jl,jr]=pair(172,397);
+ const out=[irises[0],irises[1],lm[1],pointAvg(lm,[13,14]),lm[152],cl,cr,jl,jr];
+ if(out.some(p=>!p||!Number.isFinite(p.x)||!Number.isFinite(p.y)||p.x<0||p.x>1||p.y<0||p.y>1))throw new Error('مختصات چهره قابل قبول نیست.');
+ if(irises[1].x-irises[0].x<.08)throw new Error('فاصله مرجع چشم‌ها کافی نیست.');
+ return out.map(p=>({x:p.x,y:p.y}));
+}
+async function autoDetect(which){
+ const s=sessions[which]; if(!s.img)return;
+ s.processing=true;s.active=false;s.points=[];updateStatus(which);
+ try{
+  if(typeof window.__4BDetect!=='function')throw new Error('موتور تشخیص بارگذاری نشده. اینترنت یا تنظیمات مرورگر را بررسی کنید.');
+  const res=await Promise.race([window.__4BDetect(s.img),new Promise((_,rej)=>setTimeout(()=>rej(new Error('زمان بارگذاری مدل به پایان رسید.')),45000))]);
+  if(s!==sessions[which])return;
+  s.points=pointsFromLandmarks(res.faceLandmarks[0]);s.landmarks=res.faceLandmarks[0];
+  s.source='automatic';s.pose=res.facialTransformationMatrixes?.[0]||null;
+  s.expressions=Object.fromEntries((res.faceBlendshapes?.[0]?.categories||[]).map(c=>[c.categoryName,c.score]));
+  toast('نقاط چهره در عکس '+(which==='before'?'قبل':'بعد')+' به‌صورت خودکار شناسایی شد.');
+ }catch(e){
+  if(s!==sessions[which])return;
+  s.source='failed';s.error=e.message;
+  toast('تشخیص خودکار انجام نشد: '+e.message);
+ }finally{if(s===sessions[which]){s.processing=false;updateStatus(which);}}
+}
+for(const which of ['before','after']){
+ $(which+'File').addEventListener('change',async ev=>{
+  const file=ev.target.files?.[0];if(!file)return;
+  if(!/^image\//.test(file.type)){toast('فایل باید تصویر باشد.');return;}
+  if(file.size>30*1024*1024){toast('تصویر بزرگ‌تر از ۳۰ مگابایت است.');return;}
+  try{
+   const img=new Image();const url=URL.createObjectURL(file);await new Promise((resolve,reject)=>{img.onload=resolve;img.onerror=reject;img.src=url});
+   if(img.width<400||img.height<400){URL.revokeObjectURL(url);toast('رزولوشن عکس خیلی پایین است.');return;}
+   const maxDim=1800;const sc=Math.min(1,maxDim/Math.max(img.width,img.height));
+   const c=document.createElement('canvas');c.width=Math.round(img.width*sc);c.height=Math.round(img.height*sc);c.getContext('2d',{willReadFrequently:true}).drawImage(img,0,0,c.width,c.height);
+   URL.revokeObjectURL(url);
+   const localImg=new Image();localImg.src=c.toDataURL('image/jpeg',0.91);await localImg.decode();
+   sessions[which]={img:localImg,points:[],active:false,display:null,name:file.name,source:null,landmarks:null,processing:false};result=null;resetResult();updateStatus(which);await autoDetect(which);
+  }catch(err){toast('خواندن تصویر ممکن نشد: '+err.message);}
+ });
+ $(which+'Canvas').addEventListener('click',ev=>{
+  const s=sessions[which];if(!s.img||!s.active||s.points.length>=9)return;
+  const cv=ev.currentTarget;const r=cv.getBoundingClientRect(),x=(ev.clientX-r.left)*cv.width/r.width,y=(ev.clientY-r.top)*cv.height/r.height;
+  const f=s.display;if(!f)return;let nx=(x-f.x)/f.w,ny=(y-f.y)/f.h;if(nx<0||nx>1||ny<0||ny>1){toast('روی ناحیه تصویر کلیک کنید.');return;}
+  s.points.push({x:nx,y:ny});s.source='manual';if(s.points.length===9){s.active=false;toast('نقاط دستی این تصویر تکمیل شد.');}updateStatus(which);
+ });
+ $(which+'Redo').addEventListener('click',()=>{if(!sessions[which].img){toast('اول عکس انتخاب کنید.');return;}sessions[which].points=[];sessions[which].landmarks=null;sessions[which].source='manual';sessions[which].active=true;result=null;resetResult();updateStatus(which);});
+ preview(which);
+}
+function resetResult(){$('noAnalysis').hidden=false;$('analysisResults').hidden=true;$('reportMissing').hidden=false;$('printable').hidden=true;}
+// The eye centers anchor rotation, scale and translation. Distances are expressed in normalized eye-separation units.
+function aligned(which){
+ const s=sessions[which],a=s.points[0],b=s.points[1],p=s.img,cv=document.createElement('canvas');cv.width=720;cv.height=900;
+ const ctx=cv.getContext('2d',{willReadFrequently:true});ctx.fillStyle='#d6d7d7';ctx.fillRect(0,0,cv.width,cv.height);
+ const ax=a.x*p.width,ay=a.y*p.height,bx=b.x*p.width,by=b.y*p.height;
+ const angle=Math.atan2(by-ay,bx-ax),dist=Math.hypot(bx-ax,by-ay),scale=220/dist;
+ ctx.save();ctx.translate(360,335);ctx.rotate(-angle);ctx.scale(scale,scale);ctx.translate(-(ax+bx)/2,-(ay+by)/2);ctx.drawImage(p,0,0);ctx.restore();
+ return{canvas:cv,angle,scale,eyeDistance:dist,gray:null,points:s.points.map(q=>{
+  const px=q.x*p.width-(ax+bx)/2,py=q.y*p.height-(ay+by)/2;
+  return {x:360+scale*(px*Math.cos(angle)+py*Math.sin(angle)),y:335+scale*(-px*Math.sin(angle)+py*Math.cos(angle))};
+ })};
+}
+function grayscale(canvas){const {data}=canvas.getContext('2d',{willReadFrequently:true}).getImageData(0,0,720,900);const g=new Uint8Array(720*900),rgb=data;let sum=0;for(let i=0,j=0;i<g.length;i++,j+=4){let v=(rgb[j]*0.299+rgb[j+1]*0.587+rgb[j+2]*0.114)|0;g[i]=v;sum+=v;}return{g,mean:sum/g.length};}
+// Integral image makes a reproducible 11x11 local average cheap on mobile devices.
+function integral(g){const w=720,h=900,inte=new Float64Array((w+1)*(h+1));for(let y=0;y<h;y++){let rs=0;for(let x=0;x<w;x++){rs+=g[y*w+x];inte[(y+1)*(w+1)+x+1]=inte[y*(w+1)+x+1]+rs;}}return inte;}
+function avgRect(inte,x1,y1,x2,y2){const W=721;const sum=inte[(y2+1)*W+x2+1]-inte[y1*W+x2+1]-inte[(y2+1)*W+x1]+inte[y1*W+x1];return sum/((x2-x1+1)*(y2-y1+1));}
+function zoneMetrics(g,inte,zone){
+ const {x,y,rx,ry}=zone;let count=0,dark=0,edge=0,lum=0;
+ for(let py=Math.max(9,Math.round(y-ry));py<Math.min(890,y+ry);py+=2){for(let px=Math.max(9,Math.round(x-rx));px<Math.min(710,x+rx);px+=2){
+  if(((px-x)/rx)**2+((py-y)/ry)**2>1)continue;
+  let v=g[py*720+px];if(v<22||v>247)continue;
+  const local=avgRect(inte,px-5,py-5,px+5,py+5);
+  const gx=Math.abs(g[py*720+px+1]-g[py*720+px-1]),gy=Math.abs(g[(py+1)*720+px]-g[(py-1)*720+px]);
+  // dark high-frequency features, with a minimum local gradient: visual pattern, not anatomical wrinkles.
+  if(local-v>7.5 && gx+gy>9)dark++;
+  edge+=gx+gy;lum+=v;count++;
+ }}
+ return{density:count?100*dark/count:0,edge:count?edge/count:0,brightness:count?lum/count:0,count};
+}
+function getContour(a){const p=a.points,eyeD=220;return{cheekPosition:((p[5].y+p[6].y)/2-335)/eyeD,jawPosition:((p[7].y+p[8].y)/2-335)/eyeD,jawAsymmetry:Math.abs(p[7].y-p[8].y)/eyeD,chinPosition:(p[4].y-335)/eyeD};}
+function fmt(n,d=1){return Number.isFinite(n)?new Intl.NumberFormat('fa-IR',{minimumFractionDigits:d,maximumFractionDigits:d}).format(n):'ــ';}
+function diff(a,b){return a>0.0001?(b-a)/a*100:(b<=0.0001?0:null);}
+function reportDelta(n){return n===null?'قابل محاسبه نیست':'\u2066'+(n<0?'−':n>0?'+':'')+fmt(Math.abs(n))+'٪\u2069';}
+function sharpness(g){let sum=0,sumSq=0,n=0;for(let y=190;y<770;y+=3)for(let x=140;x<580;x+=3){const v=4*g[y*720+x]-g[y*720+x-1]-g[y*720+x+1]-g[(y-1)*720+x]-g[(y+1)*720+x];sum+=v;sumSq+=v*v;n++;}return Math.max(0,sumSq/n-(sum/n)**2);}
+function assessQuality(pre,post,metrics1,metrics2){let warnings=[];
+ if(sessions.before.source!=='automatic'||sessions.after.source!=='automatic')warnings.push('حداقل یکی از عکس‌ها دستی نشانه‌گذاری شده است؛ صحت نقاط باید تأیید شود.');
+ for(const k of ['before','after']){const s=sessions[k],e=s.expressions||{};if((e.jawOpen||0)>.4||(e.mouthSmileLeft||0)>.4||(e.mouthSmileRight||0)>.4)warnings.push('حالت چهره در عکس '+(k==='before'?'قبل':'بعد')+' خنثی نیست.');}
+const p=pre.points,q=post.points;
+ if(pre.eyeDistance<90||post.eyeDistance<90)warnings.push('چشم‌ها بیش از حد به یکدیگر نزدیک نشانه‌گذاری شده‌اند.');
+ for(const idx of [2,3,4])if(Math.hypot(p[idx].x-q[idx].x,p[idx].y-q[idx].y)>65)warnings.push('ناهم‌ترازی نقطه '+(idx+1)+' پس از تطبیق چشم‌ها؛ زاویه سر یا نشانه‌گذاری بررسی شود.');
+ for(const [label,a] of [['قبل',pre],['بعد',post]]){
+  if(Math.abs(a.points[0].y-a.points[1].y)>33)warnings.push('چرخش یا نشانه‌گذاری نامناسب چشم‌ها در عکس '+label+'.');
+  if(a.points[4].y<a.points[3].y||a.points[3].y<a.points[2].y)warnings.push('ترتیب نقاط بینی، دهان یا چانه در عکس '+label+' غیرمنتظره است.');
+ }
+ if(Math.abs(pre.angle-post.angle)*180/Math.PI>7)warnings.push('چرخش سر بین دو عکس بیش از ۷ درجه تفاوت دارد.');
+ if(Math.max(Math.abs(pre.angle),Math.abs(post.angle))*180/Math.PI>12)warnings.push('در یکی از عکس‌ها سر بیش از ۱۲ درجه به یک سمت متمایل است.');
+ const scaleGap=Math.abs(pre.eyeDistance-post.eyeDistance)/Math.max(pre.eyeDistance,post.eyeDistance);if(scaleGap>.20)warnings.push('مقیاس صورت در دو عکس بیش از ۲۰٪ تفاوت دارد.');
+ const n1=metrics1.filter(v=>v.count>15);const n2=metrics2.filter(v=>v.count>15);if(n1.length<12||n2.length<12)warnings.push('ناحیه‌های کافی از پوست در کادر نیست؛ تصویر یا نشانه‌گذاری بررسی شود.');
+ const l1=n1.reduce((s,v)=>s+v.brightness,0)/Math.max(1,n1.length);
+ const l2=n2.reduce((s,v)=>s+v.brightness,0)/Math.max(1,n2.length);
+ if(Math.abs(l1-l2)>18)warnings.push('نور یا روشنایی ناحیه‌های صورت در دو عکس اختلاف قابل توجه دارد.');
+ const sharp1=sharpness(pre.gray),sharp2=sharpness(post.gray);
+ if(Math.min(sharp1,sharp2)<32)warnings.push('یکی از تصاویر ممکن است تار باشد یا جزئیات سطح پوست را کافی نشان ندهد.');
+ if(Math.abs(pre.points[4].y-post.points[4].y)>65)warnings.push('مرجع چانه بعد از ترازسازی متفاوت است؛ زاویه سر یا نشانه‌گذاری را بازبینی کنید.');
+ if(sessions.before.img.width<800||sessions.after.img.width<800)warnings.push('عرض یکی از تصاویر کمتر از ۸۰۰ پیکسل است.');
+ return{warnings,lumBefore:l1,lumAfter:l2,sharpBefore:sharp1,sharpAfter:sharp2,acceptable:warnings.length===0};
+}
+function makeOverlay(canvas,zones){const cv=canvas.cloneNode();cv.width=720;cv.height=900;const ctx=cv.getContext('2d');ctx.drawImage(canvas,0,0);ctx.lineWidth=2;ctx.font='bold 18px Tahoma, sans-serif';ctx.textAlign='center';zones.forEach((z,i)=>{ctx.beginPath();ctx.ellipse(z.x,z.y,z.rx,z.ry,0,0,Math.PI*2);ctx.fillStyle='rgba(230,188,115,.10)';ctx.fill();ctx.strokeStyle='#e8bd74';ctx.stroke();ctx.fillStyle='rgba(6,16,32,.75)';ctx.fillRect(z.x-21,z.y-14,42,27);ctx.fillStyle='#e8bd74';ctx.fillText(String(i+1),z.x,z.y+5)});return cv;}
+async function run(){
+ $('captureError').textContent='';if(!sessions.before.img||!sessions.after.img){$('captureError').textContent='دو عکس باید انتخاب شوند.';return;}
+ if(sessions.before.points.length!==9||sessions.after.points.length!==9){$('captureError').textContent='تشخیص چهره هر دو عکس باید کامل شود؛ ابتدا مدل را بارگذاری یا نقاط را اصلاح کنید.';return;}
+ if(!$('consent').checked){$('captureError').textContent='ثبت رضایت برای پردازش تصویر لازم است.';return;}
+ $('runAnalysis').disabled=true;$('runAnalysis').textContent='در حال محاسبه...';
+ try{
+  await new Promise(r=>setTimeout(r,25));
+  const pre=aligned('before'),post=aligned('after');pre.gray=grayscale(pre.canvas).g;post.gray=grayscale(post.canvas).g;
+  const preInt=integral(pre.gray),postInt=integral(post.gray);
+  const pzones=personalizedZones(pre.points),qzones=personalizedZones(post.points);
+  const pmet=pzones.map(z=>zoneMetrics(pre.gray,preInt,z)),qmet=qzones.map(z=>zoneMetrics(post.gray,postInt,z));
+  const q=assessQuality(pre,post,pmet,qmet);
+  result={pre,post,pzones,qzones,quality:q,rows:ZONES.map((z,i)=>({id:z.id,name:z.name,kind:z.kind,before:pmet[i],after:qmet[i],delta:diff(pmet[i].density,qmet[i].density),absolute:qmet[i].density-pmet[i].density})),preContour:getContour(pre),postContour:getContour(post),generated:new Date().toISOString()};
+  renderAnalysis();screen('analysis');toast('تحلیل انجام شد. کیفیت مقایسه را بررسی کنید.');
+ }catch(e){$('captureError').textContent='خطا در محاسبه: '+e.message;console.error(e);}finally{$('runAnalysis').disabled=false;$('runAnalysis').textContent='تحلیل و مقایسه دو تصویر ←';}
+}
+$('runAnalysis').addEventListener('click',run);
+function renderAnalysis(){if(!result)return;$('noAnalysis').hidden=true;$('analysisResults').hidden=false;
+ const {pre,post,rows,quality}=result;const ds=rows.map(r=>r.delta).filter(Number.isFinite);const avg=ds.length?ds.reduce((s,v)=>s+v,0)/ds.length:null;
+ $('avgChange').textContent=reportDelta(avg);$('qualityStatus').textContent=quality.acceptable?'مناسب':'نیاز به بازبینی';
+ for(const [id,al] of [['alignedBefore',pre],['alignedAfter',post]]){const cv=$(id),ctx=cv.getContext('2d');ctx.clearRect(0,0,720,900);ctx.drawImage(makeOverlay(al.canvas,id==='alignedBefore'?result.pzones:result.qzones),0,0);}
+ $('metricsTable').querySelector('tbody').innerHTML=rows.map(r=>`<tr><td>${r.name}</td><td>${fmt(r.before.density)}٪</td><td>${fmt(r.after.density)}٪</td><td>${reportDelta(r.delta)}</td><td>${fmt(r.absolute,2)} واحد درصد</td><td>${quality.acceptable?'شاخص تصویری':'محدود به کیفیت عکس'}</td></tr>`).join('');
+ const sel=$('regionSelect');sel.innerHTML=rows.map((r,i)=>`<option value="${i}">${i+1}. ${r.name}</option>`).join('');
+ sel.onchange=()=>renderRegion();renderRegion();renderBlend();
+ const a=result.preContour,b=result.postContour;
+ $('contourMetric').textContent=`شاخص موقعیت گونه نسبت به فاصله دو چشم: ${fmt(a.cheekPosition,3)} ← ${fmt(b.cheekPosition,3)} | شاخص خط فک: ${fmt(a.jawPosition,3)} ← ${fmt(b.jawPosition,3)}. این اعداد نسبت هندسی هستند و واحد میلی‌متر ندارند.`;
+ $('qualityPanel').innerHTML='<h2>کنترل کیفیت تصاویر</h2>'+ (quality.acceptable?'<p style="color:#a9d8bd">هیچ هشدار خودکاری در کنترل اولیه ثبت نشد؛ این به معنی تأیید پزشکی یا همسانی کامل شرایط عکس‌برداری نیست.</p>':'<p style="color:#ffd0b9">مقایسه ممکن است قابل اتکا نباشد. موارد زیر را بازبینی کنید:</p><ul>'+quality.warnings.map(w=>'<li>'+w+'</li>').join('')+'</ul>')+`<p class="footnote">روشنایی میانگین نواحی: ${fmt(quality.lumBefore)} در مقابل ${fmt(quality.lumAfter)} · شاخص وضوح: ${fmt(quality.sharpBefore)} در مقابل ${fmt(quality.sharpAfter)}</p>`;
+}
+function renderBlend(){if(!result)return;
+ const cv=$('blendCanvas'),c=cv.getContext('2d');const a=Number($('blendSlider').value)/100;
+ c.clearRect(0,0,720,900);c.drawImage(result.pre.canvas,0,0);c.globalAlpha=a;c.drawImage(result.post.canvas,0,0);c.globalAlpha=1;
+ $('blendValue').textContent=new Intl.NumberFormat('fa-IR').format(Math.round(a*100))+'٪';
+}
+$('blendSlider').addEventListener('input',renderBlend);
+function renderRegion(){if(!result)return;
+ const i=Number($('regionSelect').value)||0,r=result.rows[i];
+ const qualityText=result.quality.acceptable?'شرایط اولیه قابل مقایسه است، اما تفسیر نیازمند بازبینی پزشک است.':'اختلاف نور، زاویه یا کیفیت عکس وجود دارد و تفسیر عددی محدود است.';
+ $('regionDetail').innerHTML='<div><small>قبل</small><strong>'+fmt(r.before.density)+'٪</strong></div><div><small>بعد</small><strong>'+fmt(r.after.density)+'٪</strong></div><div><small>تغییر نسبی شاخص</small><strong>'+reportDelta(r.delta)+'</strong></div><p>'+qualityText+' این شاخص اندازه‌گیری واقعی عمق یا افتادگی نیست.</p>';
+}
+$('goReport').addEventListener('click',()=>screen('report'));
+$('redoFromAnalysis').addEventListener('click',()=>screen('capture'));
+function persianDate(s){if(!s)return 'ثبت نشده';try{return new Intl.DateTimeFormat('fa-IR-u-ca-persian',{year:'numeric',month:'long',day:'numeric'}).format(new Date(s+'T12:00:00'));}catch{return s;}}
+function escapeHtml(s){return String(s||'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));}
+function drawReportImage(a,anonymize){const cv=document.createElement('canvas');cv.width=720;cv.height=900;const c=cv.getContext('2d');c.drawImage(a.canvas,0,0);if(anonymize){c.fillStyle='#0b1017';const eyeY=(a.points[0].y+a.points[1].y)/2;c.fillRect(108,eyeY-34,504,68);}return cv.toDataURL('image/jpeg',.84);}
+function renderReport(){if(!result){$('reportMissing').hidden=false;$('printable').hidden=true;return;}const {rows,pre,post,quality}=result;$('reportMissing').hidden=true;$('printable').hidden=false;
+ const meta=[['نقاط مرجع',(sessions.before.source==='automatic'&&sessions.after.source==='automatic')?'شناسایی خودکار با Face Landmarker':'دارای تصحیح دستی / نیازمند تأیید'],['کد پرونده',$('patientId').value||'ثبت نشده'],['بیمار',$('patientName').value||'ناشناس'],['پروسیجر',$('procedure').value],['پزشک',$('doctor').value||'ثبت نشده'],['عکس قبل',persianDate($('beforeDate').value)],['عکس بعد',persianDate($('afterDate').value)],['وضعیت کیفیت',quality.acceptable?'بدون هشدار اولیه':'دارای هشدار / تفسیر محدود']];
+ $('reportMeta').innerHTML=meta.map(([k,v])=>`<div><strong>${escapeHtml(k)}:</strong> ${escapeHtml(v)}</div>`).join('');
+ $('reportBefore').src=drawReportImage(pre,$('anonymize').checked);$('reportAfter').src=drawReportImage(post,$('anonymize').checked);
+ $('reportDoctorNotes').textContent=$('clinicalNotes').value.trim()||'بدون توضیح تکمیلی.';
+ $('reportTable').innerHTML=rows.map(r=>`<tr><td>${escapeHtml(r.name)}</td><td>${fmt(r.before.density)}</td><td>${fmt(r.after.density)}</td><td>${reportDelta(r.delta)}</td></tr>`).join('');
+ const contourRows=[['موقعیت گونه سمت چپ تصویر',5],['موقعیت گونه سمت راست تصویر',6],['موقعیت فک سمت چپ تصویر',7],['موقعیت فک سمت راست تصویر',8],['موقعیت چانه',4]];
+ $('reportContourRows').innerHTML=contourRows.map(([label,i])=>{
+   const a=(pre.points[i].y-335)/220,b=(post.points[i].y-335)/220;
+   return `<tr><td>${label}</td><td>${fmt(a,3)}</td><td>${fmt(b,3)}</td><td>${fmt(b-a,3)}</td></tr>`;
+ }).join('');
+ const ds=rows.map(r=>r.delta).filter(Number.isFinite),avg=ds.reduce((a,b)=>a+b,0)/Math.max(1,ds.length);
+ const warn=quality.warnings.length?quality.warnings.join(' | '):'هشدار اولیه ثبت نشد.';
+ $('reportSummary').innerHTML=`<strong>خلاصه شاخص‌ها:</strong> میانگین تغییر نسبی شاخص تراکم خطوط در ${ds.length} ناحیه با مبنای قابل محاسبه: <b>${reportDelta(avg)}</b>. عدد منفی به معنای کاهش این شاخص تصویری است، نه اثبات اثر درمان یا کاهش واقعی عمق چروک.<div><strong>کنترل کیفیت:</strong> ${escapeHtml(warn)}</div>`;
+}
+$('anonymize').addEventListener('change',renderReport);
+$('printReport').addEventListener('click',()=>{if(!result){toast('ابتدا تحلیل را انجام دهید.');return;}renderReport();setTimeout(()=>{if(window.AndroidBridge&&typeof window.AndroidBridge.printReport==='function'){window.AndroidBridge.printReport();}else window.print();},170);});
+function exportFile(name,mime,content){const blob=new Blob([content],{type:mime});if(window.AndroidBridge&&typeof window.AndroidBridge.saveFile==='function'){const reader=new FileReader();reader.onload=()=>window.AndroidBridge.saveFile(name,mime,String(reader.result).split(',')[1]);reader.readAsDataURL(blob);return;}const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),10000);}
+function fileStem(){return ($('patientId').value||'patient').replace(/[^\w\-\u0600-\u06FF]/g,'_').substring(0,45);}
+// Optional encrypted portable patient case, no cloud account or silent persistence.
+function toB64(buf){const a=new Uint8Array(buf);let out='';for(let i=0;i<a.length;i+=8192)out+=String.fromCharCode(...a.subarray(i,i+8192));return btoa(out);}
+function fromB64(str){const raw=atob(str);const a=new Uint8Array(raw.length);for(let i=0;i<raw.length;i++)a[i]=raw.charCodeAt(i);return a;}
+async function caseKey(pass,salt,iterations=200000){
+ const raw=await crypto.subtle.importKey('raw',new TextEncoder().encode(pass),'PBKDF2',false,['deriveKey']);
+ return crypto.subtle.deriveKey({name:'PBKDF2',salt,iterations,hash:'SHA-256'},raw,{name:'AES-GCM',length:256},false,['encrypt','decrypt']);
+}
+function patientFields(){return Object.fromEntries(['patientId','patientName','procedure','doctor','beforeDate','afterDate','clinicalNotes'].map(k=>[k,$(k).value]));}
+$('saveCase').addEventListener('click',async()=>{
+ if(!sessions.before.img||!sessions.after.img){toast('برای ذخیره پرونده، دو عکس وارد کنید.');return;}
+ const pass=$('casePass').value;
+ if(pass.length<8){toast('گذرواژه باید حداقل ۸ نویسه داشته باشد.');return;}
+ if(!crypto?.subtle){toast('رمزگذاری در این محیط پشتیبانی نمی‌شود.');return;}
+ const btn=$('saveCase');btn.disabled=true;try{
+  const salt=crypto.getRandomValues(new Uint8Array(16)),iv=crypto.getRandomValues(new Uint8Array(12));
+  const fields=patientFields(),sessionsPayload={};
+  for(const k of ['before','after'])sessionsPayload[k]={image:sessions[k].img.src,points:sessions[k].points,source:sessions[k].source};
+  const raw=new TextEncoder().encode(JSON.stringify({version:1,fields,sessions:sessionsPayload}));
+  const key=await caseKey(pass,salt);
+  const encrypted=await crypto.subtle.encrypt({name:'AES-GCM',iv},key,raw);
+  const envelope={format:'4BCASE',version:1,kdf:'PBKDF2-SHA256',iterations:200000,salt:toB64(salt),iv:toB64(iv),data:toB64(encrypted)};
+  exportFile('4B_'+fileStem()+'.4bcase','application/json',JSON.stringify(envelope));toast('پرونده رمزگذاری شد. فایل را در محل امن ذخیره کنید.');
+ }catch(e){console.error(e);toast('ذخیره پرونده ناموفق بود.');}finally{btn.disabled=false;}
+});
+$('loadCaseFile').addEventListener('change',async ev=>{
+ const file=ev.target.files?.[0];if(!file)return;const pass=$('casePass').value;
+ if(!pass){toast('ابتدا گذرواژه پرونده را وارد کنید.');ev.target.value='';return;}
+ try{
+  if(!crypto?.subtle)throw new Error('Crypto API unavailable');
+  if(file.size>20*1024*1024)throw new Error('File too large');
+  const data=JSON.parse(await file.text());
+  if(data.format!=='4BCASE'||data.version!==1||data.iterations!==200000)throw new Error('Unsupported case format');
+  const key=await caseKey(pass,fromB64(data.salt),data.iterations);
+  const decrypted=await crypto.subtle.decrypt({name:'AES-GCM',iv:fromB64(data.iv)},key,fromB64(data.data));
+  const body=JSON.parse(new TextDecoder().decode(decrypted));
+  if(body.version!==1||!body.fields||!body.sessions)throw new Error('Case invalid');
+  const newSessions={};
+  for(const k of ['before','after']){
+    const entry=body.sessions[k];if(!entry||!entry.image?.startsWith('data:image/'))throw new Error('Image missing');
+    const im=new Image();im.src=entry.image;await im.decode();
+    if(!Array.isArray(entry.points)||entry.points.length>9||entry.points.some(p=>!Number.isFinite(p.x)||!Number.isFinite(p.y)||p.x<0||p.y<0||p.x>1||p.y>1))throw new Error('Invalid points');
+    newSessions[k]={img:im,points:entry.points,source:entry.source||'manual',active:false,display:null,name:'از پرونده رمزگذاری‌شده'};
+  }
+  for(const k of Object.keys(body.fields))if(['patientId','patientName','procedure','doctor','beforeDate','afterDate','clinicalNotes'].includes(k)&&typeof body.fields[k]==='string')$(k).value=body.fields[k];
+  sessions=newSessions;for(const k of ['before','after'])updateStatus(k);
+  result=null;resetResult();toast('پرونده بازیابی شد. تحلیل را دوباره اجرا کنید.');screen('capture');
+ }catch(e){console.error('Encrypted case restore failed',e.message);toast('بازیابی ناموفق بود؛ گذرواژه یا فایل را بررسی کنید.');}
+ finally{ev.target.value='';}
+});
+$('exportCsv').addEventListener('click',()=>{if(!result){toast('ابتدا تحلیل را انجام دهید.');return;}let rows=[['ناحیه','شاخص خطوط ظاهری قبل (%)','شاخص خطوط ظاهری بعد (%)','تغییر نسبی (%)','تغییر مطلق (واحد درصد)','کنترل کیفیت']];result.rows.forEach(r=>rows.push([r.name,fmt(r.before.density),fmt(r.after.density),r.delta===null?'':fmt(r.delta),fmt(r.absolute,2),result.quality.acceptable?'بدون هشدار اولیه':'دارای هشدار']));exportFile('4B_'+fileStem()+'.csv','text/csv;charset=utf-8','\ufeff'+rows.map(r=>r.map(v=>'"'+String(v).replaceAll('"','""')+'"').join(',')).join('\r\n'));});
+$('exportJson').addEventListener('click',()=>{if(!result){toast('ابتدا تحلیل را انجام دهید.');return;}const data={app:'4B Skin Analyzer',version:'2.0',detection_modes:{before:sessions.before.source,after:sessions.after.source},experimental:true,patient_code:$('patientId').value,procedure:$('procedure').value,visit_dates:[$('beforeDate').value,$('afterDate').value],quality:result.quality,rows:result.rows,contours:{before:result.preContour,after:result.postContour},regions:{before:result.pzones,after:result.qzones},notes:'2D photography; not skin depth or actual tissue laxity; no clinical validation'};exportFile('4B_'+fileStem()+'.json','application/json',JSON.stringify(data,null,2));});
+$('clearSession').addEventListener('click',()=>{
+ if(!confirm('همه تصاویر و اطلاعات این مراجعه از صفحه پاک شود؟ این عملیات قابل بازگرداندن نیست.'))return;
+ sessions={before:{img:null,points:[],active:false,display:null,name:'',source:null,landmarks:null,pose:null},after:{img:null,points:[],active:false,display:null,name:'',source:null,landmarks:null,pose:null}};
+ for(const id of ['patientId','patientName','doctor','clinicalNotes','casePass'])$(id).value='';
+ for(const id of ['beforeFile','afterFile','loadCaseFile'])$(id).value='';
+ $('consent').checked=false;result=null;resetResult();updateStatus('before');updateStatus('after');screen('capture');toast('داده‌های مراجعه از صفحه پاک شدند.');
+});
+window.__4BTest={getResult:()=>result,run,points:POINTS,zones:ZONES,autoDetect,pointsFromLandmarks,sessions:()=>sessions,setImage:(which,img)=>{sessions[which]={img,points:[],active:false,display:null,name:'test'};updateStatus(which);},setPoints:(which,points)=>{sessions[which].points=points;sessions[which].active=false;updateStatus(which);}};
+})();
+</script>
+<script type="module">
+const status=document.getElementById('modelStatus');
+const WASM='https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@1.2.2/wasm';
+const MODEL='https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task';
+let detectorPromise=null;
+window.__4BDetect=async function(img){
+ if(!detectorPromise){
+   status.textContent='در حال بارگذاری مدل تشخیص ۴۷۸ نقطه چهره...';
+   detectorPromise=(async()=>{
+    const {FilesetResolver,FaceLandmarker}=await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@1.2.2/vision_bundle.mjs');
+    const vision=await FilesetResolver.forVisionTasks(WASM);
+    return await FaceLandmarker.createFromOptions(vision,{
+      baseOptions:{modelAssetPath:MODEL,delegate:'CPU'},
+      runningMode:'IMAGE', numFaces:2, minFaceDetectionConfidence:0.65,
+      minFacePresenceConfidence:0.65, outputFaceBlendshapes:true,
+      outputFacialTransformationMatrixes:true
+    });
+   })().catch(e=>{detectorPromise=null;throw e});
+ }
+ const detector=await detectorPromise;
+ const res=detector.detect(img);
+ if(res.faceLandmarks?.length!==1)throw new Error(res.faceLandmarks?.length>1?'بیش از یک صورت در عکس دیده شد.':'صورت شناسایی نشد؛ عکس تمام‌رخ و روشن انتخاب کنید.');
+ status.textContent='موتور تشخیص خودکار آماده است؛ شناسایی چهره روی دستگاه انجام می‌شود.';
+ return res;
+};
+status.textContent='موتور تشخیص آماده بارگذاری است؛ با انتخاب اولین عکس مدل دریافت می‌شود.';
+</script>
+</body></html>
