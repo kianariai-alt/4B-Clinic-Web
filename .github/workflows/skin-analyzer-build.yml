@@ -1,4 +1,4 @@
-name: Build 4B Skin Analyzer Android
+name: Build 4B Skin Analyzer Offline APK and Windows
 on:
   push:
     branches: ["feature/skin-analyzer-v2-build"]
@@ -10,30 +10,103 @@ permissions:
 jobs:
   android:
     runs-on: ubuntu-latest
-    timeout-minutes: 25
+    timeout-minutes: 30
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-      - name: Java 17
-        uses: actions/setup-java@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - name: Fetch official MediaPipe runtime and face model
+        shell: bash
+        run: |
+          set -euo pipefail
+          npm install --prefix /tmp/4b-mp --no-audit --no-fund --ignore-scripts @mediapipe/tasks-vision@1.2.2
+          OUT="$GITHUB_WORKSPACE/skin-analyzer/android/app/src/main/assets"
+          MP="/tmp/4b-mp/node_modules/@mediapipe/tasks-vision"
+          mkdir -p "$OUT/mediapipe"
+          cp "$MP/vision_bundle.mjs" "$OUT/mediapipe/"
+          cp -R "$MP/wasm" "$OUT/mediapipe/"
+          cp "$MP/LICENSE" "$OUT/mediapipe/LICENSE" || true
+          curl -fL --retry 3 --silent --show-error "https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task" -o "$OUT/mediapipe/face_landmarker.task"
+          test "$(stat -c%s "$OUT/mediapipe/face_landmarker.task")" -gt 1000000
+          sha256sum "$OUT/mediapipe/face_landmarker.task"
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path("skin-analyzer/android/app/src/main/assets/app.html")
+          html=p.read_text()
+          sources={
+            "const WASM='https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@1.2.2/wasm';":"const WASM=new URL('mediapipe/wasm',document.baseURI).href;",
+            "const MODEL='https://storage.googleapis.com/mediapipe-models/face_landmarker/face_landmarker/float16/1/face_landmarker.task';":"const MODEL=new URL('mediapipe/face_landmarker.task',document.baseURI).href;",
+            "await import('https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@1.2.2/vision_bundle.mjs')":"await import(new URL('mediapipe/vision_bundle.mjs',document.baseURI).href)"
+          }
+          for old,new in sources.items():
+            assert old in html,old
+            html=html.replace(old,new)
+          html=html.replace('برای اولین استفاده به اینترنت نیاز است.','این نسخه مدل را در خود دارد و بدون اینترنت کار می‌کند.')
+          html=html.replace('کتابخانه و مدل از منابع رسمی دریافت می‌شوند. ممکن است کتابخانه اطلاعات عملکردی غیرتصویری ارسال کند.','کتابخانه و مدل رسمی در داخل برنامه قرار دارند و تصاویر از دستگاه خارج نمی‌شوند.')
+          p.write_text(html)
+          desktop=Path("skin-analyzer/desktop-dist")
+          desktop.mkdir(parents=True,exist_ok=True)
+          (desktop/"app.html").write_text(html)
+          PY
+          cp -R "$OUT/mediapipe" "$GITHUB_WORKSPACE/skin-analyzer/desktop-dist/mediapipe"
+          cat > "$GITHUB_WORKSPACE/skin-analyzer/desktop-dist/README.txt" <<'EOF'
+          4B Skin Analyzer desktop v2.0
+          Run 4B-Skin-Analyzer.exe. It opens Microsoft Edge and serves assets from 127.0.0.1 only.
+          It requires Windows 10/11. No Internet needed to analyze photos.
+          Close 4B-Skin-Analyzer.exe in Task Manager to exit the local server.
+          Do not treat photo-only change metrics as real wrinkle depth or dermal tissue measurements.
+          Clinical accuracy and release signing have not been independently validated.
+          EOF
+      - uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: "17"
-      - name: Android SDK
-        uses: android-actions/setup-android@v3
-      - name: Required SDK packages
+      - uses: android-actions/setup-android@v3
+      - name: SDK packages
         run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
-      - name: Gradle
-        uses: gradle/actions/setup-gradle@v4
+      - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: "8.10.2"
-      - name: Build installable debug APK
+      - name: Build installable APK
         working-directory: skin-analyzer/android
         run: gradle --no-daemon --stacktrace :app:assembleDebug
-      - name: Export APK
-        uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v4
         with:
-          name: 4B-Skin-Analyzer-v2-debug-APK
+          name: 4B-Skin-Analyzer-v2-installable-APK
           path: skin-analyzer/android/app/build/outputs/apk/debug/app-debug.apk
+          if-no-files-found: error
+          retention-days: 30
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 4B-Skin-Analyzer-v2-desktop-assets
+          path: skin-analyzer/desktop-dist/
+          if-no-files-found: error
+          retention-days: 3
+  windows:
+    runs-on: windows-latest
+    timeout-minutes: 25
+    needs: android
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - uses: actions/download-artifact@v4
+        with:
+          name: 4B-Skin-Analyzer-v2-desktop-assets
+          path: dist-package
+      - name: Install standalone executable packager
+        run: python -m pip install pyinstaller==6.16.0
+      - name: Build Windows executable
+        shell: pwsh
+        run: |
+          python -m PyInstaller --onefile --windowed --name "4B-Skin-Analyzer" skin-analyzer/windows/launcher.py
+          Copy-Item .\dist\4B-Skin-Analyzer.exe .\dist-package\4B-Skin-Analyzer.exe
+          Compress-Archive -Path .\dist-package\* -DestinationPath .\4B-Skin-Analyzer-Windows-v2.zip
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 4B-Skin-Analyzer-v2-Windows-EXE
+          path: 4B-Skin-Analyzer-Windows-v2.zip
           if-no-files-found: error
           retention-days: 30
