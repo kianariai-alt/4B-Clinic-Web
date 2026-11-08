@@ -17,7 +17,7 @@ jobs:
       - name: Download APK built from current v2 branch
         uses: actions/download-artifact@v4
         with:
-          run-id: 42456214290
+          run-id: 42468725572
           github-token: ${{ github.token }}
           name: 4B-Skin-Analyzer-v2-installable-APK
           path: /tmp/skin-apk
