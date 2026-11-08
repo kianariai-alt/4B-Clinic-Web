@@ -46,6 +46,13 @@ public class MainActivity extends Activity {
         .addPathHandler("/assets/",new WebViewAssetLoader.AssetsPathHandler(this)).build();
     web.setWebViewClient(new WebViewClientCompat(){
       @Override public WebResourceResponse shouldInterceptRequest(WebView v,WebResourceRequest req){
+        String url=req.getUrl().toString();
+        if(url.startsWith("https://appassets.androidplatform.net/assets/") && url.endsWith(".mjs")){
+          try {
+            return new WebResourceResponse("text/javascript","UTF-8",
+                getAssets().open("mediapipe/vision_bundle.mjs"));
+          }catch(java.io.IOException e){return null;}
+        }
         return loader.shouldInterceptRequest(req.getUrl());
       }
       @Override public boolean shouldOverrideUrlLoading(WebView v,WebResourceRequest req){
