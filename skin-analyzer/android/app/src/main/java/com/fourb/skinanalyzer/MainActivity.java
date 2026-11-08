@@ -12,6 +12,10 @@ import android.webkit.WebView;
 import android.webkit.WebChromeClient;
 import android.webkit.WebViewClient;
 import android.webkit.WebSettings;
+import android.webkit.WebResourceRequest;
+import android.webkit.WebResourceResponse;
+import androidx.webkit.WebViewAssetLoader;
+import androidx.webkit.WebViewClientCompat;
 import android.webkit.PermissionRequest;
 import android.webkit.ValueCallback;
 import android.view.WindowManager;
@@ -29,7 +33,7 @@ public class MainActivity extends Activity {
     setContentView(web);
     WebSettings s=web.getSettings();
     s.setJavaScriptEnabled(true);
-    s.setAllowFileAccess(true);
+    s.setAllowFileAccess(false);
     s.setAllowContentAccess(true);
     s.setAllowFileAccessFromFileURLs(false);
     s.setAllowUniversalAccessFromFileURLs(false);
@@ -38,9 +42,14 @@ public class MainActivity extends Activity {
     s.setCacheMode(WebSettings.LOAD_DEFAULT);
     s.setMixedContentMode(WebSettings.MIXED_CONTENT_NEVER_ALLOW);
     s.setDefaultTextEncodingName("UTF-8");
-    web.setWebViewClient(new WebViewClient(){
-      @Override public boolean shouldOverrideUrlLoading(WebView v,String url) {
-         return !url.startsWith("file:///android_asset/");
+    final WebViewAssetLoader loader=new WebViewAssetLoader.Builder()
+        .addPathHandler("/assets/",new WebViewAssetLoader.AssetsPathHandler(this)).build();
+    web.setWebViewClient(new WebViewClientCompat(){
+      @Override public WebResourceResponse shouldInterceptRequest(WebView v,WebResourceRequest req){
+        return loader.shouldInterceptRequest(req.getUrl());
+      }
+      @Override public boolean shouldOverrideUrlLoading(WebView v,WebResourceRequest req){
+        return !req.getUrl().toString().startsWith("https://appassets.androidplatform.net/assets/");
       }
     });
     web.setWebChromeClient(new WebChromeClient(){
@@ -55,7 +64,7 @@ public class MainActivity extends Activity {
       @Override public void onPermissionRequest(PermissionRequest r){r.deny();}
     });
     web.addJavascriptInterface(new Bridge(),"AndroidBridge");
-    web.loadUrl("file:///android_asset/app.html");
+    web.loadUrl("https://appassets.androidplatform.net/assets/app.html");
   }
   public class Bridge{
     @JavascriptInterface public void saveFile(String name,String mime,String encoded){
