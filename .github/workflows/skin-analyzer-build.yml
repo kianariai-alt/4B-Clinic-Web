@@ -2,6 +2,8 @@ name: Build 4B Skin Analyzer Android
 on:
   push:
     branches: ["feature/skin-analyzer-v2-build"]
+  pull_request:
+    branches: ["main"]
   workflow_dispatch:
 permissions:
   contents: read
